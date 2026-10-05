@@ -11,7 +11,11 @@ const upload = multer({
   limits: { files: 10, fileSize: 20 * 1024 * 1024 }
 });
 app.use(express.static('public'));
+app.use(express.static('public'));
 
+app.get('/', (req, res) => {
+  res.sendFile(process.cwd() + '/index.html');
+});
 function esc(value='') {
   return String(value).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
