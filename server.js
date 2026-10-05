@@ -1,3 +1,8 @@
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const dirname = dirname(filename);
 import express from 'express';
 import multer from 'multer';
 
