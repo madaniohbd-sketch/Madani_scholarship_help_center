@@ -10,7 +10,6 @@ const upload = multer({
   storage: multer.memoryStorage(),
   limits: { files: 10, fileSize: 20 * 1024 * 1024 }
 });
-app.use(express.static(path.join(process.cwd(), "public")));
 app.use(express.static('public'));
 
 function esc(value='') {
