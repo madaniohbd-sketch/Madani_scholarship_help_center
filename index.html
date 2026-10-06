@@ -560,617 +560,1828 @@
         💡 <strong>বিঃদ্রঃ</strong> যেকোনো বিশ্ববিদ্যালয়ে স্কলারশিপ আবেদনের নিয়মাবলী ও বিস্তারিত জানতে আমাদের সাথে যোগাযোগ করুন। <a href="#apply">আবেদন করতে এখানে ক্লিক করুন।</a>
       </div>
 
-      <div class="uni-tools">
-        <input type="text" id="uniSearch" placeholder="বিশ্ববিদ্যালয়ের নাম বা শহর দিয়ে খুঁজুন...">
+      <!-- =========================================
+     UNIVERSITY SECTION
+========================================= -->
+
+<section class="university-section" id="universities">
+
+    <!-- =====================================
+         SEARCH & FILTER
+    ====================================== -->
+
+    <div class="uni-tools">
+
+        <input
+            type="text"
+            id="uniSearch"
+            placeholder="বিশ্ববিদ্যালয়ের নাম, English নাম বা শহর দিয়ে খুঁজুন..."
+            autocomplete="off"
+        >
+
         <div class="filter-buttons">
-          <button class="filter-btn active" onclick="filterUni('all')">সবগুলো</button>
-          <button class="filter-btn" onclick="filterUni('ইসলামিক')">ইসলামিক/শরীয়াহ</button>
-          <button class="filter-btn" onclick="filterUni('জেনারেল')">জেনারেল</button>
-        </div>
-      </div>
 
-      <div class="uni-grid" id="uniGrid">
-        <!-- University 1 -->
-        <div class="uni-card" data-category="ইসলামিক" data-name="ইসলামিক বিশ্ববিদ্যালয় মদিনা islamic university of madinah makkah madinah">
-          <div class="uni-top">
-            <div class="uni-logo-wrap">
-              <span class="logo-fallback" style="display:flex;">IUM</span>
-            </div>
-            <div>
-              <span class="uni-number">#০১</span>
-              <h3>ইসলামিক বিশ্ববিদ্যালয় মদিনা</h3>
-              <p class="uni-en">Islamic University of Madinah</p>
-            </div>
-          </div>
-          <div class="uni-meta">
-            <span>মদিনা</span>
-            <span>ইসলামিক ও জেনারেল</span>
-          </div>
-          <div class="uni-info">
-            <h4>অফারকৃত কোর্সসমূহ:</h4>
-            <p>শরীয়াহ, দাওয়াহ, হাদিস, কোরআন, ইঞ্জিনিয়ারিং, কম্পিউটার সায়েন্স ও সায়েন্স ইত্যাদি।</p>
-          </div>
-          <a href="#apply" class="uni-link">আবেদনের জন্য যোগাযোগ করুন</a>
+            <button
+                type="button"
+                class="filter-btn active"
+                onclick="filterUni('all', this)"
+            >
+                সবগুলো
+            </button>
+
+            <button
+                type="button"
+                class="filter-btn"
+                onclick="filterUni('ইসলামিক', this)"
+            >
+                ইসলামিক/শরীয়াহ
+            </button>
+
+            <button
+                type="button"
+                class="filter-btn"
+                onclick="filterUni('জেনারেল', this)"
+            >
+                জেনারেল
+            </button>
+
         </div>
 
-        <!-- University 2 -->
-        <div class="uni-card" data-category="জেনারেল" data-name="কিং সউদ বিশ্ববিদ্যালয় king saud university riyadh">
-          <div class="uni-top">
-            <div class="uni-logo-wrap">
-              <span class="logo-fallback" style="display:flex;">KSU</span>
-            </div>
-            <div>
-              <span class="uni-number">#০২</span>
-              <h3>কিং সউদ বিশ্ববিদ্যালয়</h3>
-              <p class="uni-en">King Saud University</p>
-            </div>
-          </div>
-          <div class="uni-meta">
-            <span>রিয়াদ</span>
-            <span>জেনারেল ও সায়েন্স</span>
-          </div>
-          <div class="uni-info">
-            <h4>অফারকৃত কোর্সসমূহ:</h4>
-            <p>মেডিসিন, ইঞ্জিনিয়ারিং, বিজনেস, মানবিক, সায়েন্স, আর্টস ইত্যাদি।</p>
-          </div>
-          <a href="#apply" class="uni-link">আবেদনের জন্য যোগাযোগ করুন</a>
-        </div>
-
-        <!-- University 3 -->
-        <div class="uni-card" data-category="ইসলামিক" data-name="উম্মুল কুরা বিশ্ববিদ্যালয় umm al qura university makkah">
-          <div class="uni-top">
-            <div class="uni-logo-wrap">
-              <span class="logo-fallback" style="display:flex;">UQU</span>
-            </div>
-            <div>
-              <span class="uni-number">#০৩</span>
-              <h3>উম্মুল কুরা বিশ্ববিদ্যালয়</h3>
-              <p class="uni-en">Umm Al-Qura University</p>
-            </div>
-          </div>
-          <div class="uni-meta">
-            <span>মক্কা</span>
-            <span>ইসলামিক ও জেনারেল</span>
-          </div>
-          <div class="uni-info">
-            <h4>অফারকৃত কোর্সসমূহ:</h4>
-            <p>ইসলামিক স্টাডিজ, আরবি ভাষা, ইঞ্জিনিয়ারিং, এডুকেশন, আর্টস ইত্যাদি।</p>
-          </div>
-          <a href="#apply" class="uni-link">আবেদনের জন্য যোগাযোগ করুন</a>
-        </div>
-
-        <!-- University 4 -->
-        <div class="uni-card" data-category="জেনারেল" data-name="কিং ফাহাদ পেট্রোলিয়াম বিশ্ববিদ্যালয় king fahd university of petroleum and minerals dhahran">
-          <div class="uni-top">
-            <div class="uni-logo-wrap">
-              <span class="logo-fallback" style="display:flex;">KFUPM</span>
-            </div>
-            <div>
-              <span class="uni-number">#০৪</span>
-              <h3>কিং ফাহাদ পেট্রোলিয়াম বিশ্ববিদ্যালয়</h3>
-              <p class="uni-en">King Fahd University of Petroleum & Minerals</p>
-            </div>
-          </div>
-          <div class="uni-meta">
-            <span>ধাহরান</span>
-            <span>ইঞ্জিনিয়ারিং ও টেকনোলজি</span>
-          </div>
-          <div class="uni-info">
-            <h4>অফারকৃত কোর্সসমূহ:</h4>
-            <p>পেট্রোলিয়াম, কেমিক্যাল, কম্পিউটার ও সিভিল ইঞ্জিনিয়ারিং, ডাটা সায়েন্স ইত্যাদি।</p>
-          </div>
-          <a href="#apply" class="uni-link">আবেদনের জন্য যোগাযোগ করুন</a>
-        </div>
-
-        <!-- University 5 -->
-        <div class="uni-card" data-category="জেনারেল" data-name="কিং আব্দুলআজিজ বিশ্ববিদ্যালয় king abdulaziz university jeddah">
-          <div class="uni-top">
-            <div class="uni-logo-wrap">
-              <span class="logo-fallback" style="display:flex;">KAU</span>
-            </div>
-            <div>
-              <span class="uni-number">#০৫</span>
-              <h3>কিং আব্দুলআজিজ বিশ্ববিদ্যালয়</h3>
-              <p class="uni-en">King Abdulaziz University</p>
-            </div>
-          </div>
-          <div class="uni-meta">
-            <span>জেদ্দা</span>
-            <span>জেনারেল ও রিসার্চ</span>
-          </div>
-          <div class="uni-info">
-            <h4>অফারকৃত কোর্সসমূহ:</h4>
-            <p>সায়েন্স, বিজনেস, আইটি, ইঞ্জিনিয়ারিং, মেরিন সায়েন্স, মেডিসিন ইত্যাদি।</p>
-          </div>
-          <a href="#apply" class="uni-link">আবেদনের জন্য যোগাযোগ করুন</a>
-        </div>
-
-        <!-- University 6 -->
-        <div class="uni-card" data-category="জেনারেল" data-name="কিং খালিদ বিশ্ববিদ্যালয় king khalid university abha">
-          <div class="uni-top">
-            <div class="uni-logo-wrap">
-              <span class="logo-fallback" style="display:flex;">KKU</span>
-            </div>
-            <div>
-              <span class="uni-number">#০৬</span>
-              <h3>কিং খালিদ বিশ্ববিদ্যালয়</h3>
-              <p class="uni-en">King Khalid University</p>
-            </div>
-          </div>
-          <div class="uni-meta">
-            <span>আবহা</span>
-            <span>জেনারেল</span>
-          </div>
-          <div class="uni-info">
-            <h4>অফারকৃত কোর্সসমূহ:</h4>
-            <p>কম্পিউটার সায়েন্স, হিউম্যানিটিজ, ইঞ্জিনিয়ারিং, ফার্মেসি, এডুকেশন ইত্যাদি।</p>
-          </div>
-        <!-- University 7 -->
-        <div class="uni-card" data-category="জেনারেল" data-name="ইমাম আব্দুর রহমান বিন ফয়সাল বিশ্ববিদ্যালয় imam abdulrahman bin faisal university dammam">
-          <div class="uni-top">
-            <div class="uni-logo-wrap">
-              <span class="logo-fallback" style="display:flex;">IAU</span>
-            </div>
-            <div>
-              <span class="uni-number">#০৭</span>
-              <h3>ইমাম আব্দুর রহমান বিন ফয়সাল বিশ্ববিদ্যালয়</h3>
-              <p class="uni-en">Imam Abdulrahman Bin Faisal University</p>
-            </div>
-          </div>
-          <div class="uni-meta">
-            <span>দাম্মাম</span>
-            <span>মেডিসিন ও জেনারেল</span>
-          </div>
-          <div class="uni-info">
-            <h4>অফারকৃত কোর্সসমূহ:</h4>
-            <p>মেডিসিন, ডেন্টিস্ট্রি, নার্সিং, ইঞ্জিনিয়ারিং, কম্পিউটার সায়েন্স, বিজনেস, সায়েন্স ও মানবিক বিভাগসহ বিভিন্ন প্রোগ্রাম।</p>
-          </div>
-          <a href="#apply" class="uni-link">আবেদনের জন্য যোগাযোগ করুন</a>
-        </div>
-
-        <!-- University 8 -->
-        <div class="uni-card" data-category="ইসলামিক" data-name="ইমাম মুহাম্মদ ইবনে সৌদ ইসলামিক বিশ্ববিদ্যালয় imam muhammad ibn saud islamic university riyadh">
-          <div class="uni-top">
-            <div class="uni-logo-wrap">
-              <span class="logo-fallback" style="display:flex;">IMSIU</span>
-            </div>
-            <div>
-              <span class="uni-number">#০৮</span>
-              <h3>ইমাম মুহাম্মদ ইবনে সৌদ ইসলামিক বিশ্ববিদ্যালয়</h3>
-              <p class="uni-en">Imam Muhammad ibn Saud Islamic University</p>
-            </div>
-          </div>
-          <div class="uni-meta">
-            <span>রিয়াদ</span>
-            <span>ইসলামিক ও জেনারেল</span>
-          </div>
-          <div class="uni-info">
-            <h4>অফারকৃত কোর্সসমূহ:</h4>
-            <p>শরীয়াহ, উসূলুদ্দীন, আরবি, ইসলামিক স্টাডিজ, আইন, কম্পিউটার সায়েন্স, ইঞ্জিনিয়ারিং, মিডিয়া ও অর্থনীতি।</p>
-          </div>
-          <a href="#apply" class="uni-link">আবেদনের জন্য যোগাযোগ করুন</a>
-        </div>
-
-        <!-- University 9 -->
-        <div class="uni-card" data-category="জেনারেল" data-name="প্রিন্স সত্তাম বিন আব্দুলআজিজ বিশ্ববিদ্যালয় prince sattam bin abdulaziz university al kharj">
-          <div class="uni-top">
-            <div class="uni-logo-wrap">
-              <span class="logo-fallback" style="display:flex;">PSAU</span>
-            </div>
-            <div>
-              <span class="uni-number">#০৯</span>
-              <h3>প্রিন্স সত্তাম বিন আব্দুলআজিজ বিশ্ববিদ্যালয়</h3>
-              <p class="uni-en">Prince Sattam Bin Abdulaziz University</p>
-            </div>
-          </div>
-          <div class="uni-meta">
-            <span>আল-খারজ</span>
-            <span>জেনারেল ও প্রযুক্তি</span>
-          </div>
-          <div class="uni-info">
-            <h4>অফারকৃত কোর্সসমূহ:</h4>
-            <p>ইঞ্জিনিয়ারিং, কম্পিউটার সায়েন্স, বিজনেস, সায়েন্স, শিক্ষা, মানবিক ও বিভিন্ন একাডেমিক প্রোগ্রাম।</p>
-          </div>
-          <a href="#apply" class="uni-link">আবেদনের জন্য যোগাযোগ করুন</a>
-        </div>
-
-        <!-- University 10 -->
-        <div class="uni-card" data-category="জেনারেল" data-name="প্রিন্সেস নূরা বিনতে আব্দুর রহমান বিশ্ববিদ্যালয় princess nourah bint abdulrahman university riyadh">
-          <div class="uni-top">
-            <div class="uni-logo-wrap">
-              <span class="logo-fallback" style="display:flex;">PNU</span>
-            </div>
-            <div>
-              <span class="uni-number">#১০</span>
-              <h3>প্রিন্সেস নূরা বিনতে আব্দুর রহমান বিশ্ববিদ্যালয়</h3>
-              <p class="uni-en">Princess Nourah Bint Abdulrahman University</p>
-            </div>
-          </div>
-          <div class="uni-meta">
-            <span>রিয়াদ</span>
-            <span>শুধু ছাত্রী</span>
-          </div>
-          <div class="uni-info">
-            <h4>অফারকৃত কোর্সসমূহ:</h4>
-            <p>মেডিসিন, ফার্মেসি, নার্সিং, কম্পিউটার সায়েন্স, ইঞ্জিনিয়ারিং, বিজনেস, শিক্ষা, ভাষা ও মানবিক বিভাগ।</p>
-          </div>
-          <a href="#apply" class="uni-link">আবেদনের জন্য যোগাযোগ করুন</a>
-        </div>
-
-        <!-- University 11 -->
-        <div class="uni-card" data-category="জেনারেল" data-name="আল-বাহা বিশ্ববিদ্যালয় al baha university al baha">
-          <div class="uni-top">
-            <div class="uni-logo-wrap">
-              <span class="logo-fallback" style="display:flex;">BU</span>
-            </div>
-            <div>
-              <span class="uni-number">#১১</span>
-              <h3>আল-বাহা বিশ্ববিদ্যালয়</h3>
-              <p class="uni-en">Al-Baha University</p>
-            </div>
-          </div>
-          <div class="uni-meta">
-            <span>আল-বাহা</span>
-            <span>জেনারেল</span>
-          </div>
-          <div class="uni-info">
-            <h4>অফারকৃত কোর্সসমূহ:</h4>
-            <p>মেডিসিন, ইঞ্জিনিয়ারিং, কম্পিউটার সায়েন্স, সায়েন্স, বিজনেস, শিক্ষা, আরবি ও মানবিক বিভাগ।</p>
-          </div>
-          <a href="#apply" class="uni-link">আবেদনের জন্য যোগাযোগ করুন</a>
-        </div>
-
-        <!-- University 12 -->
-        <div class="uni-card" data-category="জেনারেল" data-name="আল-জাওফ বিশ্ববিদ্যালয় al jouf university sakaka">
-          <div class="uni-top">
-            <div class="uni-logo-wrap">
-              <span class="logo-fallback" style="display:flex;">JU</span>
-            </div>
-            <div>
-              <span class="uni-number">#১২</span>
-              <h3>আল-জাওফ বিশ্ববিদ্যালয়</h3>
-              <p class="uni-en">Al-Jouf University</p>
-            </div>
-          </div>
-          <div class="uni-meta">
-            <span>সাকাকা</span>
-            <span>জেনারেল ও মেডিকেল</span>
-          </div>
-          <div class="uni-info">
-            <h4>অফারকৃত কোর্সসমূহ:</h4>
-            <p>মেডিসিন, ডেন্টিস্ট্রি, ফার্মেসি, ইঞ্জিনিয়ারিং, কম্পিউটার সায়েন্স, সায়েন্স, বিজনেস ও মানবিক বিভাগ।</p>
-          </div>
-          <a href="#apply" class="uni-link">আবেদনের জন্য যোগাযোগ করুন</a>
-        </div>
-
-        <!-- University 13 -->
-        <div class="uni-card" data-category="জেনারেল" data-name="নর্দার্ন বর্ডার বিশ্ববিদ্যালয় northern border university arar">
-          <div class="uni-top">
-            <div class="uni-logo-wrap">
-              <span class="logo-fallback" style="display:flex;">NBU</span>
-            </div>
-            <div>
-              <span class="uni-number">#১৩</span>
-              <h3>নর্দার্ন বর্ডার বিশ্ববিদ্যালয়</h3>
-              <p class="uni-en">Northern Border University</p>
-            </div>
-          </div>
-          <div class="uni-meta">
-            <span>আরার</span>
-            <span>জেনারেল ও মেডিকেল</span>
-          </div>
-          <div class="uni-info">
-            <h4>অফারকৃত কোর্সসমূহ:</h4>
-            <p>মেডিসিন, নার্সিং, ইঞ্জিনিয়ারিং, কম্পিউটার সায়েন্স, সায়েন্স, বিজনেস, শিক্ষা ও মানবিক বিভাগ।</p>
-          </div>
-          <a href="#apply" class="uni-link">আবেদনের জন্য যোগাযোগ করুন</a>
-        </div>
-
-        <!-- University 14 -->
-        <div class="uni-card" data-category="জেনারেল" data-name="তায়েফ বিশ্ববিদ্যালয় taif university taif">
-          <div class="uni-top">
-            <div class="uni-logo-wrap">
-              <span class="logo-fallback" style="display:flex;">TU</span>
-            </div>
-            <div>
-              <span class="uni-number">#১৪</span>
-              <h3>তায়েফ বিশ্ববিদ্যালয়</h3>
-              <p class="uni-en">Taif University</p>
-            </div>
-          </div>
-          <div class="uni-meta">
-            <span>তায়েফ</span>
-            <span>জেনারেল ও মেডিকেল</span>
-          </div>
-          <div class="uni-info">
-            <h4>অফারকৃত কোর্সসমূহ:</h4>
-            <p>মেডিসিন, ফার্মেসি, ইঞ্জিনিয়ারিং, কম্পিউটার সায়েন্স, সায়েন্স, বিজনেস, শিক্ষা ও মানবিক বিভাগ।</p>
-          </div>
-          <a href="#apply" class="uni-link">আবেদনের জন্য যোগাযোগ করুন</a>
-        </div>
-
-        <!-- University 15 -->
-        <div class="uni-card" data-category="জেনারেল" data-name="কাসিম বিশ্ববিদ্যালয় qassim university buraydah">
-          <div class="uni-top">
-            <div class="uni-logo-wrap">
-              <span class="logo-fallback" style="display:flex;">QU</span>
-            </div>
-            <div>
-              <span class="uni-number">#১৫</span>
-              <h3>কাসিম বিশ্ববিদ্যালয়</h3>
-              <p class="uni-en">Qassim University</p>
-            </div>
-          </div>
-          <div class="uni-meta">
-            <span>বুরাইদাহ</span>
-            <span>জেনারেল ও রিসার্চ</span>
-          </div>
-          <div class="uni-info">
-            <h4>অফারকৃত কোর্সসমূহ:</h4>
-            <p>মেডিসিন, ডেন্টিস্ট্রি, ফার্মেসি, ইঞ্জিনিয়ারিং, কম্পিউটার সায়েন্স, বিজনেস, সায়েন্স ও মানবিক বিভাগ।</p>
-          </div>
-          <a href="#apply" class="uni-link">আবেদনের জন্য যোগাযোগ করুন</a>
-        </div>
-
-        <!-- University 16 -->
-        <div class="uni-card" data-category="জেনারেল" data-name="মাজমা বিশ্ববিদ্যালয় majmaah university al majmaah">
-          <div class="uni-top">
-            <div class="uni-logo-wrap">
-              <span class="logo-fallback" style="display:flex;">MU</span>
-            </div>
-            <div>
-              <span class="uni-number">#১৬</span>
-              <h3>মাজমা বিশ্ববিদ্যালয়</h3>
-              <p class="uni-en">Majmaah University</p>
-            </div>
-          </div>
-          <div class="uni-meta">
-            <span>আল-মাজমা</span>
-            <span>জেনারেল</span>
-          </div>
-          <div class="uni-info">
-            <h4>অফারকৃত কোর্সসমূহ:</h4>
-            <p>মেডিসিন, ইঞ্জিনিয়ারিং, কম্পিউটার সায়েন্স, সায়েন্স, বিজনেস, শিক্ষা, আইন ও মানবিক বিভাগ।</p>
-          </div>
-          <a href="#apply" class="uni-link">আবেদনের জন্য যোগাযোগ করুন</a>
-        </div>
-
-        <!-- University 17 -->
-        <div class="uni-card" data-category="জেনারেল" data-name="কিং ফয়সাল বিশ্ববিদ্যালয় king faisal university al ahsa hofuf">
-          <div class="uni-top">
-            <div class="uni-logo-wrap">
-              <span class="logo-fallback" style="display:flex;">KFU</span>
-            </div>
-            <div>
-              <span class="uni-number">#১৭</span>
-              <h3>কিং ফয়সাল বিশ্ববিদ্যালয়</h3>
-              <p class="uni-en">King Faisal University</p>
-            </div>
-          </div>
-          <div class="uni-meta">
-            <span>আল-আহসা</span>
-            <span>জেনারেল ও রিসার্চ</span>
-          </div>
-          <div class="uni-info">
-            <h4>অফারকৃত কোর্সসমূহ:</h4>
-            <p>মেডিসিন, ভেটেরিনারি মেডিসিন, ইঞ্জিনিয়ারিং, কম্পিউটার সায়েন্স, বিজনেস, কৃষি, সায়েন্স ও মানবিক বিভাগ।</p>
-          </div>
-          <a href="#apply" class="uni-link">আবেদনের জন্য যোগাযোগ করুন</a>
-        </div>
-
-        <!-- University 18 -->
-        <div class="uni-card" data-category="জেনারেল" data-name="বিশা বিশ্ববিদ্যালয় university of bisha bisha">
-          <div class="uni-top">
-            <div class="uni-logo-wrap">
-              <span class="logo-fallback" style="display:flex;">UB</span>
-            </div>
-            <div>
-              <span class="uni-number">#১৮</span>
-              <h3>বিশা বিশ্ববিদ্যালয়</h3>
-              <p class="uni-en">University of Bisha</p>
-            </div>
-          </div>
-          <div class="uni-meta">
-            <span>বিশা</span>
-            <span>জেনারেল ও স্বাস্থ্য</span>
-          </div>
-          <div class="uni-info">
-            <h4>অফারকৃত কোর্সসমূহ:</h4>
-            <p>মেডিসিন, নার্সিং, কম্পিউটার সায়েন্স, ইঞ্জিনিয়ারিং, সায়েন্স, বিজনেস, শিক্ষা ও মানবিক বিভাগ।</p>
-          </div>
-          <a href="#apply" class="uni-link">আবেদনের জন্য যোগাযোগ করুন</a>
-        </div>
-
-        <!-- University 19 -->
-        <div class="uni-card" data-category="জেনারেল" data-name="তাবুক বিশ্ববিদ্যালয় university of tabuk tabuk">
-          <div class="uni-top">
-            <div class="uni-logo-wrap">
-              <span class="logo-fallback" style="display:flex;">UT</span>
-            </div>
-            <div>
-              <span class="uni-number">#১৯</span>
-              <h3>তাবুক বিশ্ববিদ্যালয়</h3>
-              <p class="uni-en">University of Tabuk</p>
-            </div>
-          </div>
-          <div class="uni-meta">
-            <span>তাবুক</span>
-            <span>জেনারেল ও প্রযুক্তি</span>
-          </div>
-          <div class="uni-info">
-            <h4>অফারকৃত কোর্সসমূহ:</h4>
-            <p>মেডিসিন, ফার্মেসি, ইঞ্জিনিয়ারিং, কম্পিউটার সায়েন্স, সায়েন্স, বিজনেস, শিক্ষা ও মানবিক বিভাগ।</p>
-          </div>
-          <a href="#apply" class="uni-link">আবেদনের জন্য যোগাযোগ করুন</a>
-        </div>
-
-        <!-- University 20 -->
-        <div class="uni-card" data-category="জেনারেল" data-name="জাজান বিশ্ববিদ্যালয় jazan university jazan">
-          <div class="uni-top">
-            <div class="uni-logo-wrap">
-              <span class="logo-fallback" style="display:flex;">JU</span>
-            </div>
-            <div>
-              <span class="uni-number">#২০</span>
-              <h3>জাজান বিশ্ববিদ্যালয়</h3>
-              <p class="uni-en">Jazan University</p>
-            </div>
-          </div>
-          <div class="uni-meta">
-            <span>জাজান</span>
-            <span>জেনারেল ও মেডিকেল</span>
-          </div>
-          <div class="uni-info">
-            <h4>অফারকৃত কোর্সসমূহ:</h4>
-            <p>মেডিসিন, ডেন্টিস্ট্রি, ফার্মেসি, ইঞ্জিনিয়ারিং, কম্পিউটার সায়েন্স, সায়েন্স, বিজনেস ও মানবিক বিভাগ।</p>
-          </div>
-          <a href="#apply" class="uni-link">আবেদনের জন্য যোগাযোগ করুন</a>
-        </div>
-
-        <!-- University 21 -->
-        <div class="uni-card" data-category="জেনারেল" data-name="জেদ্দা বিশ্ববিদ্যালয় university of jeddah jeddah">
-          <div class="uni-top">
-            <div class="uni-logo-wrap">
-              <span class="logo-fallback" style="display:flex;">UJ</span>
-            </div>
-            <div>
-              <span class="uni-number">#২১</span>
-              <h3>জেদ্দা বিশ্ববিদ্যালয়</h3>
-              <p class="uni-en">University of Jeddah</p>
-            </div>
-          </div>
-          <div class="uni-meta">
-            <span>জেদ্দা</span>
-            <span>জেনারেল ও প্রযুক্তি</span>
-          </div>
-          <div class="uni-info">
-            <h4>অফারকৃত কোর্সসমূহ:</h4>
-            <p>ইঞ্জিনিয়ারিং, কম্পিউটার সায়েন্স, সায়েন্স, বিজনেস, মেডিসিন, শিক্ষা, আইন ও মানবিক বিভাগ।</p>
-          </div>
-          <a href="#apply" class="uni-link">আবেদনের জন্য যোগাযোগ করুন</a>
-        </div>
-
-        <!-- University 22 -->
-        <div class="uni-card" data-category="জেনারেল" data-name="হাইল বিশ্ববিদ্যালয় university of hail hail">
-          <div class="uni-top">
-            <div class="uni-logo-wrap">
-              <span class="logo-fallback" style="display:flex;">UOH</span>
-            </div>
-            <div>
-              <span class="uni-number">#২২</span>
-              <h3>হাইল বিশ্ববিদ্যালয়</h3>
-              <p class="uni-en">University of Hail</p>
-            </div>
-          </div>
-          <div class="uni-meta">
-            <span>হাইল</span>
-            <span>জেনারেল ও স্বাস্থ্য</span>
-          </div>
-          <div class="uni-info">
-            <h4>অফারকৃত কোর্সসমূহ:</h4>
-            <p>মেডিসিন, ফার্মেসি, ইঞ্জিনিয়ারিং, কম্পিউটার সায়েন্স, সায়েন্স, বিজনেস, শিক্ষা ও মানবিক বিভাগ।</p>
-          </div>
-          <a href="#apply" class="uni-link">আবেদনের জন্য যোগাযোগ করুন</a>
-        </div>
-
-        <!-- University 23 -->
-        <div class="uni-card" data-category="জেনারেল" data-name="হাফর আল-বাতিন বিশ্ববিদ্যালয় university of hafr al batin hafr al batin">
-          <div class="uni-top">
-            <div class="uni-logo-wrap">
-              <span class="logo-fallback" style="display:flex;">UHB</span>
-            </div>
-            <div>
-              <span class="uni-number">#২৩</span>
-              <h3>হাফর আল-বাতিন বিশ্ববিদ্যালয়</h3>
-              <p class="uni-en">University of Hafr Al Batin</p>
-            </div>
-          </div>
-          <div class="uni-meta">
-            <span>হাফর আল-বাতিন</span>
-            <span>ইঞ্জিনিয়ারিং ও জেনারেল</span>
-          </div>
-          <div class="uni-info">
-            <h4>অফারকৃত কোর্সসমূহ:</h4>
-            <p>ইঞ্জিনিয়ারিং, কম্পিউটার সায়েন্স, সায়েন্স, বিজনেস, মেডিসিন, নার্সিং ও মানবিক বিভাগ।</p>
-          </div>
-          <a href="#apply" class="uni-link">আবেদনের জন্য যোগাযোগ করুন</a>
-        </div>
-
-        <!-- University 24 -->
-        <div class="uni-card" data-category="জেনারেল" data-name="শাকরা বিশ্ববিদ্যালয় shaqra university shaqra">
-          <div class="uni-top">
-            <div class="uni-logo-wrap">
-              <span class="logo-fallback" style="display:flex;">SU</span>
-            </div>
-            <div>
-              <span class="uni-number">#২৪</span>
-              <h3>শাকরা বিশ্ববিদ্যালয়</h3>
-              <p class="uni-en">Shaqra University</p>
-            </div>
-          </div>
-          <div class="uni-meta">
-            <span>শাকরা</span>
-            <span>জেনারেল ও প্রযুক্তি</span>
-          </div>
-          <div class="uni-info">
-            <h4>অফারকৃত কোর্সসমূহ:</h4>
-            <p>ইঞ্জিনিয়ারিং, কম্পিউটার সায়েন্স, সায়েন্স, বিজনেস, ফার্মেসি, শিক্ষা ও মানবিক বিভাগ।</p>
-          </div>
-          <a href="#apply" class="uni-link">আবেদনের জন্য যোগাযোগ করুন</a>
-        </div>
-
-        <!-- University 25 -->
-        <div class="uni-card" data-category="জেনারেল" data-name="তায়বাহ বিশ্ববিদ্যালয় taibah university madinah">
-          <div class="uni-top">
-            <div class="uni-logo-wrap">
-              <span class="logo-fallback" style="display:flex;">Taibah</span>
-            </div>
-            <div>
-              <span class="uni-number">#২৫</span>
-              <h3>তায়বাহ বিশ্ববিদ্যালয়</h3>
-              <p class="uni-en">Taibah University</p>
-            </div>
-          </div>
-          <div class="uni-meta">
-            <span>মদিনা</span>
-            <span>জেনারেল ও ইসলামিক</span>
-          </div>
-          <div class="uni-info">
-            <h4>অফারকৃত কোর্সসমূহ:</h4>
-            <p>মেডিসিন, ডেন্টিস্ট্রি, ফার্মেসি, ইঞ্জিনিয়ারিং, কম্পিউটার সায়েন্স, ইসলামিক স্টাডিজ, আরবি, বিজনেস ও শিক্ষা।</p>
-          </div>
-          <a href="#apply" class="uni-link">আবেদনের জন্য যোগাযোগ করুন</a>
-        </div>
-
-        <!-- University 26 -->
-        <div class="uni-card" data-category="জেনারেল" data-name="নাজরান বিশ্ববিদ্যালয় najran university najran">
-          <div class="uni-top">
-            <div class="uni-logo-wrap">
-              <span class="logo-fallback" style="display:flex;">NU</span>
-            </div>
-            <div>
-              <span class="uni-number">#২৬</span>
-              <h3>নাজরান বিশ্ববিদ্যালয়</h3>
-              <p class="uni-en">Najran University</p>
-            </div>
-          </div>
-          <div class="uni-meta">
-            <span>নাজরান</span>
-            <span>জেনারেল ও মেডিকেল</span>
-          </div>
-          <div class="uni-info">
-            <h4>অফারকৃত কোর্সসমূহ:</h4>
-            <p>মেডিসিন, ডেন্টিস্ট্রি, ফার্মেসি, ইঞ্জিনিয়ারিং, কম্পিউটার সায়েন্স, সায়েন্স, বিজনেস, শিক্ষা ও মানবিক বিভাগ।</p>
-          </div>
-          <a href="#apply" class="uni-link">আবেদনের জন্য যোগাযোগ করুন</a>
-        </div>
-          
-      <div class="no-results" id="noResults">
-        <p>দুঃখিত, কোনো বিশ্ববিদ্যালয় খুঁজে পাওয়া যায়নি!</p>
-      </div>
     </div>
-  </section>
 
+
+    <!-- =====================================
+         UNIVERSITY GRID
+    ====================================== -->
+
+    <div class="uni-grid" id="uniGrid">
+
+
+        <!-- =================================
+             UNIVERSITY 01
+        ================================== -->
+
+        <div
+            class="uni-card"
+            data-category="ইসলামিক জেনারেল"
+            data-name="ইসলামিক বিশ্ববিদ্যালয় মদিনা islamic university of madinah madinah"
+        >
+
+            <div class="uni-top">
+
+                <div class="uni-logo-wrap">
+                    <span class="logo-fallback" style="display:flex;">
+                        IUM
+                    </span>
+                </div>
+
+                <div>
+                    <span class="uni-number">#০১</span>
+
+                    <h3>
+                        ইসলামিক বিশ্ববিদ্যালয় মদিনা
+                    </h3>
+
+                    <p class="uni-en">
+                        Islamic University of Madinah
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="uni-meta">
+                <span>মদিনা</span>
+                <span>ইসলামিক ও জেনারেল</span>
+            </div>
+
+
+            <div class="uni-info">
+
+                <h4>অফারকৃত কোর্সসমূহ:</h4>
+
+                <p>
+                    শরীয়াহ, দাওয়াহ, হাদিস, কোরআন,
+                    ইঞ্জিনিয়ারিং, কম্পিউটার সায়েন্স ও
+                    সায়েন্স ইত্যাদি।
+                </p>
+
+            </div>
+
+
+            <a href="#apply" class="uni-link">
+                আবেদনের জন্য যোগাযোগ করুন
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+             UNIVERSITY 02
+        ================================== -->
+
+        <div
+            class="uni-card"
+            data-category="জেনারেল"
+            data-name="কিং সউদ বিশ্ববিদ্যালয় king saud university riyadh"
+        >
+
+            <div class="uni-top">
+
+                <div class="uni-logo-wrap">
+                    <span class="logo-fallback" style="display:flex;">
+                        KSU
+                    </span>
+                </div>
+
+                <div>
+                    <span class="uni-number">#০২</span>
+
+                    <h3>
+                        কিং সউদ বিশ্ববিদ্যালয়
+                    </h3>
+
+                    <p class="uni-en">
+                        King Saud University
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="uni-meta">
+                <span>রিয়াদ</span>
+                <span>জেনারেল ও সায়েন্স</span>
+            </div>
+
+
+            <div class="uni-info">
+
+                <h4>অফারকৃত কোর্সসমূহ:</h4>
+
+                <p>
+                    মেডিসিন, ইঞ্জিনিয়ারিং, বিজনেস,
+                    মানবিক, সায়েন্স, আর্টস ইত্যাদি।
+                </p>
+
+            </div>
+
+
+            <a href="#apply" class="uni-link">
+                আবেদনের জন্য যোগাযোগ করুন
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+             UNIVERSITY 03
+        ================================== -->
+
+        <div
+            class="uni-card"
+            data-category="ইসলামিক জেনারেল"
+            data-name="উম্মুল কুরা বিশ্ববিদ্যালয় umm al qura university makkah"
+        >
+
+            <div class="uni-top">
+
+                <div class="uni-logo-wrap">
+                    <span class="logo-fallback" style="display:flex;">
+                        UQU
+                    </span>
+                </div>
+
+                <div>
+                    <span class="uni-number">#০৩</span>
+
+                    <h3>
+                        উম্মুল কুরা বিশ্ববিদ্যালয়
+                    </h3>
+
+                    <p class="uni-en">
+                        Umm Al-Qura University
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="uni-meta">
+                <span>মক্কা</span>
+                <span>ইসলামিক ও জেনারেল</span>
+            </div>
+
+
+            <div class="uni-info">
+
+                <h4>অফারকৃত কোর্সসমূহ:</h4>
+
+                <p>
+                    ইসলামিক স্টাডিজ, আরবি ভাষা,
+                    ইঞ্জিনিয়ারিং, এডুকেশন, আর্টস ইত্যাদি।
+                </p>
+
+            </div>
+
+
+            <a href="#apply" class="uni-link">
+                আবেদনের জন্য যোগাযোগ করুন
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+             UNIVERSITY 04
+        ================================== -->
+
+        <div
+            class="uni-card"
+            data-category="জেনারেল"
+            data-name="কিং ফাহাদ পেট্রোলিয়াম বিশ্ববিদ্যালয় king fahd university of petroleum and minerals dhahran"
+        >
+
+            <div class="uni-top">
+
+                <div class="uni-logo-wrap">
+                    <span class="logo-fallback" style="display:flex;">
+                        KFUPM
+                    </span>
+                </div>
+
+                <div>
+                    <span class="uni-number">#০৪</span>
+
+                    <h3>
+                        কিং ফাহাদ পেট্রোলিয়াম বিশ্ববিদ্যালয়
+                    </h3>
+
+                    <p class="uni-en">
+                        King Fahd University of Petroleum & Minerals
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="uni-meta">
+                <span>ধাহরান</span>
+                <span>ইঞ্জিনিয়ারিং ও টেকনোলজি</span>
+            </div>
+
+
+            <div class="uni-info">
+
+                <h4>অফারকৃত কোর্সসমূহ:</h4>
+
+                <p>
+                    পেট্রোলিয়াম, কেমিক্যাল, কম্পিউটার
+                    ও সিভিল ইঞ্জিনিয়ারিং, ডাটা সায়েন্স ইত্যাদি।
+                </p>
+
+            </div>
+
+
+            <a href="#apply" class="uni-link">
+                আবেদনের জন্য যোগাযোগ করুন
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+             UNIVERSITY 05
+        ================================== -->
+
+        <div
+            class="uni-card"
+            data-category="জেনারেল"
+            data-name="কিং আব্দুলআজিজ বিশ্ববিদ্যালয় king abdulaziz university jeddah"
+        >
+
+            <div class="uni-top">
+
+                <div class="uni-logo-wrap">
+                    <span class="logo-fallback" style="display:flex;">
+                        KAU
+                    </span>
+                </div>
+
+                <div>
+                    <span class="uni-number">#০৫</span>
+
+                    <h3>
+                        কিং আব্দুলআজিজ বিশ্ববিদ্যালয়
+                    </h3>
+
+                    <p class="uni-en">
+                        King Abdulaziz University
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="uni-meta">
+                <span>জেদ্দা</span>
+                <span>জেনারেল ও রিসার্চ</span>
+            </div>
+
+
+            <div class="uni-info">
+
+                <h4>অফারকৃত কোর্সসমূহ:</h4>
+
+                <p>
+                    সায়েন্স, বিজনেস, আইটি, ইঞ্জিনিয়ারিং,
+                    মেরিন সায়েন্স, মেডিসিন ইত্যাদি।
+                </p>
+
+            </div>
+
+
+            <a href="#apply" class="uni-link">
+                আবেদনের জন্য যোগাযোগ করুন
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+             UNIVERSITY 06
+        ================================== -->
+
+        <div
+            class="uni-card"
+            data-category="জেনারেল"
+            data-name="কিং খালিদ বিশ্ববিদ্যালয় king khalid university abha"
+        >
+
+            <div class="uni-top">
+
+                <div class="uni-logo-wrap">
+                    <span class="logo-fallback" style="display:flex;">
+                        KKU
+                    </span>
+                </div>
+
+                <div>
+                    <span class="uni-number">#০৬</span>
+
+                    <h3>
+                        কিং খালিদ বিশ্ববিদ্যালয়
+                    </h3>
+
+                    <p class="uni-en">
+                        King Khalid University
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="uni-meta">
+                <span>আবহা</span>
+                <span>জেনারেল</span>
+            </div>
+
+
+            <div class="uni-info">
+
+                <h4>অফারকৃত কোর্সসমূহ:</h4>
+
+                <p>
+                    কম্পিউটার সায়েন্স, হিউম্যানিটিজ,
+                    ইঞ্জিনিয়ারিং, ফার্মেসি, এডুকেশন ইত্যাদি।
+                </p>
+
+            </div>
+
+
+            <a href="#apply" class="uni-link">
+                আবেদনের জন্য যোগাযোগ করুন
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+             UNIVERSITY 07
+        ================================== -->
+
+        <div
+            class="uni-card"
+            data-category="জেনারেল"
+            data-name="ইমাম আব্দুর রহমান বিন ফয়সাল বিশ্ববিদ্যালয় imam abdulrahman bin faisal university dammam"
+        >
+
+            <div class="uni-top">
+
+                <div class="uni-logo-wrap">
+                    <span class="logo-fallback" style="display:flex;">
+                        IAU
+                    </span>
+                </div>
+
+                <div>
+                    <span class="uni-number">#০৭</span>
+
+                    <h3>
+                        ইমাম আব্দুর রহমান বিন ফয়সাল বিশ্ববিদ্যালয়
+                    </h3>
+
+                    <p class="uni-en">
+                        Imam Abdulrahman Bin Faisal University
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="uni-meta">
+                <span>দাম্মাম</span>
+                <span>মেডিসিন ও জেনারেল</span>
+            </div>
+
+
+            <div class="uni-info">
+
+                <h4>অফারকৃত কোর্সসমূহ:</h4>
+
+                <p>
+                    মেডিসিন, ডেন্টিস্ট্রি, নার্সিং, ইঞ্জিনিয়ারিং,
+                    কম্পিউটার সায়েন্স, বিজনেস, সায়েন্স ও মানবিক
+                    বিভাগসহ বিভিন্ন প্রোগ্রাম।
+                </p>
+
+            </div>
+
+
+            <a href="#apply" class="uni-link">
+                আবেদনের জন্য যোগাযোগ করুন
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+             UNIVERSITY 08
+        ================================== -->
+
+        <div
+            class="uni-card"
+            data-category="ইসলামিক জেনারেল"
+            data-name="ইমাম মুহাম্মদ ইবনে সৌদ ইসলামিক বিশ্ববিদ্যালয় imam muhammad ibn saud islamic university riyadh"
+        >
+
+            <div class="uni-top">
+
+                <div class="uni-logo-wrap">
+                    <span class="logo-fallback" style="display:flex;">
+                        IMSIU
+                    </span>
+                </div>
+
+                <div>
+                    <span class="uni-number">#০৮</span>
+
+                    <h3>
+                        ইমাম মুহাম্মদ ইবনে সৌদ ইসলামিক বিশ্ববিদ্যালয়
+                    </h3>
+
+                    <p class="uni-en">
+                        Imam Muhammad ibn Saud Islamic University
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="uni-meta">
+                <span>রিয়াদ</span>
+                <span>ইসলামিক ও জেনারেল</span>
+            </div>
+
+
+            <div class="uni-info">
+
+                <h4>অফারকৃত কোর্সসমূহ:</h4>
+
+                <p>
+                    শরীয়াহ, উসূলুদ্দীন, আরবি, ইসলামিক স্টাডিজ,
+                    আইন, কম্পিউটার সায়েন্স, ইঞ্জিনিয়ারিং,
+                    মিডিয়া ও অর্থনীতি।
+                </p>
+
+            </div>
+
+
+            <a href="#apply" class="uni-link">
+                আবেদনের জন্য যোগাযোগ করুন
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+             UNIVERSITY 09
+        ================================== -->
+
+        <div
+            class="uni-card"
+            data-category="জেনারেল"
+            data-name="প্রিন্স সত্তাম বিন আব্দুলআজিজ বিশ্ববিদ্যালয় prince sattam bin abdulaziz university al kharj"
+        >
+
+            <div class="uni-top">
+
+                <div class="uni-logo-wrap">
+                    <span class="logo-fallback" style="display:flex;">
+                        PSAU
+                    </span>
+                </div>
+
+                <div>
+                    <span class="uni-number">#০৯</span>
+
+                    <h3>
+                        প্রিন্স সত্তাম বিন আব্দুলআজিজ বিশ্ববিদ্যালয়
+                    </h3>
+
+                    <p class="uni-en">
+                        Prince Sattam Bin Abdulaziz University
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="uni-meta">
+                <span>আল-খারজ</span>
+                <span>জেনারেল ও প্রযুক্তি</span>
+            </div>
+
+
+            <div class="uni-info">
+
+                <h4>অফারকৃত কোর্সসমূহ:</h4>
+
+                <p>
+                    ইঞ্জিনিয়ারিং, কম্পিউটার সায়েন্স, বিজনেস,
+                    সায়েন্স, শিক্ষা, মানবিক ও বিভিন্ন একাডেমিক প্রোগ্রাম।
+                </p>
+
+            </div>
+
+
+            <a href="#apply" class="uni-link">
+                আবেদনের জন্য যোগাযোগ করুন
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+             UNIVERSITY 10
+        ================================== -->
+
+        <div
+            class="uni-card"
+            data-category="জেনারেল"
+            data-name="প্রিন্সেস নূরা বিনতে আব্দুর রহমান বিশ্ববিদ্যালয় princess nourah bint abdulrahman university riyadh"
+        >
+
+            <div class="uni-top">
+
+                <div class="uni-logo-wrap">
+                    <span class="logo-fallback" style="display:flex;">
+                        PNU
+                    </span>
+                </div>
+
+                <div>
+                    <span class="uni-number">#১০</span>
+
+                    <h3>
+                        প্রিন্সেস নূরা বিনতে আব্দুর রহমান বিশ্ববিদ্যালয়
+                    </h3>
+
+                    <p class="uni-en">
+                        Princess Nourah Bint Abdulrahman University
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="uni-meta">
+                <span>রিয়াদ</span>
+                <span>শুধু ছাত্রী</span>
+            </div>
+
+
+            <div class="uni-info">
+
+                <h4>অফারকৃত কোর্সসমূহ:</h4>
+
+                <p>
+                    মেডিসিন, ফার্মেসি, নার্সিং, কম্পিউটার সায়েন্স,
+                    ইঞ্জিনিয়ারিং, বিজনেস, শিক্ষা, ভাষা ও মানবিক বিভাগ।
+                </p>
+
+            </div>
+
+
+            <a href="#apply" class="uni-link">
+                আবেদনের জন্য যোগাযোগ করুন
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+             UNIVERSITY 11
+        ================================== -->
+
+        <div
+            class="uni-card"
+            data-category="জেনারেল"
+            data-name="আল-বাহা বিশ্ববিদ্যালয় al baha university al baha"
+        >
+
+            <div class="uni-top">
+
+                <div class="uni-logo-wrap">
+                    <span class="logo-fallback" style="display:flex;">
+                        BU
+                    </span>
+                </div>
+
+                <div>
+                    <span class="uni-number">#১১</span>
+
+                    <h3>
+                        আল-বাহা বিশ্ববিদ্যালয়
+                    </h3>
+
+                    <p class="uni-en">
+                        Al-Baha University
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="uni-meta">
+                <span>আল-বাহা</span>
+                <span>জেনারেল</span>
+            </div>
+
+
+            <div class="uni-info">
+
+                <h4>অফারকৃত কোর্সসমূহ:</h4>
+
+                <p>
+                    মেডিসিন, ইঞ্জিনিয়ারিং, কম্পিউটার সায়েন্স,
+                    সায়েন্স, বিজনেস, শিক্ষা, আরবি ও মানবিক বিভাগ।
+                </p>
+
+            </div>
+
+
+            <a href="#apply" class="uni-link">
+                আবেদনের জন্য যোগাযোগ করুন
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+             UNIVERSITY 12
+        ================================== -->
+
+        <div
+            class="uni-card"
+            data-category="জেনারেল"
+            data-name="আল-জাওফ বিশ্ববিদ্যালয় al jouf university sakaka"
+        >
+
+            <div class="uni-top">
+
+                <div class="uni-logo-wrap">
+                    <span class="logo-fallback" style="display:flex;">
+                        JU
+                    </span>
+                </div>
+
+                <div>
+                    <span class="uni-number">#১২</span>
+
+                    <h3>
+                        আল-জাওফ বিশ্ববিদ্যালয়
+                    </h3>
+
+                    <p class="uni-en">
+                        Al-Jouf University
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="uni-meta">
+                <span>সাকাকা</span>
+                <span>জেনারেল ও মেডিকেল</span>
+            </div>
+
+
+            <div class="uni-info">
+
+                <h4>অফারকৃত কোর্সসমূহ:</h4>
+
+                <p>
+                    মেডিসিন, ডেন্টিস্ট্রি, ফার্মেসি, ইঞ্জিনিয়ারিং,
+                    কম্পিউটার সায়েন্স, সায়েন্স, বিজনেস ও মানবিক বিভাগ।
+                </p>
+
+            </div>
+
+
+            <a href="#apply" class="uni-link">
+                আবেদনের জন্য যোগাযোগ করুন
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+             UNIVERSITY 13
+        ================================== -->
+
+        <div
+            class="uni-card"
+            data-category="জেনারেল"
+            data-name="নর্দার্ন বর্ডার বিশ্ববিদ্যালয় northern border university arar"
+        >
+
+            <div class="uni-top">
+
+                <div class="uni-logo-wrap">
+                    <span class="logo-fallback" style="display:flex;">
+                        NBU
+                    </span>
+                </div>
+
+                <div>
+                    <span class="uni-number">#১৩</span>
+
+                    <h3>
+                        নর্দার্ন বর্ডার বিশ্ববিদ্যালয়
+                    </h3>
+
+                    <p class="uni-en">
+                        Northern Border University
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="uni-meta">
+                <span>আরার</span>
+                <span>জেনারেল ও মেডিকেল</span>
+            </div>
+
+
+            <div class="uni-info">
+
+                <h4>অফারকৃত কোর্সসমূহ:</h4>
+
+                <p>
+                    মেডিসিন, নার্সিং, ইঞ্জিনিয়ারিং, কম্পিউটার সায়েন্স,
+                    সায়েন্স, বিজনেস, শিক্ষা ও মানবিক বিভাগ।
+                </p>
+
+            </div>
+
+
+            <a href="#apply" class="uni-link">
+                আবেদনের জন্য যোগাযোগ করুন
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+             UNIVERSITY 14
+        ================================== -->
+
+        <div
+            class="uni-card"
+            data-category="জেনারেল"
+            data-name="তায়েফ বিশ্ববিদ্যালয় taif university taif"
+        >
+
+            <div class="uni-top">
+
+                <div class="uni-logo-wrap">
+                    <span class="logo-fallback" style="display:flex;">
+                        TU
+                    </span>
+                </div>
+
+                <div>
+                    <span class="uni-number">#১৪</span>
+
+                    <h3>
+                        তায়েফ বিশ্ববিদ্যালয়
+                    </h3>
+
+                    <p class="uni-en">
+                        Taif University
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="uni-meta">
+                <span>তায়েফ</span>
+                <span>জেনারেল ও মেডিকেল</span>
+            </div>
+
+
+            <div class="uni-info">
+
+                <h4>অফারকৃত কোর্সসমূহ:</h4>
+
+                <p>
+                    মেডিসিন, ফার্মেসি, ইঞ্জিনিয়ারিং,
+                    কম্পিউটার সায়েন্স, সায়েন্স, বিজনেস,
+                    শিক্ষা ও মানবিক বিভাগ।
+                </p>
+
+            </div>
+
+
+            <a href="#apply" class="uni-link">
+                আবেদনের জন্য যোগাযোগ করুন
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+             UNIVERSITY 15
+        ================================== -->
+
+        <div
+            class="uni-card"
+            data-category="জেনারেল"
+            data-name="কাসিম বিশ্ববিদ্যালয় qassim university buraydah"
+        >
+
+            <div class="uni-top">
+
+                <div class="uni-logo-wrap">
+                    <span class="logo-fallback" style="display:flex;">
+                        QU
+                    </span>
+                </div>
+
+                <div>
+                    <span class="uni-number">#১৫</span>
+
+                    <h3>
+                        কাসিম বিশ্ববিদ্যালয়
+                    </h3>
+
+                    <p class="uni-en">
+                        Qassim University
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="uni-meta">
+                <span>বুরাইদাহ</span>
+                <span>জেনারেল ও রিসার্চ</span>
+            </div>
+
+
+            <div class="uni-info">
+
+                <h4>অফারকৃত কোর্সসমূহ:</h4>
+
+                <p>
+                    মেডিসিন, ডেন্টিস্ট্রি, ফার্মেসি, ইঞ্জিনিয়ারিং,
+                    কম্পিউটার সায়েন্স, বিজনেস, সায়েন্স ও মানবিক বিভাগ।
+                </p>
+
+            </div>
+
+
+            <a href="#apply" class="uni-link">
+                আবেদনের জন্য যোগাযোগ করুন
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+             UNIVERSITY 16
+        ================================== -->
+
+        <div
+            class="uni-card"
+            data-category="জেনারেল"
+            data-name="মাজমা বিশ্ববিদ্যালয় majmaah university al majmaah"
+        >
+
+            <div class="uni-top">
+
+                <div class="uni-logo-wrap">
+                    <span class="logo-fallback" style="display:flex;">
+                        MU
+                    </span>
+                </div>
+
+                <div>
+                    <span class="uni-number">#১৬</span>
+
+                    <h3>
+                        মাজমা বিশ্ববিদ্যালয়
+                    </h3>
+
+                    <p class="uni-en">
+                        Majmaah University
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="uni-meta">
+                <span>আল-মাজমা</span>
+                <span>জেনারেল</span>
+            </div>
+
+
+            <div class="uni-info">
+
+                <h4>অফারকৃত কোর্সসমূহ:</h4>
+
+                <p>
+                    মেডিসিন, ইঞ্জিনিয়ারিং, কম্পিউটার সায়েন্স,
+                    সায়েন্স, বিজনেস, শিক্ষা, আইন ও মানবিক বিভাগ।
+                </p>
+
+            </div>
+
+
+            <a href="#apply" class="uni-link">
+                আবেদনের জন্য যোগাযোগ করুন
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+             UNIVERSITY 17
+        ================================== -->
+
+        <div
+            class="uni-card"
+            data-category="জেনারেল"
+            data-name="কিং ফয়সাল বিশ্ববিদ্যালয় king faisal university al ahsa hofuf"
+        >
+
+            <div class="uni-top">
+
+                <div class="uni-logo-wrap">
+                    <span class="logo-fallback" style="display:flex;">
+                        KFU
+                    </span>
+                </div>
+
+                <div>
+                    <span class="uni-number">#১৭</span>
+
+                    <h3>
+                        কিং ফয়সাল বিশ্ববিদ্যালয়
+                    </h3>
+
+                    <p class="uni-en">
+                        King Faisal University
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="uni-meta">
+                <span>আল-আহসা</span>
+                <span>জেনারেল ও রিসার্চ</span>
+            </div>
+
+
+            <div class="uni-info">
+
+                <h4>অফারকৃত কোর্সসমূহ:</h4>
+
+                <p>
+                    মেডিসিন, ভেটেরিনারি মেডিসিন, ইঞ্জিনিয়ারিং,
+                    কম্পিউটার সায়েন্স, বিজনেস, কৃষি,
+                    সায়েন্স ও মানবিক বিভাগ।
+                </p>
+
+            </div>
+
+
+            <a href="#apply" class="uni-link">
+                আবেদনের জন্য যোগাযোগ করুন
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+             UNIVERSITY 18
+        ================================== -->
+
+        <div
+            class="uni-card"
+            data-category="জেনারেল"
+            data-name="বিশা বিশ্ববিদ্যালয় university of bisha bisha"
+        >
+
+            <div class="uni-top">
+
+                <div class="uni-logo-wrap">
+                    <span class="logo-fallback" style="display:flex;">
+                        UB
+                    </span>
+                </div>
+
+                <div>
+                    <span class="uni-number">#১৮</span>
+
+                    <h3>
+                        বিশা বিশ্ববিদ্যালয়
+                    </h3>
+
+                    <p class="uni-en">
+                        University of Bisha
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="uni-meta">
+                <span>বিশা</span>
+                <span>জেনারেল ও স্বাস্থ্য</span>
+            </div>
+
+
+            <div class="uni-info">
+
+                <h4>অফারকৃত কোর্সসমূহ:</h4>
+
+                <p>
+                    মেডিসিন, নার্সিং, কম্পিউটার সায়েন্স,
+                    ইঞ্জিনিয়ারিং, সায়েন্স, বিজনেস,
+                    শিক্ষা ও মানবিক বিভাগ।
+                </p>
+
+            </div>
+
+
+            <a href="#apply" class="uni-link">
+                আবেদনের জন্য যোগাযোগ করুন
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+             UNIVERSITY 19
+        ================================== -->
+
+        <div
+            class="uni-card"
+            data-category="জেনারেল"
+            data-name="তাবুক বিশ্ববিদ্যালয় university of tabuk tabuk"
+        >
+
+            <div class="uni-top">
+
+                <div class="uni-logo-wrap">
+                    <span class="logo-fallback" style="display:flex;">
+                        UT
+                    </span>
+                </div>
+
+                <div>
+                    <span class="uni-number">#১৯</span>
+
+                    <h3>
+                        তাবুক বিশ্ববিদ্যালয়
+                    </h3>
+
+                    <p class="uni-en">
+                        University of Tabuk
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="uni-meta">
+                <span>তাবুক</span>
+                <span>জেনারেল ও প্রযুক্তি</span>
+            </div>
+
+
+            <div class="uni-info">
+
+                <h4>অফারকৃত কোর্সসমূহ:</h4>
+
+                <p>
+                    মেডিসিন, ফার্মেসি, ইঞ্জিনিয়ারিং,
+                    কম্পিউটার সায়েন্স, সায়েন্স, বিজনেস,
+                    শিক্ষা ও মানবিক বিভাগ।
+                </p>
+
+            </div>
+
+
+            <a href="#apply" class="uni-link">
+                আবেদনের জন্য যোগাযোগ করুন
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+             UNIVERSITY 20
+        ================================== -->
+
+        <div
+            class="uni-card"
+            data-category="জেনারেল"
+            data-name="জাজান বিশ্ববিদ্যালয় jazan university jazan"
+        >
+
+            <div class="uni-top">
+
+                <div class="uni-logo-wrap">
+                    <span class="logo-fallback" style="display:flex;">
+                        JU
+                    </span>
+                </div>
+
+                <div>
+                    <span class="uni-number">#২০</span>
+
+                    <h3>
+                        জাজান বিশ্ববিদ্যালয়
+                    </h3>
+
+                    <p class="uni-en">
+                        Jazan University
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="uni-meta">
+                <span>জাজান</span>
+                <span>জেনারেল ও মেডিকেল</span>
+            </div>
+
+
+            <div class="uni-info">
+
+                <h4>অফারকৃত কোর্সসমূহ:</h4>
+
+                <p>
+                    মেডিসিন, ডেন্টিস্ট্রি, ফার্মেসি, ইঞ্জিনিয়ারিং,
+                    কম্পিউটার সায়েন্স, সায়েন্স, বিজনেস ও মানবিক বিভাগ।
+                </p>
+
+            </div>
+
+
+            <a href="#apply" class="uni-link">
+                আবেদনের জন্য যোগাযোগ করুন
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+             UNIVERSITY 21
+        ================================== -->
+
+        <div
+            class="uni-card"
+            data-category="জেনারেল"
+            data-name="জেদ্দা বিশ্ববিদ্যালয় university of jeddah jeddah"
+        >
+
+            <div class="uni-top">
+
+                <div class="uni-logo-wrap">
+                    <span class="logo-fallback" style="display:flex;">
+                        UJ
+                    </span>
+                </div>
+
+                <div>
+                    <span class="uni-number">#২১</span>
+
+                    <h3>
+                        জেদ্দা বিশ্ববিদ্যালয়
+                    </h3>
+
+                    <p class="uni-en">
+                        University of Jeddah
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="uni-meta">
+                <span>জেদ্দা</span>
+                <span>জেনারেল ও প্রযুক্তি</span>
+            </div>
+
+
+            <div class="uni-info">
+
+                <h4>অফারকৃত কোর্সসমূহ:</h4>
+
+                <p>
+                    ইঞ্জিনিয়ারিং, কম্পিউটার সায়েন্স, সায়েন্স,
+                    বিজনেস, মেডিসিন, শিক্ষা, আইন ও মানবিক বিভাগ।
+                </p>
+
+            </div>
+
+
+            <a href="#apply" class="uni-link">
+                আবেদনের জন্য যোগাযোগ করুন
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+             UNIVERSITY 22
+        ================================== -->
+
+        <div
+            class="uni-card"
+            data-category="জেনারেল"
+            data-name="হাইল বিশ্ববিদ্যালয় university of hail hail"
+        >
+
+            <div class="uni-top">
+
+                <div class="uni-logo-wrap">
+                    <span class="logo-fallback" style="display:flex;">
+                        UOH
+                    </span>
+                </div>
+
+                <div>
+                    <span class="uni-number">#২২</span>
+
+                    <h3>
+                        হাইল বিশ্ববিদ্যালয়
+                    </h3>
+
+                    <p class="uni-en">
+                        University of Hail
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="uni-meta">
+                <span>হাইল</span>
+                <span>জেনারেল ও স্বাস্থ্য</span>
+            </div>
+
+
+            <div class="uni-info">
+
+                <h4>অফারকৃত কোর্সসমূহ:</h4>
+
+                <p>
+                    মেডিসিন, ফার্মেসি, ইঞ্জিনিয়ারিং,
+                    কম্পিউটার সায়েন্স, সায়েন্স, বিজনেস,
+                    শিক্ষা ও মানবিক বিভাগ।
+                </p>
+
+            </div>
+
+
+            <a href="#apply" class="uni-link">
+                আবেদনের জন্য যোগাযোগ করুন
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+             UNIVERSITY 23
+        ================================== -->
+
+        <div
+            class="uni-card"
+            data-category="জেনারেল"
+            data-name="হাফর আল-বাতিন বিশ্ববিদ্যালয় university of hafr al batin hafr al batin"
+        >
+
+            <div class="uni-top">
+
+                <div class="uni-logo-wrap">
+                    <span class="logo-fallback" style="display:flex;">
+                        UHB
+                    </span>
+                </div>
+
+                <div>
+                    <span class="uni-number">#২৩</span>
+
+                    <h3>
+                        হাফর আল-বাতিন বিশ্ববিদ্যালয়
+                    </h3>
+
+                    <p class="uni-en">
+                        University of Hafr Al Batin
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="uni-meta">
+                <span>হাফর আল-বাতিন</span>
+                <span>ইঞ্জিনিয়ারিং ও জেনারেল</span>
+            </div>
+
+
+            <div class="uni-info">
+
+                <h4>অফারকৃত কোর্সসমূহ:</h4>
+
+                <p>
+                    ইঞ্জিনিয়ারিং, কম্পিউটার সায়েন্স,
+                    সায়েন্স, বিজনেস, মেডিসিন, নার্সিং
+                    ও মানবিক বিভাগ।
+                </p>
+
+            </div>
+
+
+            <a href="#apply" class="uni-link">
+                আবেদনের জন্য যোগাযোগ করুন
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+             UNIVERSITY 24
+        ================================== -->
+
+        <div
+            class="uni-card"
+            data-category="জেনারেল"
+            data-name="শাকরা বিশ্ববিদ্যালয় shaqra university shaqra"
+        >
+
+            <div class="uni-top">
+
+                <div class="uni-logo-wrap">
+                    <span class="logo-fallback" style="display:flex;">
+                        SU
+                    </span>
+                </div>
+
+                <div>
+                    <span class="uni-number">#২৪</span>
+
+                    <h3>
+                        শাকরা বিশ্ববিদ্যালয়
+                    </h3>
+
+                    <p class="uni-en">
+                        Shaqra University
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="uni-meta">
+                <span>শাকরা</span>
+                <span>জেনারেল ও প্রযুক্তি</span>
+            </div>
+
+
+            <div class="uni-info">
+
+                <h4>অফারকৃত কোর্সসমূহ:</h4>
+
+                <p>
+                    ইঞ্জিনিয়ারিং, কম্পিউটার সায়েন্স,
+                    সায়েন্স, বিজনেস, ফার্মেসি,
+                    শিক্ষা ও মানবিক বিভাগ।
+                </p>
+
+            </div>
+
+
+            <a href="#apply" class="uni-link">
+                আবেদনের জন্য যোগাযোগ করুন
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+             UNIVERSITY 25
+        ================================== -->
+
+        <div
+            class="uni-card"
+            data-category="জেনারেল ইসলামিক"
+            data-name="তায়বাহ বিশ্ববিদ্যালয় taibah university madinah"
+        >
+
+            <div class="uni-top">
+
+                <div class="uni-logo-wrap">
+                    <span class="logo-fallback" style="display:flex;">
+                        Taibah
+                    </span>
+                </div>
+
+                <div>
+                    <span class="uni-number">#২৫</span>
+
+                    <h3>
+                        তায়বাহ বিশ্ববিদ্যালয়
+                    </h3>
+
+                    <p class="uni-en">
+                        Taibah University
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="uni-meta">
+                <span>মদিনা</span>
+                <span>জেনারেল ও ইসলামিক</span>
+            </div>
+
+
+            <div class="uni-info">
+
+                <h4>অফারকৃত কোর্সসমূহ:</h4>
+
+                <p>
+                    মেডিসিন, ডেন্টিস্ট্রি, ফার্মেসি, ইঞ্জিনিয়ারিং,
+                    কম্পিউটার সায়েন্স, ইসলামিক স্টাডিজ, আরবি,
+                    বিজনেস ও শিক্ষা।
+                </p>
+
+            </div>
+
+
+            <a href="#apply" class="uni-link">
+                আবেদনের জন্য যোগাযোগ করুন
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+             UNIVERSITY 26
+        ================================== -->
+
+        <div
+            class="uni-card"
+            data-category="জেনারেল"
+            data-name="নাজরান বিশ্ববিদ্যালয় najran university najran"
+        >
+
+            <div class="uni-top">
+
+                <div class="uni-logo-wrap">
+                    <span class="logo-fallback" style="display:flex;">
+                        NU
+                    </span>
+                </div>
+
+                <div>
+                    <span class="uni-number">#২৬</span>
+
+                    <h3>
+                        নাজরান বিশ্ববিদ্যালয়
+                    </h3>
+
+                    <p class="uni-en">
+                        Najran University
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="uni-meta">
+                <span>নাজরান</span>
+                <span>জেনারেল ও মেডিকেল</span>
+            </div>
+
+
+            <div class="uni-info">
+
+                <h4>অফারকৃত কোর্সসমূহ:</h4>
+
+                <p>
+                    মেডিসিন, ডেন্টিস্ট্রি, ফার্মেসি, ইঞ্জিনিয়ারিং,
+                    কম্পিউটার সায়েন্স, সায়েন্স, বিজনেস,
+                    শিক্ষা ও মানবিক বিভাগ।
+                </p>
+
+            </div>
+
+
+            <a href="#apply" class="uni-link">
+                আবেদনের জন্য যোগাযোগ করুন
+            </a>
+
+        </div>
+
+
+    </div>
+    <!-- END uni-grid -->
+
+
+    <!-- =====================================
+         NO RESULTS
+    ====================================== -->
+
+    <div
+        class="no-results"
+        id="noResults"
+        style="display:none;"
+    >
+        <p>
+            দুঃখিত, কোনো বিশ্ববিদ্যালয় খুঁজে পাওয়া যায়নি!
+        </p>
+    </div>
+
+
+</section>
+
+
+<!-- =========================================
+     SEARCH + FILTER JAVASCRIPT
+========================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const searchInput = document.getElementById("uniSearch");
+
+    const cards = document.querySelectorAll(
+        "#uniGrid .uni-card"
+    );
+
+    const noResults = document.getElementById(
+        "noResults"
+    );
+
+    let activeCategory = "all";
+
+
+    /* =========================================
+       TEXT NORMALIZE
+    ========================================== */
+
+    function normalizeText(text) {
+
+        return text
+            .toString()
+            .toLowerCase()
+            .trim()
+            .replace(/\s+/g, " ");
+
+    }
+
+
+    /* =========================================
+       UPDATE UNIVERSITIES
+    ========================================== */
+
+    function updateUniversities() {
+
+        const searchText =
+            normalizeText(searchInput.value);
+
+        let visibleCount = 0;
+
+
+        cards.forEach(function (card) {
+
+            const category =
+                normalizeText(
+                    card.getAttribute("data-category") || ""
+                );
+
+
+            const dataName =
+                normalizeText(
+                    card.getAttribute("data-name") || ""
+                );
+
+
+            const cardText =
+                normalizeText(
+                    card.textContent || ""
+                );
+
+
+            /*
+             * Searchable content
+             */
+            const searchableText =
+                dataName + " " + cardText;
+
+
+            /* =====================================
+               CATEGORY MATCH
+            ===================================== */
+
+            let categoryMatch = false;
+
+
+            if (activeCategory === "all") {
+
+                categoryMatch = true;
+
+            } else {
+
+                categoryMatch = category
+                    .split(/\s+/)
+                    .includes(
+                        normalizeText(activeCategory)
+                    );
+
+            }
+
+
+            /* =====================================
+               SEARCH MATCH
+            ===================================== */
+
+            let searchMatch = true;
+
+
+            if (searchText !== "") {
+
+                const searchWords =
+                    searchText.split(/\s+/);
+
+
+                searchMatch =
+                    searchWords.every(function (word) {
+
+                        return searchableText.includes(word);
+
+                    });
+
+            }
+
+
+            /* =====================================
+               SHOW / HIDE
+            ===================================== */
+
+            if (
+                categoryMatch &&
+                searchMatch
+            ) {
+
+                card.style.display = "";
+
+                visibleCount++;
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+
+        /* =====================================
+           NO RESULT
+        ===================================== */
+
+        if (visibleCount === 0) {
+
+            noResults.style.display = "block";
+
+        } else {
+
+            noResults.style.display = "none";
+
+        }
+
+    }
+
+
+    /* =========================================
+       SEARCH EVENT
+    ========================================== */
+
+    searchInput.addEventListener(
+        "input",
+        function () {
+
+            updateUniversities();
+
+        }
+    );
+
+
+    /* =========================================
+       FILTER FUNCTION
+    ========================================== */
+
+    window.filterUni = function (
+        category,
+        button
+    ) {
+
+        activeCategory = category;
+
+
+        /*
+         * সব button থেকে active সরানো
+         */
+        document
+            .querySelectorAll(".filter-btn")
+            .forEach(function (btn) {
+
+                btn.classList.remove("active");
+
+            });
+
+
+        /*
+         * বর্তমান button active
+         */
+        if (button) {
+
+            button.classList.add("active");
+
+        }
+
+
+        /*
+         * Search + Filter একসাথে update
+         */
+        updateUniversities();
+
+    };
+
+
+    /*
+     * Page load হওয়ার পর
+     */
+    updateUniversities();
+
+});
+
+</script>
   <!-- DOCUMENT CHECKLIST (NEW) -->
   <section id="documents">
     <div class="container">
