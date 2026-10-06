@@ -1,27 +1,997 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>মাদানি স্কলারশিপ হেল্প সেন্টার</title>
-<meta name="description" content="স্কলারশিপ আবেদন, পরামর্শ, ভিসা, অনুবাদ ও সৌদি আরবের উচ্চশিক্ষা সংক্রান্ত সহায়তা।">
-<style>
-:root{--g:#08734f;--gd:#043d2d;--mint:#effaf5;--gold:#c99b35;--ink:#16352b;--muted:#667871;--line:#dfeae5}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,"Noto Sans Bengali",sans-serif;color:var(--ink);line-height:1.7;background:#fff}a{text-decoration:none;color:inherit}.wrap{max-width:1120px;margin:auto;padding:0 20px}header{position:sticky;top:0;z-index:20;background:#ffffffee;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;font-weight:900;color:var(--gd)}.brand img{width:52px;height:52px;object-fit:contain;border-radius:12px}.navlinks{display:flex;gap:22px;font-weight:700}.nav-actions{display:flex;gap:8px}.nav-btn{padding:9px 14px;border-radius:9px;font-weight:800;border:1px solid #bfd4ca;color:var(--gd)}.nav-btn.primary{background:var(--g);color:#fff;border-color:var(--g)}.navlinks a:hover{color:var(--g)}.hero{background:radial-gradient(circle at 85% 20%,#d8f2e7,transparent 35%),linear-gradient(135deg,#effaf5,#fff);padding:78px 0}.heroGrid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}.pill{display:inline-block;padding:7px 14px;border-radius:999px;background:#dff3e9;color:var(--g);font-weight:800}.hero h1{font-size:clamp(36px,5vw,60px);line-height:1.13;margin:18px 0 16px;color:var(--gd)}.hero p{font-size:19px;color:#52675f;max-width:700px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{border:0;border-radius:11px;padding:13px 20px;font-weight:900;cursor:pointer;display:inline-block}.primary{background:var(--g);color:#fff}.secondary{background:#fff;border:1px solid #bfd4ca;color:var(--gd)}.heroCard{background:#fff;border:1px solid var(--line);border-radius:26px;padding:34px;text-align:center;box-shadow:0 25px 70px #053d2d16}.heroCard img{width:min(250px,80%);max-height:250px;object-fit:contain}.heroCard h3{margin:12px 0 4px;color:var(--gd)}section{padding:70px 0}.title{text-align:center;max-width:760px;margin:0 auto 36px}.title h2{font-size:34px;line-height:1.25;margin:0 0 8px;color:var(--gd)}.title p{color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid var(--line);border-radius:18px;padding:24px;background:#fff;transition:.2s}.card:hover{transform:translateY(-3px);box-shadow:0 12px 30px #053d2d0c}.icon{font-size:30px}.card h3{margin:8px 0;color:var(--gd)}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{background:var(--mint);border-radius:18px;padding:24px}.num{display:grid;place-items:center;width:40px;height:40px;background:var(--g);color:#fff;border-radius:50%;font-weight:900}.apply{background:var(--gd);color:#fff}.apply .title h2,.apply .title p{color:#fff}.form{max-width:920px;margin:auto;background:#fff;color:var(--ink);padding:30px;border-radius:22px;box-shadow:0 20px 60px #0002}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}label{font-weight:800;font-size:14px}input,select,textarea{width:100%;margin-top:6px;padding:13px;border:1px solid #cbdcd5;border-radius:10px;font:inherit;background:#fff}textarea{min-height:120px;resize:vertical}.full{grid-column:1/-1}.files{padding:13px;border:1px dashed #9fbeb1;border-radius:10px;background:#f7fbf9}.note{font-size:13px;color:#71827c;margin:10px 0 0}.msg{margin-top:14px;font-weight:800}.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.contact .card{text-align:center}.contact a{color:var(--g);font-weight:800}footer{background:#032c21;color:#d7ebe4;text-align:center;padding:25px}.small{font-size:13px;opacity:.8}@media(max-width:800px){.navlinks,.nav-actions{display:none}.heroGrid,.cards,.steps,.contact,.grid{grid-template-columns:1fr}.full{grid-column:auto}.hero{padding:52px 0}.heroCard{order:-1}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>মাদানি স্কলারশিপ হেল্প সেন্টার</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- RESET & VARIABLES ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --dark-green: #0b3d2e;
+      --medium-green: #1a5c45;
+      --light-green: #e8f0ed;
+      --gold: #c9a84c;
+      --gold-light: #f5e6b8;
+      --text-dark: #1a1a1a;
+      --text-gray: #4a4a4a;
+      --white: #ffffff;
+      --pink: #e84393;
+      --orange: #e67e22;
+      --blue: #2980b9;
+      --border-radius: 12px;
+      --shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    body {
+      font-family: 'Poppins', 'Noto Sans Bengali', sans-serif;
+      color: var(--text-dark);
+      background: #fafafa;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ---------- HEADER ---------- */
+    .navbar {
+      background: var(--dark-green);
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: var(--white);
+      font-size: 1.3rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: all 0.25s;
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--dark-green);
+    }
+
+    .btn-gold:hover {
+      background: #d4b85a;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.4);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .btn-green {
+      background: var(--dark-green);
+      color: var(--white);
+    }
+
+    .btn-green:hover {
+      background: var(--medium-green);
+      transform: translateY(-2px);
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      background: linear-gradient(135deg, var(--dark-green) 0%, #0f4a38 100%);
+      padding: 80px 0 100px;
+      color: var(--white);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: #fafafa;
+      clip-path: ellipse(70% 100% at 50% 100%);
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 720px;
+      margin: 0 auto 36px;
+      opacity: 0.9;
+      line-height: 1.7;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ---------- TRUST BAR ---------- */
+    .trust-bar {
+      background: var(--white);
+      padding: 28px 0;
+      box-shadow: var(--shadow);
+      margin-top: -40px;
+      position: relative;
+      z-index: 10;
+      border-radius: var(--border-radius);
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .trust-bar .container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text-dark);
+    }
+
+    .trust-item .icon {
+      width: 36px;
+      height: 36px;
+      background: var(--light-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+
+    /* ---------- SECTIONS ---------- */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 2rem;
+      color: var(--dark-green);
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: var(--text-gray);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ---------- COURSE CARDS ---------- */
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .course-card {
+      background: var(--white);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .course-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+    }
+
+    .course-card .card-img {
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      position: relative;
+    }
+
+    .course-card .badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--gold);
+      color: var(--dark-green);
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .course-card .card-body {
+      padding: 20px;
+    }
+
+    .course-card h3 {
+      font-size: 1.1rem;
+      color: var(--dark-green);
+      margin-bottom: 8px;
+    }
+
+    .course-card p {
+      font-size: 0.85rem;
+      color: var(--text-gray);
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    .course-card .price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .course-card .price {
+      font-weight: 700;
+      color: var(--dark-green);
+      font-size: 1rem;
+    }
+
+    .course-card .price small {
+      font-weight: 400;
+      color: var(--text-gray);
+      font-size: 0.75rem;
+    }
+
+    .course-card .view-link {
+      color: var(--gold);
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .course-card .view-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Card background colors */
+    .bg-pink { background: linear-gradient(135deg, #fce4ec, #f8bbd0); }
+    .bg-gold { background: linear-gradient(135deg, #fff8e1, #ffe082); }
+    .bg-orange { background: linear-gradient(135deg, #fff3e0, #ffcc80); }
+    .bg-blue { background: linear-gradient(135deg, #e3f2fd, #90caf9); }
+    .bg-teal { background: linear-gradient(135deg, #e0f2f1, #80cbc4); }
+    .bg-purple { background: linear-gradient(135deg, #f3e5f5, #ce93d8); }
+    .bg-green { background: linear-gradient(135deg, #e8f5e9, #a5d6a7); }
+
+    /* ---------- WHY CHOOSE ---------- */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 24px;
+    }
+
+    .why-card {
+      background: var(--white);
+      border-radius: var(--border-radius);
+      padding: 30px 24px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      border: 1px solid #eee;
+    }
+
+    .why-card .icon-circle {
+      width: 60px;
+      height: 60px;
+      background: var(--light-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+      font-size: 1.5rem;
+    }
+
+    .why-card h4 {
+      color: var(--dark-green);
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+    }
+
+    .why-card p {
+      font-size: 0.85rem;
+      color: var(--text-gray);
+    }
+
+    /* ---------- HOW IT WORKS ---------- */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      text-align: center;
+    }
+
+    .step-number {
+      width: 64px;
+      height: 64px;
+      background: var(--dark-green);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 0 auto 20px;
+    }
+
+    .step-card h4 {
+      color: var(--dark-green);
+      margin-bottom: 10px;
+    }
+
+    .step-card p {
+      font-size: 0.9rem;
+      color: var(--text-gray);
+    }
+
+    /* ---------- TOOLS ---------- */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .tool-card {
+      background: var(--white);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid #eee;
+    }
+
+    .tool-card .tool-img {
+      height: 160px;
+      background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+    }
+
+    .tool-card .tool-body {
+      padding: 20px;
+    }
+
+    .tool-card h3 {
+      color: var(--dark-green);
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    .tool-card p {
+      font-size: 0.85rem;
+      color: var(--text-gray);
+      margin-bottom: 14px;
+    }
+
+    .tool-card .launch-link {
+      color: var(--gold);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+
+    .tool-card .launch-link:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------- PRICING ---------- */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .price-card {
+      background: var(--white);
+      border-radius: var(--border-radius);
+      padding: 30px 24px;
+      box-shadow: var(--shadow);
+      border: 2px solid #eee;
+      text-align: center;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+
+    .price-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-4px);
+    }
+
+    .price-card.featured {
+      border-color: var(--gold);
+      background: linear-gradient(180deg, #fffdf5, #ffffff);
+      position: relative;
+    }
+
+    .price-card.featured::before {
+      content: 'Recommended';
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: var(--dark-green);
+      padding: 4px 18px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .price-card h3 {
+      color: var(--dark-green);
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    .price-card .amount {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--dark-green);
+    }
+
+    .price-card .amount small {
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--text-gray);
+    }
+
+    .price-card .pkr {
+      font-size: 0.8rem;
+      color: var(--text-gray);
+      margin-bottom: 20px;
+    }
+
+    .price-card ul {
+      list-style: none;
+      text-align: left;
+      margin: 20px 0;
+      padding: 0;
+    }
+
+    .price-card ul li {
+      padding: 8px 0;
+      font-size: 0.85rem;
+      color: var(--text-gray);
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .price-card ul li::before {
+      content: '✔ ';
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    /* ---------- TRIAL / CTA ---------- */
+    .trial-section {
+      background: linear-gradient(135deg, var(--dark-green), #0f4a38);
+      color: var(--white);
+      text-align: center;
+      padding: 80px 0;
+    }
+
+    .trial-section h2 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .trial-section p {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      opacity: 0.9;
+    }
+
+    .trial-features {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+
+    .trial-features span {
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .trial-features span::before {
+      content: '✦';
+      color: var(--gold);
+    }
+
+    /* ---------- FORM ---------- */
+    .form-box {
+      background: var(--white);
+      border-radius: var(--border-radius);
+      padding: 36px;
+      max-width: 540px;
+      margin: 0 auto;
+      text-align: left;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    }
+
+    .form-box h3 {
+      color: var(--dark-green);
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-family: inherit;
+      transition: border-color 0.2s;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: var(--gold);
+    }
+
+    .form-box .btn {
+      width: 100%;
+      padding: 14px;
+      font-size: 1rem;
+      margin-top: 8px;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: var(--dark-green);
+      color: rgba(255,255,255,0.8);
+      padding: 60px 0 30px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    footer h4 {
+      color: var(--white);
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+
+    footer p,
+    footer li {
+      font-size: 0.85rem;
+      line-height: 1.8;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    footer a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    footer a:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 24px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 900px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero {
+        padding: 60px 0 80px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-bar .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .form-box {
+        padding: 24px;
+      }
+
+      section {
+        padding: 50px 0;
+      }
+    }
+  </style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="#"><img src="assets/logo.jpg" alt="লোগো"><span>মাদানি স্কলারশিপ হেল্প সেন্টার</span></a><nav class="navlinks"><a href="#services">সেবাসমূহ</a><a href="#apply">আবেদন</a><a href="#contact">যোগাযোগ</a></nav><div class="nav-actions"><a class="nav-btn" href="https://wa.me/8801601899945" target="_blank">WhatsApp</a><a class="nav-btn primary" href="#apply">আবেদন করুন</a></div></div></header>
-<main>
-<section class="hero"><div class="wrap heroGrid"><div><span class="pill">🎓 Scholarship • Visa • Consultation</span><h1>স্কলারশিপের আবেদন ও প্রয়োজনীয় সহায়তা—এক জায়গায়</h1><p>সৌদি আরবসহ বিভিন্ন দেশের উচ্চশিক্ষা, স্কলারশিপ, ভিসা, অনুবাদ ও প্রয়োজনীয় কাগজপত্রের বিষয়ে সহজ ও নির্ভরযোগ্য সহায়তা।</p><div class="actions"><a class="btn primary" href="#apply">🎓 স্কলারশিপের জন্য আবেদন করুন</a><a class="btn secondary" href="https://wa.me/8801601899945" target="_blank">💬 WhatsApp</a></div></div><div class="heroCard"><img src="assets/logo.jpg" alt="Madani Scholarship Help Center"><h3>আপনার শিক্ষাযাত্রায় পাশে আছি</h3><div class="small">সহজ আবেদন • ব্যক্তিগত পরামর্শ • দ্রুত যোগাযোগ</div></div></div></section>
-<section id="services"><div class="wrap"><div class="title"><h2>আমাদের সেবাসমূহ</h2><p>আপনার প্রয়োজন অনুযায়ী সঠিক সহায়তা পেতে আবেদন করুন।</p></div><div class="cards">
-<div class="card"><div class="icon">🎓</div><h3>স্কলারশিপ আবেদন</h3><p>বিশ্ববিদ্যালয় ও স্কলারশিপের আবেদন প্রক্রিয়ায় সহায়তা।</p></div><div class="card"><div class="icon">📝</div><h3>শিক্ষা পরামর্শ</h3><p>বিষয়, বিশ্ববিদ্যালয় ও আবেদন সংক্রান্ত গাইডলাইন।</p></div><div class="card"><div class="icon">🛂</div><h3>ভিসা সহায়তা</h3><p>ভিসা আবেদন ও প্রয়োজনীয় কাগজপত্র সম্পর্কে সহায়তা।</p></div><div class="card"><div class="icon">🌐</div><h3>অনুবাদ</h3><p>প্রয়োজনীয় ডকুমেন্টের অনুবাদ ও প্রস্তুতিতে সহায়তা।</p></div><div class="card"><div class="icon">🏥</div><h3>মেডিকেল স্লিপ</h3><p>মেডিকেল সংক্রান্ত প্রক্রিয়ায় প্রয়োজনীয় দিকনির্দেশনা।</p></div><div class="card"><div class="icon">📅</div><h3>Tasheerah Center</h3><p>অ্যাপয়েন্টমেন্ট ও সংশ্লিষ্ট প্রক্রিয়ায় সহায়তা।</p></div></div></div></section>
-<section><div class="wrap"><div class="title"><h2>কীভাবে কাজ করবে?</h2></div><div class="steps"><div class="step"><span class="num">১</span><h3>তথ্য দিন</h3><p>ফর্মে প্রয়োজনীয় তথ্য ও Documents দিন।</p></div><div class="step"><span class="num">২</span><h3>আমরা পাব</h3><p>আপনার আবেদন সরাসরি আমাদের Telegram Channel-এ পৌঁছাবে।</p></div><div class="step"><span class="num">৩</span><h3>আমরা যোগাযোগ করব</h3><p>তথ্য দেখে প্রয়োজনীয় পরামর্শ ও পরবর্তী ধাপ জানানো হবে।</p></div></div></div></section>
-<section id="apply" class="apply"><div class="wrap"><div class="title"><h2>নতুন স্কলারশিপ আবেদন</h2><p>তথ্য পূরণ করুন। Submit করলে আপনার তথ্য ও সংযুক্ত Documents সরাসরি আমাদের Telegram Channel-এ যাবে।</p></div><form class="form" id="applyForm" enctype="multipart/form-data"><div class="grid">
-<div><label>পূর্ণ নাম *</label><input name="name" required></div><div><label>পিতার নাম *</label><input name="father" required></div><div><label>দাদার নাম</label><input name="grandfather"></div><div><label>মায়ের নাম *</label><input name="mother" required></div><div><label>পাসপোর্ট নাম্বার *</label><input name="passport" required></div><div><label>ফোন / WhatsApp *</label><input name="phone" required></div><div><label>Email</label><input type="email" name="email"></div><div><label>সেবা *</label><select name="service" required><option value="">নির্বাচন করুন</option><option>স্কলারশিপ আবেদন</option><option>পরামর্শ</option><option>ভিসা সহায়তা</option><option>অনুবাদ</option><option>মেডিকেল স্লিপ</option><option>Tasheerah Center</option><option>অন্যান্য</option></select></div><div class="full"><label>বার্তা</label><textarea name="message" placeholder="আপনার প্রয়োজন সংক্ষেপে লিখুন"></textarea></div><div class="full"><label>📎 Documents</label><input class="files" type="file" name="documents" multiple accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"><div class="note">সর্বোচ্চ ১০টি ফাইল, প্রতিটি সর্বোচ্চ ২০MB।</div></div></div><button class="btn primary" type="submit" style="margin-top:18px">📤 আবেদন পাঠান</button><div class="msg" id="msg"></div></form></div></section>
-<section id="contact"><div class="wrap"><div class="title"><h2>যোগাযোগ</h2></div><div class="contact"><div class="card"><h3>📞 ফোন / WhatsApp</h3><p><a href="https://wa.me/8801601899945">+8801601899945</a></p></div><div class="card"><h3>✉️ Email</h3><p><a href="mailto:madaniohbd@gmail.com">madaniohbd@gmail.com</a></p></div><div class="card"><h3>💬 যোগাযোগ</h3><p>WhatsApp • Telegram • Imo</p></div></div></div></section>
-</main><footer>© <span id="year"></span> Madani Scholarship Help Center — All Rights Reserved.</footer>
-<script>
-document.getElementById('year').textContent=new Date().getFullYear();
-const form=document.getElementById('applyForm'),msg=document.getElementById('msg');
-form.addEventListener('submit',async e=>{e.preventDefault();msg.textContent='আবেদন পাঠানো হচ্ছে…';msg.style.color='#08734f';try{const r=await fetch('/api/apply',{method:'POST',body:new FormData(form)});const d=await r.json();if(!r.ok||!d.ok)throw new Error(d.message);msg.textContent='✅ '+d.message;form.reset();}catch(err){msg.textContent='❌ '+err.message;msg.style.color='#b42318';}});
-</script>
-</body></html>
+
+  <!-- ===== HEADER ===== -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">মাদানি <span>স্কলারশিপ হেল্প সেন্টার</span></div>
+      <ul class="nav-links">
+        <li><a href="#">হোম</a></li>
+        <li><a href="#">কোর্স</a></li>
+        <li><a href="#">ফ্রি টুলস</a></li>
+        <li><a href="#">মূল্য</a></li>
+        <li><a href="#">যোগাযোগ</a></li>
+      </ul>
+      <a href="#" class="btn btn-gold">ফ্রি ট্রায়াল</a>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container">
+      <h1>অনলাইনে কুরআন শিখুন &amp; আমাদের <span>ইসলামিক এআই চ্যাটবট</span> এর সাথে চ্যাট করুন</h1>
+      <p>সার্টিফাইড পুরুষ ও মহিলা শিক্ষকদের কাছে বিশ্বব্যাপী কুরআন পাঠ, তাজবীদ, হিফজ এবং আরবি শিখুন। এছাড়াও, আমাদের উন্নত ইসলামিক এআই অ্যাসিস্ট্যান্ট ব্যবহার করে কুরআন, হাদিস, ফিকহ এবং ইসলামিক ইতিহাস সম্পর্কে তাৎক্ষণিকভাবে জিজ্ঞাসা করুন।</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn btn-gold">৩ দিনের ফ্রি ট্রায়াল বুক করুন</a>
+        <a href="#" class="btn btn-outline">💬 ইসলামিক এআই চ্যাটবট দেখুন</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUST BAR ===== -->
+  <div class="trust-bar">
+    <div class="container">
+      <div class="trust-item"><span class="icon">🎓</span> সার্টিফাইড শিক্ষক</div>
+      <div class="trust-item"><span class="icon">🌍</span> ১৫+ দেশে সেবা</div>
+      <div class="trust-item"><span class="icon">👨‍🏫</span> পুরুষ ও মহিলা শিক্ষক</div>
+      <div class="trust-item"><span class="icon">✅</span> সনদ ও ইজাযাহ সার্টিফাইড</div>
+    </div>
+  </div>
+
+  <!-- ===== COURSES ===== -->
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>আমাদের বিশেষায়িত কুরআন ও আরবি কোর্স</h2>
+        <p>শিশু এবং প্রাপ্তবয়স্কদের জন্য ১-থেকে-১ অনলাইন প্রোগ্রাম, একেবারে শিক্ষানবিস থেকে উন্নত শিক্ষার্থীদের জন্য।</p>
+      </div>
+      <div class="course-grid">
+        <!-- Card 1 -->
+        <div class="course-card">
+          <div class="card-img bg-pink">
+            <span class="badge">শিক্ষানবিস</span>
+            🌙
+          </div>
+          <div class="card-body">
+            <h3>নূরানী কায়দা ও কুরআন পাঠ</h3>
+            <p>সার্টিফাইড শিক্ষকদের সাথে অনলাইনে নূরানী কায়দা এবং প্রাথমিক নাযিরা কুরআন পাঠ শিখুন।</p>
+            <div class="price-row">
+              <span class="price">$১৭.৮৯ <small>/মাস</small></span>
+              <a href="#" class="view-link">বিস্তারিত →</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="course-card">
+          <div class="card-img bg-gold">
+            <span class="badge">সুপারিশকৃত</span>
+            📖
+          </div>
+          <div class="card-body">
+            <h3>তাজবীদসহ কুরআন</h3>
+            <p>সার্টিফাইড কারীদের সাথে অনলাইনে তাজবীদের নিয়ম শিখুন। সঠিক মাখরিজ ও সুন্দর তিলাওয়াত শিখুন।</p>
+            <div class="price-row">
+              <span class="price">$১৭.৮৯ <small>/মাস</small></span>
+              <a href="#" class="view-link">বিস্তারিত →</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="course-card">
+          <div class="card-img bg-orange">
+            <span class="badge">হিফজ</span>
+            🧑‍🎓
+          </div>
+          <div class="card-body">
+            <h3>কুরআন মুখস্থ (হিফজ)</h3>
+            <p>ইজাযাহপ্রাপ্ত শিক্ষকদের সাথে অনলাইনে কুরআন মুখস্থ করুন। কাঠামোবদ্ধ, ব্যক্তিগতকৃত হিফজ পরিকল্পনা।</p>
+            <div class="price-row">
+              <span class="price">$১৭.৮৯ <small>/মাস</small></span>
+              <a href="#" class="view-link">বিস্তারিত →</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="course-card">
+          <div class="card-img bg-blue">
+            <span class="badge">শিশুদের জন্য</span>
+            🧒
+          </div>
+          <div class="card-body">
+            <h3>শিশুদের জন্য অনলাইন কুরআন ক্লাস</h3>
+            <p>শিশুদের জন্য ইন্টারঅ্যাকটিভ অনলাইন কুরআন পাঠ। গেমিফাইড শিক্ষণ পদ্ধতি এবং শিশু-বান্ধব শিক্ষক।</p>
+            <div class="price-row">
+              <span class="price">$১৭.৮৯ <small>/মাস</small></span>
+              <a href="#" class="view-link">বিস্তারিত →</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="course-card">
+          <div class="card-img bg-teal">
+            <span class="badge">প্রাপ্তবয়স্কদের জন্য</span>
+            👨
+          </div>
+          <div class="card-body">
+            <h3>প্রাপ্তবয়স্কদের জন্য অনলাইন কুরআন ক্লাস</h3>
+            <p>নমনীয় সময়সূচী, ব্যক্তিগত ১-থেকে-১ কল, এবং সার্টিফাইড আলেম। ১০০% গোপনীয়তা নিশ্চিত।</p>
+            <div class="price-row">
+              <span class="price">$১৭.৮৯ <small>/মাস</small></span>
+              <a href="#" class="view-link">বিস্তারিত →</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="course-card">
+          <div class="card-img bg-purple">
+            <span class="badge">আরবি</span>
+            🗣️
+          </div>
+          <div class="card-body">
+            <h3>শিশু ও প্রাপ্তবয়স্কদের জন্য আরবি</h3>
+            <p>মূল আরবি ভাষা (ফুসহা) এবং কুরআনিক আরবি ব্যাকরণ অনলাইনে শিখুন দেশীয় আরবি ভাষী শিক্ষকদের সাথে।</p>
+            <div class="price-row">
+              <span class="price">$১৭.৮৯ <small>/মাস</small></span>
+              <a href="#" class="view-link">বিস্তারিত →</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 7 -->
+        <div class="course-card">
+          <div class="card-img bg-green">
+            <span class="badge">ইসলামিক স্টাডিজ</span>
+            📚
+          </div>
+          <div class="card-body">
+            <h3>তাফসীর ও তারজুমাহ</h3>
+            <p>অনলাইনে তাফসীর এবং তারজুমাহ অধ্যয়ন করুন। আয়াতের অর্থ, ঐতিহাসিক প্রেক্ষাপট গভীরভাবে জানুন।</p>
+            <div class="price-row">
+              <span class="price">$১৭.৮৯ <small>/মাস</small></span>
+              <a href="#" class="view-link">বিস্তারিত →</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 8 -->
+        <div class="course-card">
+          <div class="card-img bg-gold">
+            <span class="badge">হাদিস</span>
+            📜
+          </div>
+          <div class="card-body">
+            <h3>হাদিস / হাদিস বিজ্ঞান</h3>
+            <p>অনলাইনে হাদিস এবং হাদিস বিজ্ঞান শিখুন। সংগ্রহ ইতিহাস এবং প্রমাণীকরণ বিভাগগুলি অধ্যয়ন করুন।</p>
+            <div class="price-row">
+              <span class="price">$১৭.৮৯ <small>/মাস</small></span>
+              <a href="#" class="view-link">বিস্তারিত →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE ===== -->
+  <section style="background: #f5f9f7;">
+    <div class="container">
+      <div class="section-title">
+        <h2>কেন মাদানি স্কলারশিপ হেল্প সেন্টার বেছে নেবেন?</h2>
+        <p>আমরা ওয়েবে সর্বোচ্চ মানের ইসলামিক টিউটরিং প্ল্যাটফর্ম প্রদান করি।</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="icon-circle">🎓</div>
+          <h4>সার্টিফাইড শিক্ষক</h4>
+          <p>আল-আজহার বিশ্ববিদ্যালয় থেকে প্রামাণিক ইজাযাহপ্রাপ্ত অভিজ্ঞ পুরুষ ও মহিলা শিক্ষক।</p>
+        </div>
+        <div class="why-card">
+          <div class="icon-circle">📅</div>
+          <h4>নমনীয় সময়সূচী</h4>
+          <p>স্কুল, কাজ বা স্থানীয় সময় অঞ্চলের সাথে পুরোপুরি মিলে যায় এমন ক্লাসের সময় বেছে নিন।</p>
+        </div>
+        <div class="why-card">
+          <div class="icon-circle">👥</div>
+          <h4>১-থেকে-১ লাইভ পাঠ</h4>
+          <p>ব্যক্তিগত ক্লাস ১০০% মনোযোগ নিশ্চিত করে, শিক্ষার্থীদের ৩ গুণ দ্রুত অগ্রগতি করতে সাহায্য করে।</p>
+        </div>
+        <div class="why-card">
+          <div class="icon-circle">🏷️</div>
+          <h4>সাশ্রয়ী মূল্য</h4>
+          <p>উচ্চ-মানের ইসলামিক শিক্ষা পরিকল্পনা মাত্র USD ৩৫ / মাস থেকে শুরু, কোনো চুক্তি নেই।</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>৩টি সহজ ধাপে এটি কীভাবে কাজ করে</h2>
+        <p>৫ মিনিটেরও কম সময়ে আপনার শেখার যাত্রা শুরু করুন।</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">১</div>
+          <h4>লাইভ নিবন্ধন করুন</h4>
+          <p>আপনার যোগাযোগের তথ্য এবং পছন্দের ক্লাসের সময় সহ ট্রায়াল ফর্মটি পূরণ করুন।</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">২</div>
+          <h4>ফ্রি ট্রায়াল নিন</h4>
+          <p>আমাদের সমন্বয়কারী উপযুক্ত শিক্ষকের সাথে হোয়াটসঅ্যাপে ৩ দিনের ফ্রি ট্রায়াল নির্ধারণ করবেন।</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">৩</div>
+          <h4>শেখা শুরু করুন</h4>
+          <p>একটি নিয়মিত পরিকল্পনা বেছে নিন এবং আপনার ট্যাবলেট বা কম্পিউটার থেকে লাইভ অনলাইন ক্লাস শুরু করুন।</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FREE TOOLS ===== -->
+  <section style="background: #f5f9f7;">
+    <div class="container">
+      <div class="section-title">
+        <h2>বিনামূল্যে ইন্টারঅ্যাকটিভ ইসলামিক টুলস দেখুন</h2>
+        <p>দৈনন্দিন আধ্যাত্মিক অনুশীলন এবং শেখার জন্য তৈরি ওয়েব অ্যাপ্লিকেশন এবং ইন্টারঅ্যাকটিভ ড্যাশবোর্ড। চিরকালের জন্য বিনামূল্যে।</p>
+      </div>
+      <div class="tools-grid">
+        <div class="tool-card">
+          <div class="tool-img">🖌️</div>
+          <div class="tool-body">
+            <h3>আরবি ক্যালিগ্রাফি জেনারেটর</h3>
+            <p>সুন্দর আরবি ক্যালিগ্রাফি অনলাইনে তৈরি করুন। নাম এবং কুরআনিক আয়াতকে ইসলামিক শিল্পে রূপান্তর করুন।</p>
+            <a href="#" class="launch-link">অ্যাপ লঞ্চ করুন ↗</a>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-img">📿</div>
+          <div class="tool-body">
+            <h3>ডিজিটাল তাসবিহ কাউন্টার</h3>
+            <p>এই সুবিধাজনক অনলাইন কাউন্টার দিয়ে আপনার দৈনিক যিকির ট্র্যাক করুন।</p>
+            <a href="#" class="launch-link">অ্যাপ লঞ্চ করুন ↗</a>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-img">🧮</div>
+          <div class="tool-body">
+            <h3>অনলাইন যাকাত ক্যালকুলেটর (২০২৬)</h3>
+           
