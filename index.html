@@ -7,11 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     /* ---------- RESET & VARIABLES ---------- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
       --dark-green: #0b3d2e;
@@ -22,9 +18,6 @@
       --text-dark: #1a1a1a;
       --text-gray: #4a4a4a;
       --white: #ffffff;
-      --pink: #e84393;
-      --orange: #e67e22;
-      --blue: #2980b9;
       --border-radius: 12px;
       --shadow: 0 4px 20px rgba(0,0,0,0.08);
     }
@@ -36,11 +29,7 @@
       line-height: 1.6;
     }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
     /* ---------- HEADER ---------- */
     .navbar {
@@ -50,13 +39,11 @@
       top: 0;
       z-index: 100;
     }
-
     .navbar .container {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-
     .logo {
       color: var(--white);
       font-size: 1.3rem;
@@ -65,17 +52,8 @@
       align-items: center;
       gap: 10px;
     }
-
-    .logo span {
-      color: var(--gold);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      list-style: none;
-    }
-
+    .logo span { color: var(--gold); }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
     .nav-links a {
       color: rgba(255,255,255,0.85);
       text-decoration: none;
@@ -83,10 +61,7 @@
       font-weight: 500;
       transition: color 0.2s;
     }
-
-    .nav-links a:hover {
-      color: var(--gold);
-    }
+    .nav-links a:hover { color: var(--gold); }
 
     .btn {
       display: inline-block;
@@ -100,37 +75,16 @@
       border: none;
       font-family: inherit;
     }
-
-    .btn-gold {
-      background: var(--gold);
-      color: var(--dark-green);
-    }
-
-    .btn-gold:hover {
-      background: #d4b85a;
-      transform: translateY(-2px);
-    }
-
+    .btn-gold { background: var(--gold); color: var(--dark-green); }
+    .btn-gold:hover { background: #d4b85a; transform: translateY(-2px); }
     .btn-outline {
       background: transparent;
       color: var(--white);
       border: 2px solid rgba(255,255,255,0.4);
     }
-
-    .btn-outline:hover {
-      border-color: var(--gold);
-      color: var(--gold);
-    }
-
-    .btn-green {
-      background: var(--dark-green);
-      color: var(--white);
-    }
-
-    .btn-green:hover {
-      background: var(--medium-green);
-      transform: translateY(-2px);
-    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+    .btn-green { background: var(--dark-green); color: var(--white); }
+    .btn-green:hover { background: var(--medium-green); transform: translateY(-2px); }
 
     /* ---------- HERO ---------- */
     .hero {
@@ -141,7 +95,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .hero::after {
       content: '';
       position: absolute;
@@ -152,18 +105,13 @@
       background: #fafafa;
       clip-path: ellipse(70% 100% at 50% 100%);
     }
-
     .hero h1 {
       font-size: 2.8rem;
       font-weight: 700;
       margin-bottom: 20px;
       line-height: 1.3;
     }
-
-    .hero h1 span {
-      color: var(--gold);
-    }
-
+    .hero h1 span { color: var(--gold); }
     .hero p {
       font-size: 1.1rem;
       max-width: 720px;
@@ -171,7 +119,6 @@
       opacity: 0.9;
       line-height: 1.7;
     }
-
     .hero-buttons {
       display: flex;
       gap: 16px;
@@ -192,14 +139,12 @@
       margin-left: auto;
       margin-right: auto;
     }
-
     .trust-bar .container {
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
       gap: 20px;
     }
-
     .trust-item {
       display: flex;
       align-items: center;
@@ -208,7 +153,6 @@
       font-size: 0.9rem;
       color: var(--text-dark);
     }
-
     .trust-item .icon {
       width: 36px;
       height: 36px;
@@ -221,21 +165,13 @@
     }
 
     /* ---------- SECTIONS ---------- */
-    section {
-      padding: 80px 0;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
+    section { padding: 80px 0; }
+    .section-title { text-align: center; margin-bottom: 50px; }
     .section-title h2 {
       font-size: 2rem;
       color: var(--dark-green);
       margin-bottom: 12px;
     }
-
     .section-title p {
       color: var(--text-gray);
       max-width: 600px;
@@ -248,7 +184,6 @@
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 24px;
     }
-
     .service-card {
       background: var(--white);
       border-radius: var(--border-radius);
@@ -257,12 +192,10 @@
       border: 1px solid #eee;
       transition: transform 0.25s, box-shadow 0.25s;
     }
-
     .service-card:hover {
       transform: translateY(-6px);
       box-shadow: 0 12px 32px rgba(0,0,0,0.12);
     }
-
     .service-card .icon-circle {
       width: 60px;
       height: 60px;
@@ -274,26 +207,18 @@
       margin-bottom: 18px;
       font-size: 1.5rem;
     }
-
     .service-card h3 {
       color: var(--dark-green);
       font-size: 1.1rem;
       margin-bottom: 10px;
     }
-
     .service-card p {
       font-size: 0.85rem;
       color: var(--text-gray);
       margin-bottom: 16px;
       line-height: 1.6;
     }
-
-    .service-card ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
+    .service-card ul { list-style: none; padding: 0; margin: 0; }
     .service-card ul li {
       font-size: 0.85rem;
       color: var(--text-gray);
@@ -303,7 +228,6 @@
       align-items: flex-start;
       gap: 8px;
     }
-
     .service-card ul li::before {
       content: '✔';
       color: var(--gold);
@@ -317,7 +241,6 @@
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 24px;
     }
-
     .why-card {
       background: var(--white);
       border-radius: var(--border-radius);
@@ -326,7 +249,6 @@
       box-shadow: var(--shadow);
       border: 1px solid #eee;
     }
-
     .why-card .icon-circle {
       width: 60px;
       height: 60px;
@@ -338,17 +260,12 @@
       margin: 0 auto 18px;
       font-size: 1.5rem;
     }
-
     .why-card h4 {
       color: var(--dark-green);
       margin-bottom: 10px;
       font-size: 1.05rem;
     }
-
-    .why-card p {
-      font-size: 0.85rem;
-      color: var(--text-gray);
-    }
+    .why-card p { font-size: 0.85rem; color: var(--text-gray); }
 
     /* ---------- HOW IT WORKS ---------- */
     .steps-grid {
@@ -357,7 +274,6 @@
       gap: 30px;
       text-align: center;
     }
-
     .step-number {
       width: 64px;
       height: 64px;
@@ -371,22 +287,11 @@
       font-weight: 700;
       margin: 0 auto 20px;
     }
+    .step-card h4 { color: var(--dark-green); margin-bottom: 10px; }
+    .step-card p { font-size: 0.9rem; color: var(--text-gray); }
 
-    .step-card h4 {
-      color: var(--dark-green);
-      margin-bottom: 10px;
-    }
-
-    .step-card p {
-      font-size: 0.9rem;
-      color: var(--text-gray);
-    }
-
-    /* ---------- APPLICATION FORM ---------- */
-    .form-section {
-      background: #f5f9f7;
-    }
-
+    /* ---------- FORM ---------- */
+    .form-section { background: #f5f9f7; }
     .form-box {
       background: var(--white);
       border-radius: var(--border-radius);
@@ -396,24 +301,14 @@
       box-shadow: 0 20px 60px rgba(0,0,0,0.08);
       border: 1px solid #eee;
     }
-
     .form-box h3 {
       color: var(--dark-green);
       text-align: center;
       margin-bottom: 30px;
       font-size: 1.5rem;
     }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .form-group {
-      margin-bottom: 18px;
-    }
-
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .form-group { margin-bottom: 18px; }
     .form-group label {
       display: block;
       font-size: 0.85rem;
@@ -421,11 +316,7 @@
       color: var(--text-dark);
       margin-bottom: 6px;
     }
-
-    .form-group label .required {
-      color: #e74c3c;
-    }
-
+    .form-group label .required { color: #e74c3c; }
     .form-group input,
     .form-group select,
     .form-group textarea {
@@ -439,24 +330,10 @@
       outline: none;
       background: var(--white);
     }
-
     .form-group input:focus,
     .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: var(--gold);
-    }
-
-    .form-group textarea {
-      resize: vertical;
-      min-height: 80px;
-    }
-
-    .form-group small {
-      display: block;
-      font-size: 0.75rem;
-      color: var(--text-gray);
-      margin-top: 4px;
-    }
+    .form-group textarea:focus { border-color: var(--gold); }
+    .form-group textarea { resize: vertical; min-height: 80px; }
 
     .file-upload-box {
       border: 2px dashed #d0d0d0;
@@ -467,33 +344,19 @@
       cursor: pointer;
       position: relative;
     }
-
     .file-upload-box:hover {
       border-color: var(--gold);
       background: #fffdf5;
     }
-
     .file-upload-box input[type="file"] {
       position: absolute;
       inset: 0;
       opacity: 0;
       cursor: pointer;
     }
-
-    .file-upload-box .upload-icon {
-      font-size: 2rem;
-      margin-bottom: 8px;
-    }
-
-    .file-upload-box .upload-text {
-      font-size: 0.85rem;
-      color: var(--text-gray);
-    }
-
-    .file-upload-box .upload-text strong {
-      color: var(--dark-green);
-    }
-
+    .file-upload-box .upload-icon { font-size: 2rem; margin-bottom: 8px; }
+    .file-upload-box .upload-text { font-size: 0.85rem; color: var(--text-gray); }
+    .file-upload-box .upload-text strong { color: var(--dark-green); }
     .file-upload-box .file-name {
       font-size: 0.8rem;
       color: var(--gold);
@@ -509,25 +372,19 @@
       margin-top: 10px;
     }
 
-    /* ---------- TRIAL / CTA ---------- */
+    /* ---------- CTA ---------- */
     .trial-section {
       background: linear-gradient(135deg, var(--dark-green), #0f4a38);
       color: var(--white);
       text-align: center;
       padding: 80px 0;
     }
-
-    .trial-section h2 {
-      font-size: 2rem;
-      margin-bottom: 16px;
-    }
-
+    .trial-section h2 { font-size: 2rem; margin-bottom: 16px; }
     .trial-section p {
       max-width: 600px;
       margin: 0 auto 30px;
       opacity: 0.9;
     }
-
     .trial-features {
       display: flex;
       justify-content: center;
@@ -535,18 +392,13 @@
       flex-wrap: wrap;
       margin-bottom: 36px;
     }
-
     .trial-features span {
       font-size: 0.9rem;
       display: flex;
       align-items: center;
       gap: 8px;
     }
-
-    .trial-features span::before {
-      content: '✦';
-      color: var(--gold);
-    }
+    .trial-features span::before { content: '✦'; color: var(--gold); }
 
     /* ---------- FOOTER ---------- */
     footer {
@@ -554,41 +406,21 @@
       color: rgba(255,255,255,0.8);
       padding: 60px 0 30px;
     }
-
     .footer-grid {
       display: grid;
       grid-template-columns: 2fr 1fr 1fr 1.5fr;
       gap: 40px;
       margin-bottom: 40px;
     }
-
-    footer h4 {
-      color: var(--white);
-      font-size: 1rem;
-      margin-bottom: 16px;
-    }
-
-    footer p,
-    footer li {
-      font-size: 0.85rem;
-      line-height: 1.8;
-    }
-
-    footer ul {
-      list-style: none;
-      padding: 0;
-    }
-
+    footer h4 { color: var(--white); font-size: 1rem; margin-bottom: 16px; }
+    footer p, footer li { font-size: 0.85rem; line-height: 1.8; }
+    footer ul { list-style: none; padding: 0; }
     footer a {
       color: rgba(255,255,255,0.7);
       text-decoration: none;
       transition: color 0.2s;
     }
-
-    footer a:hover {
-      color: var(--gold);
-    }
-
+    footer a:hover { color: var(--gold); }
     .footer-bottom {
       border-top: 1px solid rgba(255,255,255,0.1);
       padding-top: 24px;
@@ -599,48 +431,18 @@
 
     /* ---------- RESPONSIVE ---------- */
     @media (max-width: 900px) {
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .steps-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .nav-links {
-        display: none;
-      }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
     }
-
     @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 1.8rem;
-      }
-
-      .hero {
-        padding: 60px 0 80px;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .trust-bar .container {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .form-box {
-        padding: 24px;
-      }
-
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-
-      section {
-        padding: 50px 0;
-      }
+      .hero h1 { font-size: 1.8rem; }
+      .hero { padding: 60px 0 80px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .trust-bar .container { flex-direction: column; align-items: center; }
+      .form-box { padding: 24px; }
+      .form-row { grid-template-columns: 1fr; }
+      section { padding: 50px 0; }
     }
   </style>
 </head>
@@ -908,7 +710,6 @@
           📌 নিচের যেকোনো ডকুমেন্ট আপনি চাইলে আপলোড করতে পারেন। সব ডকুমেন্ট আপলোড না করলেও আবেদন জমা দেওয়া যাবে। প্রতিটি ফাইল সর্বোচ্চ ২০ এমবি।
         </div>
 
-        <!-- পাসপোর্ট -->
         <div class="form-group">
           <label>🛂 পাসপোর্ট <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
           <div class="file-upload-box">
@@ -919,7 +720,6 @@
           </div>
         </div>
 
-        <!-- এইচএসসি সার্টিফিকেট -->
         <div class="form-group">
           <label>🎓 এইচএসসি সার্টিফিকেট <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
           <div class="file-upload-box">
@@ -930,7 +730,6 @@
           </div>
         </div>
 
-        <!-- এইচএসসি মার্কশিট -->
         <div class="form-group">
           <label>📊 এইচএসসি মার্কশিট <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
           <div class="file-upload-box">
@@ -941,8 +740,17 @@
           </div>
         </div>
 
-        <!-- এসএসসি সার্টিফিকেট -->
         <div class="form-group">
           <label>📜 এসএসসি সার্টিফিকেট <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
           <div class="file-upload-box">
-            <input
+            <input type="file" name="ssc_certificate" accept=".pdf,.jpg,.jpeg,.png" onchange="showFileName(this)">
+            <div class="upload-icon">📎</div>
+            <div class="upload-text">ফাইল নির্বাচন করতে ক্লিক করুন<br><strong>সর্বোচ্চ ২০ এমবি</strong></div>
+            <div class="file-name"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>📈 এসএসসি মার্কশিট <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
+          <div class="file-upload-box">
+            <input type="file" name="ssc_marksheet" accept=".pdf,.jpg,.j
