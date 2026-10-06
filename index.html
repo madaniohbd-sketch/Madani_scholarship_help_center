@@ -242,106 +242,74 @@
       margin: 0 auto;
     }
 
-    /* ---------- COURSE CARDS ---------- */
-    .course-grid {
+    /* ---------- SERVICE CARDS (Universities & Documents) ---------- */
+    .service-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 24px;
     }
 
-    .course-card {
+    .service-card {
       background: var(--white);
       border-radius: var(--border-radius);
-      overflow: hidden;
+      padding: 30px 24px;
       box-shadow: var(--shadow);
+      border: 1px solid #eee;
       transition: transform 0.25s, box-shadow 0.25s;
     }
 
-    .course-card:hover {
+    .service-card:hover {
       transform: translateY(-6px);
       box-shadow: 0 12px 32px rgba(0,0,0,0.12);
     }
 
-    .course-card .card-img {
-      height: 180px;
+    .service-card .icon-circle {
+      width: 60px;
+      height: 60px;
+      background: var(--light-green);
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 3rem;
-      position: relative;
+      margin-bottom: 18px;
+      font-size: 1.5rem;
     }
 
-    .course-card .badge {
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      background: var(--gold);
+    .service-card h3 {
       color: var(--dark-green);
-      padding: 4px 14px;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .course-card .card-body {
-      padding: 20px;
-    }
-
-    .course-card h3 {
       font-size: 1.1rem;
-      color: var(--dark-green);
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
-    .course-card p {
+    .service-card p {
       font-size: 0.85rem;
       color: var(--text-gray);
       margin-bottom: 16px;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
-    .course-card .price-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .service-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
 
-    .course-card .price {
-      font-weight: 700;
-      color: var(--dark-green);
-      font-size: 1rem;
-    }
-
-    .course-card .price small {
-      font-weight: 400;
-      color: var(--text-gray);
-      font-size: 0.75rem;
-    }
-
-    .course-card .view-link {
-      color: var(--gold);
-      font-weight: 600;
+    .service-card ul li {
       font-size: 0.85rem;
-      text-decoration: none;
+      color: var(--text-gray);
+      padding: 6px 0;
+      border-bottom: 1px solid #f0f0f0;
       display: flex;
-      align-items: center;
-      gap: 4px;
+      align-items: flex-start;
+      gap: 8px;
     }
 
-    .course-card .view-link:hover {
-      text-decoration: underline;
+    .service-card ul li::before {
+      content: '✔';
+      color: var(--gold);
+      font-weight: 700;
+      flex-shrink: 0;
     }
-
-    /* Card background colors */
-    .bg-pink { background: linear-gradient(135deg, #fce4ec, #f8bbd0); }
-    .bg-gold { background: linear-gradient(135deg, #fff8e1, #ffe082); }
-    .bg-orange { background: linear-gradient(135deg, #fff3e0, #ffcc80); }
-    .bg-blue { background: linear-gradient(135deg, #e3f2fd, #90caf9); }
-    .bg-teal { background: linear-gradient(135deg, #e0f2f1, #80cbc4); }
-    .bg-purple { background: linear-gradient(135deg, #f3e5f5, #ce93d8); }
-    .bg-green { background: linear-gradient(135deg, #e8f5e9, #a5d6a7); }
 
     /* ---------- WHY CHOOSE ---------- */
     .why-grid {
@@ -414,198 +382,32 @@
       color: var(--text-gray);
     }
 
-    /* ---------- TOOLS ---------- */
-    .tools-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 24px;
+    /* ---------- APPLICATION FORM ---------- */
+    .form-section {
+      background: #f5f9f7;
     }
 
-    .tool-card {
-      background: var(--white);
-      border-radius: var(--border-radius);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      border: 1px solid #eee;
-    }
-
-    .tool-card .tool-img {
-      height: 160px;
-      background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.5rem;
-    }
-
-    .tool-card .tool-body {
-      padding: 20px;
-    }
-
-    .tool-card h3 {
-      color: var(--dark-green);
-      font-size: 1.1rem;
-      margin-bottom: 8px;
-    }
-
-    .tool-card p {
-      font-size: 0.85rem;
-      color: var(--text-gray);
-      margin-bottom: 14px;
-    }
-
-    .tool-card .launch-link {
-      color: var(--gold);
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-decoration: none;
-    }
-
-    .tool-card .launch-link:hover {
-      text-decoration: underline;
-    }
-
-    /* ---------- PRICING ---------- */
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 24px;
-    }
-
-    .price-card {
-      background: var(--white);
-      border-radius: var(--border-radius);
-      padding: 30px 24px;
-      box-shadow: var(--shadow);
-      border: 2px solid #eee;
-      text-align: center;
-      transition: border-color 0.25s, transform 0.25s;
-    }
-
-    .price-card:hover {
-      border-color: var(--gold);
-      transform: translateY(-4px);
-    }
-
-    .price-card.featured {
-      border-color: var(--gold);
-      background: linear-gradient(180deg, #fffdf5, #ffffff);
-      position: relative;
-    }
-
-    .price-card.featured::before {
-      content: 'Recommended';
-      position: absolute;
-      top: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--gold);
-      color: var(--dark-green);
-      padding: 4px 18px;
-      border-radius: 20px;
-      font-size: 0.7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-
-    .price-card h3 {
-      color: var(--dark-green);
-      font-size: 1.1rem;
-      margin-bottom: 8px;
-    }
-
-    .price-card .amount {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--dark-green);
-    }
-
-    .price-card .amount small {
-      font-size: 0.85rem;
-      font-weight: 400;
-      color: var(--text-gray);
-    }
-
-    .price-card .pkr {
-      font-size: 0.8rem;
-      color: var(--text-gray);
-      margin-bottom: 20px;
-    }
-
-    .price-card ul {
-      list-style: none;
-      text-align: left;
-      margin: 20px 0;
-      padding: 0;
-    }
-
-    .price-card ul li {
-      padding: 8px 0;
-      font-size: 0.85rem;
-      color: var(--text-gray);
-      border-bottom: 1px solid #f0f0f0;
-    }
-
-    .price-card ul li::before {
-      content: '✔ ';
-      color: var(--gold);
-      font-weight: 700;
-    }
-
-    /* ---------- TRIAL / CTA ---------- */
-    .trial-section {
-      background: linear-gradient(135deg, var(--dark-green), #0f4a38);
-      color: var(--white);
-      text-align: center;
-      padding: 80px 0;
-    }
-
-    .trial-section h2 {
-      font-size: 2rem;
-      margin-bottom: 16px;
-    }
-
-    .trial-section p {
-      max-width: 600px;
-      margin: 0 auto 30px;
-      opacity: 0.9;
-    }
-
-    .trial-features {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      margin-bottom: 36px;
-    }
-
-    .trial-features span {
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .trial-features span::before {
-      content: '✦';
-      color: var(--gold);
-    }
-
-    /* ---------- FORM ---------- */
     .form-box {
       background: var(--white);
       border-radius: var(--border-radius);
-      padding: 36px;
-      max-width: 540px;
+      padding: 40px;
+      max-width: 800px;
       margin: 0 auto;
-      text-align: left;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+      border: 1px solid #eee;
     }
 
     .form-box h3 {
       color: var(--dark-green);
       text-align: center;
-      margin-bottom: 24px;
+      margin-bottom: 30px;
+      font-size: 1.5rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
     }
 
     .form-group {
@@ -620,8 +422,13 @@
       margin-bottom: 6px;
     }
 
+    .form-group label .required {
+      color: #e74c3c;
+    }
+
     .form-group input,
-    .form-group select {
+    .form-group select,
+    .form-group textarea {
       width: 100%;
       padding: 12px 16px;
       border: 2px solid #e0e0e0;
@@ -630,18 +437,76 @@
       font-family: inherit;
       transition: border-color 0.2s;
       outline: none;
+      background: var(--white);
     }
 
     .form-group input:focus,
-    .form-group select:focus {
+    .form-group select:focus,
+    .form-group textarea:focus {
       border-color: var(--gold);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .form-group small {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--text-gray);
+      margin-top: 4px;
+    }
+
+    .file-upload-box {
+      border: 2px dashed #d0d0d0;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      transition: border-color 0.2s, background 0.2s;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .file-upload-box:hover {
+      border-color: var(--gold);
+      background: #fffdf5;
+    }
+
+    .file-upload-box input[type="file"] {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .file-upload-box .upload-icon {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .file-upload-box .upload-text {
+      font-size: 0.85rem;
+      color: var(--text-gray);
+    }
+
+    .file-upload-box .upload-text strong {
+      color: var(--dark-green);
+    }
+
+    .file-upload-box .file-name {
+      font-size: 0.8rem;
+      color: var(--gold);
+      margin-top: 6px;
+      font-weight: 600;
+      word-break: break-all;
     }
 
     .form-box .btn {
       width: 100%;
       padding: 14px;
       font-size: 1rem;
-      margin-top: 8px;
+      margin-top: 10px;
     }
 
     /* ---------- FOOTER ---------- */
@@ -730,6 +595,10 @@
         padding: 24px;
       }
 
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
       section {
         padding: 50px 0;
       }
@@ -744,23 +613,23 @@
       <div class="logo">মাদানি <span>স্কলারশিপ হেল্প সেন্টার</span></div>
       <ul class="nav-links">
         <li><a href="#">হোম</a></li>
-        <li><a href="#">কোর্স</a></li>
-        <li><a href="#">ফ্রি টুলস</a></li>
-        <li><a href="#">মূল্য</a></li>
+        <li><a href="#">সেবাসমূহ</a></li>
+        <li><a href="#">কাগজপত্র</a></li>
+        <li><a href="#">আবেদন ফরম</a></li>
         <li><a href="#">যোগাযোগ</a></li>
       </ul>
-      <a href="#" class="btn btn-gold">ফ্রি ট্রায়াল</a>
+      <a href="#apply" class="btn btn-gold">আবেদন করুন</a>
     </div>
   </header>
 
   <!-- ===== HERO ===== -->
   <section class="hero">
     <div class="container">
-      <h1>অনলাইনে কুরআন শিখুন &amp; আমাদের <span>ইসলামিক এআই চ্যাটবট</span> এর সাথে চ্যাট করুন</h1>
-      <p>সার্টিফাইড পুরুষ ও মহিলা শিক্ষকদের কাছে বিশ্বব্যাপী কুরআন পাঠ, তাজবীদ, হিফজ এবং আরবি শিখুন। এছাড়াও, আমাদের উন্নত ইসলামিক এআই অ্যাসিস্ট্যান্ট ব্যবহার করে কুরআন, হাদিস, ফিকহ এবং ইসলামিক ইতিহাস সম্পর্কে তাৎক্ষণিকভাবে জিজ্ঞাসা করুন।</p>
+      <h1>সৌদি আরবের বিশ্ববিদ্যালয়ে <span>ভর্তির জন্য সম্পূর্ণ সহায়তা</span></h1>
+      <p>মাদানি স্কলারশিপ হেল্প সেন্টার সৌদি আরবের বিভিন্ন বিশ্ববিদ্যালয়ে আবেদনের জন্য প্রয়োজনীয় কাগজপত্র প্রস্তুত, আবেদন প্রক্রিয়া এবং সম্পূর্ণ গাইডলাইন প্রদান করে। আমরা আপনার স্বপ্ন পূরণের পথে পাশে আছি।</p>
       <div class="hero-buttons">
-        <a href="#" class="btn btn-gold">৩ দিনের ফ্রি ট্রায়াল বুক করুন</a>
-        <a href="#" class="btn btn-outline">💬 ইসলামিক এআই চ্যাটবট দেখুন</a>
+        <a href="#apply" class="btn btn-gold">এখনই আবেদন করুন</a>
+        <a href="#services" class="btn btn-outline">📋 সেবাসমূহ দেখুন</a>
       </div>
     </div>
   </section>
@@ -768,140 +637,100 @@
   <!-- ===== TRUST BAR ===== -->
   <div class="trust-bar">
     <div class="container">
-      <div class="trust-item"><span class="icon">🎓</span> সার্টিফাইড শিক্ষক</div>
-      <div class="trust-item"><span class="icon">🌍</span> ১৫+ দেশে সেবা</div>
-      <div class="trust-item"><span class="icon">👨‍🏫</span> পুরুষ ও মহিলা শিক্ষক</div>
-      <div class="trust-item"><span class="icon">✅</span> সনদ ও ইজাযাহ সার্টিফাইড</div>
+      <div class="trust-item"><span class="icon">🎓</span> অভিজ্ঞ পরামর্শক</div>
+      <div class="trust-item"><span class="icon">🌍</span> সৌদি আরবের বিশ্ববিদ্যালয়</div>
+      <div class="trust-item"><span class="icon">📄</span> কাগজপত্র প্রস্তুত</div>
+      <div class="trust-item"><span class="icon">✅</span> ১০০% বিশ্বস্ত সেবা</div>
     </div>
   </div>
 
-  <!-- ===== COURSES ===== -->
-  <section>
+  <!-- ===== SERVICES (Universities & Documents) ===== -->
+  <section id="services">
     <div class="container">
       <div class="section-title">
-        <h2>আমাদের বিশেষায়িত কুরআন ও আরবি কোর্স</h2>
-        <p>শিশু এবং প্রাপ্তবয়স্কদের জন্য ১-থেকে-১ অনলাইন প্রোগ্রাম, একেবারে শিক্ষানবিস থেকে উন্নত শিক্ষার্থীদের জন্য।</p>
+        <h2>সৌদি বিশ্ববিদ্যালয়ে আবেদনের জন্য আমাদের সেবাসমূহ</h2>
+        <p>আমরা সৌদি আরবের বিভিন্ন বিশ্ববিদ্যালয়ে ভর্তির জন্য প্রয়োজনীয় সকল কাগজপত্র প্রস্তুত এবং আবেদন প্রক্রিয়ায় সহায়তা করি।</p>
       </div>
-      <div class="course-grid">
-        <!-- Card 1 -->
-        <div class="course-card">
-          <div class="card-img bg-pink">
-            <span class="badge">শিক্ষানবিস</span>
-            🌙
-          </div>
-          <div class="card-body">
-            <h3>নূরানী কায়দা ও কুরআন পাঠ</h3>
-            <p>সার্টিফাইড শিক্ষকদের সাথে অনলাইনে নূরানী কায়দা এবং প্রাথমিক নাযিরা কুরআন পাঠ শিখুন।</p>
-            <div class="price-row">
-              <span class="price">$১৭.৮৯ <small>/মাস</small></span>
-              <a href="#" class="view-link">বিস্তারিত →</a>
-            </div>
-          </div>
+      <div class="service-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="icon-circle">🏛️</div>
+          <h3>বিশ্ববিদ্যালয় নির্বাচন</h3>
+          <p>আপনার যোগ্যতা ও আগ্রহ অনুযায়ী সৌদি আরবের সেরা বিশ্ববিদ্যালয় নির্বাচনে সহায়তা।</p>
+          <ul>
+            <li>উম্মুল কুরা বিশ্ববিদ্যালয়</li>
+            <li>ইসলামিক বিশ্ববিদ্যালয় মদিনা</li>
+            <li>কিং সৌদ বিশ্ববিদ্যালয়</li>
+            <li>কিং আব্দুল আজিজ বিশ্ববিদ্যালয়</li>
+            <li>ইমাম মুহাম্মদ ইবনে সৌদ বিশ্ববিদ্যালয়</li>
+          </ul>
         </div>
-        <!-- Card 2 -->
-        <div class="course-card">
-          <div class="card-img bg-gold">
-            <span class="badge">সুপারিশকৃত</span>
-            📖
-          </div>
-          <div class="card-body">
-            <h3>তাজবীদসহ কুরআন</h3>
-            <p>সার্টিফাইড কারীদের সাথে অনলাইনে তাজবীদের নিয়ম শিখুন। সঠিক মাখরিজ ও সুন্দর তিলাওয়াত শিখুন।</p>
-            <div class="price-row">
-              <span class="price">$১৭.৮৯ <small>/মাস</small></span>
-              <a href="#" class="view-link">বিস্তারিত →</a>
-            </div>
-          </div>
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="icon-circle">📄</div>
+          <h3>প্রয়োজনীয় কাগজপত্র প্রস্তুত</h3>
+          <p>আবেদনের জন্য প্রয়োজনীয় সকল ডকুমেন্ট প্রস্তুত ও যাচাইকরণে সম্পূর্ণ সহায়তা।</p>
+          <ul>
+            <li>পাসপোর্ট ও জন্মনিবন্ধন</li>
+            <li>শিক্ষাগত সনদ ও মার্কশিট</li>
+            <li>অনুবাদ ও সত্যায়ন</li>
+            <li>পুলিশ ক্লিয়ারেন্স</li>
+            <li>মেডিকেল রিপোর্ট</li>
+            <li>ছবি ও ফরম পূরণ</li>
+          </ul>
         </div>
-        <!-- Card 3 -->
-        <div class="course-card">
-          <div class="card-img bg-orange">
-            <span class="badge">হিফজ</span>
-            🧑‍🎓
-          </div>
-          <div class="card-body">
-            <h3>কুরআন মুখস্থ (হিফজ)</h3>
-            <p>ইজাযাহপ্রাপ্ত শিক্ষকদের সাথে অনলাইনে কুরআন মুখস্থ করুন। কাঠামোবদ্ধ, ব্যক্তিগতকৃত হিফজ পরিকল্পনা।</p>
-            <div class="price-row">
-              <span class="price">$১৭.৮৯ <small>/মাস</small></span>
-              <a href="#" class="view-link">বিস্তারিত →</a>
-            </div>
-          </div>
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="icon-circle">🎁</div>
+          <h3>যে সুযোগ-সুবিধা পাবেন</h3>
+          <p>সৌদি বিশ্ববিদ্যালয়ে ভর্তি হলে যে সকল সুযোগ-সুবিধা পাবেন।</p>
+          <ul>
+            <li>সম্পূর্ণ বিনামূল্যে শিক্ষা</li>
+            <li>মাসিক উপবৃত্তি</li>
+            <li>বিনামূল্যে আবাসন</li>
+            <li>চিকিৎসা সুবিধা</li>
+            <li>খাবার ও পরিবহন</li>
+            <li>উচ্চ মানের শিক্ষা</li>
+          </ul>
         </div>
-        <!-- Card 4 -->
-        <div class="course-card">
-          <div class="card-img bg-blue">
-            <span class="badge">শিশুদের জন্য</span>
-            🧒
-          </div>
-          <div class="card-body">
-            <h3>শিশুদের জন্য অনলাইন কুরআন ক্লাস</h3>
-            <p>শিশুদের জন্য ইন্টারঅ্যাকটিভ অনলাইন কুরআন পাঠ। গেমিফাইড শিক্ষণ পদ্ধতি এবং শিশু-বান্ধব শিক্ষক।</p>
-            <div class="price-row">
-              <span class="price">$১৭.৮৯ <small>/মাস</small></span>
-              <a href="#" class="view-link">বিস্তারিত →</a>
-            </div>
-          </div>
+        <!-- Service 4 -->
+        <div class="service-card">
+          <div class="icon-circle">✈️</div>
+          <h3>ভিসা ও ভ্রমণ সহায়তা</h3>
+          <p>ভিসা প্রক্রিয়া, টিকিট বুকিং এবং সৌদি আরবে পৌঁছানোর পর গাইডলাইন।</p>
+          <ul>
+            <li>ভিসা আবেদন প্রক্রিয়া</li>
+            <li>টিকিট বুকিং সহায়তা</li>
+            <li>এয়ারপোর্ট রিসিভ</li>
+            <li>বিশ্ববিদ্যালয়ে ভর্তি সহায়তা</li>
+            <li>স্থানীয় গাইডলাইন</li>
+          </ul>
         </div>
-        <!-- Card 5 -->
-        <div class="course-card">
-          <div class="card-img bg-teal">
-            <span class="badge">প্রাপ্তবয়স্কদের জন্য</span>
-            👨
-          </div>
-          <div class="card-body">
-            <h3>প্রাপ্তবয়স্কদের জন্য অনলাইন কুরআন ক্লাস</h3>
-            <p>নমনীয় সময়সূচী, ব্যক্তিগত ১-থেকে-১ কল, এবং সার্টিফাইড আলেম। ১০০% গোপনীয়তা নিশ্চিত।</p>
-            <div class="price-row">
-              <span class="price">$১৭.৮৯ <small>/মাস</small></span>
-              <a href="#" class="view-link">বিস্তারিত →</a>
-            </div>
-          </div>
+        <!-- Service 5 -->
+        <div class="service-card">
+          <div class="icon-circle">📝</div>
+          <h3>আবেদন প্রক্রিয়া</h3>
+          <p>অনলাইন আবেদন থেকে শুরু করে ভর্তি নিশ্চিতকরণ পর্যন্ত সম্পূর্ণ প্রক্রিয়া।</p>
+          <ul>
+            <li>অনলাইন ফরম পূরণ</li>
+            <li>ডকুমেন্ট আপলোড</li>
+            <li>আবেদন ফি পরিশোধ</li>
+            <li>ইন্টারভিউ প্রস্তুতি</li>
+            <li>ভর্তি নিশ্চিতকরণ</li>
+          </ul>
         </div>
-        <!-- Card 6 -->
-        <div class="course-card">
-          <div class="card-img bg-purple">
-            <span class="badge">আরবি</span>
-            🗣️
-          </div>
-          <div class="card-body">
-            <h3>শিশু ও প্রাপ্তবয়স্কদের জন্য আরবি</h3>
-            <p>মূল আরবি ভাষা (ফুসহা) এবং কুরআনিক আরবি ব্যাকরণ অনলাইনে শিখুন দেশীয় আরবি ভাষী শিক্ষকদের সাথে।</p>
-            <div class="price-row">
-              <span class="price">$১৭.৮৯ <small>/মাস</small></span>
-              <a href="#" class="view-link">বিস্তারিত →</a>
-            </div>
-          </div>
-        </div>
-        <!-- Card 7 -->
-        <div class="course-card">
-          <div class="card-img bg-green">
-            <span class="badge">ইসলামিক স্টাডিজ</span>
-            📚
-          </div>
-          <div class="card-body">
-            <h3>তাফসীর ও তারজুমাহ</h3>
-            <p>অনলাইনে তাফসীর এবং তারজুমাহ অধ্যয়ন করুন। আয়াতের অর্থ, ঐতিহাসিক প্রেক্ষাপট গভীরভাবে জানুন।</p>
-            <div class="price-row">
-              <span class="price">$১৭.৮৯ <small>/মাস</small></span>
-              <a href="#" class="view-link">বিস্তারিত →</a>
-            </div>
-          </div>
-        </div>
-        <!-- Card 8 -->
-        <div class="course-card">
-          <div class="card-img bg-gold">
-            <span class="badge">হাদিস</span>
-            📜
-          </div>
-          <div class="card-body">
-            <h3>হাদিস / হাদিস বিজ্ঞান</h3>
-            <p>অনলাইনে হাদিস এবং হাদিস বিজ্ঞান শিখুন। সংগ্রহ ইতিহাস এবং প্রমাণীকরণ বিভাগগুলি অধ্যয়ন করুন।</p>
-            <div class="price-row">
-              <span class="price">$১৭.৮৯ <small>/মাস</small></span>
-              <a href="#" class="view-link">বিস্তারিত →</a>
-            </div>
-          </div>
+        <!-- Service 6 -->
+        <div class="service-card">
+          <div class="icon-circle">💬</div>
+          <h3>২৪/৭ পরামর্শ সেবা</h3>
+          <p>যেকোনো প্রশ্ন বা সমস্যার জন্য আমাদের সাথে যোগাযোগ করুন।</p>
+          <ul>
+            <li>হোয়াটসঅ্যাপ সাপোর্ট</li>
+            <li>ফোন কল সাপোর্ট</li>
+            <li>ইমেইল সাপোর্ট</li>
+            <li>ব্যক্তিগত পরামর্শ</li>
+            <li>অনলাইন মিটিং</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -912,28 +741,28 @@
     <div class="container">
       <div class="section-title">
         <h2>কেন মাদানি স্কলারশিপ হেল্প সেন্টার বেছে নেবেন?</h2>
-        <p>আমরা ওয়েবে সর্বোচ্চ মানের ইসলামিক টিউটরিং প্ল্যাটফর্ম প্রদান করি।</p>
+        <p>আমরা সৌদি আরবের বিশ্ববিদ্যালয়ে ভর্তির জন্য সর্বোচ্চ মানের সেবা প্রদান করি।</p>
       </div>
       <div class="why-grid">
         <div class="why-card">
           <div class="icon-circle">🎓</div>
-          <h4>সার্টিফাইড শিক্ষক</h4>
-          <p>আল-আজহার বিশ্ববিদ্যালয় থেকে প্রামাণিক ইজাযাহপ্রাপ্ত অভিজ্ঞ পুরুষ ও মহিলা শিক্ষক।</p>
+          <h4>অভিজ্ঞ পরামর্শক</h4>
+          <p>দীর্ঘ বছরের অভিজ্ঞতা সম্পন্ন পরামর্শক দল আপনার আবেদন প্রক্রিয়ায় সহায়তা করবে।</p>
         </div>
         <div class="why-card">
           <div class="icon-circle">📅</div>
-          <h4>নমনীয় সময়সূচী</h4>
-          <p>স্কুল, কাজ বা স্থানীয় সময় অঞ্চলের সাথে পুরোপুরি মিলে যায় এমন ক্লাসের সময় বেছে নিন।</p>
+          <h4>সময়মতো সেবা</h4>
+          <p>নির্ধারিত সময়ের মধ্যে আপনার সকল কাগজপত্র ও আবেদন প্রস্তুত করা হবে।</p>
         </div>
         <div class="why-card">
           <div class="icon-circle">👥</div>
-          <h4>১-থেকে-১ লাইভ পাঠ</h4>
-          <p>ব্যক্তিগত ক্লাস ১০০% মনোযোগ নিশ্চিত করে, শিক্ষার্থীদের ৩ গুণ দ্রুত অগ্রগতি করতে সাহায্য করে।</p>
+          <h4>ব্যক্তিগত মনোযোগ</h4>
+          <p>প্রতিটি আবেদনকারীকে আলাদাভাবে গুরুত্ব দিয়ে সেবা প্রদান করা হয়।</p>
         </div>
         <div class="why-card">
           <div class="icon-circle">🏷️</div>
           <h4>সাশ্রয়ী মূল্য</h4>
-          <p>উচ্চ-মানের ইসলামিক শিক্ষা পরিকল্পনা মাত্র USD ৩৫ / মাস থেকে শুরু, কোনো চুক্তি নেই।</p>
+          <p>উচ্চ-মানের সেবা সাশ্রয়ী মূল্যে প্রদান করা হয়, কোনো লুকানো খরচ নেই।</p>
         </div>
       </div>
     </div>
@@ -943,55 +772,166 @@
   <section>
     <div class="container">
       <div class="section-title">
-        <h2>৩টি সহজ ধাপে এটি কীভাবে কাজ করে</h2>
-        <p>৫ মিনিটেরও কম সময়ে আপনার শেখার যাত্রা শুরু করুন।</p>
+        <h2>৩টি সহজ ধাপে আবেদন করুন</h2>
+        <p>৫ মিনিটেরও কম সময়ে আপনার আবেদন প্রক্রিয়া শুরু করুন।</p>
       </div>
       <div class="steps-grid">
         <div class="step-card">
           <div class="step-number">১</div>
-          <h4>লাইভ নিবন্ধন করুন</h4>
-          <p>আপনার যোগাযোগের তথ্য এবং পছন্দের ক্লাসের সময় সহ ট্রায়াল ফর্মটি পূরণ করুন।</p>
+          <h4>ফরম পূরণ করুন</h4>
+          <p>নিচের আবেদন ফরমটি পূরণ করে আপনার প্রয়োজনীয় তথ্য ও ডকুমেন্ট আপলোড করুন।</p>
         </div>
         <div class="step-card">
           <div class="step-number">২</div>
-          <h4>ফ্রি ট্রায়াল নিন</h4>
-          <p>আমাদের সমন্বয়কারী উপযুক্ত শিক্ষকের সাথে হোয়াটসঅ্যাপে ৩ দিনের ফ্রি ট্রায়াল নির্ধারণ করবেন।</p>
+          <h4>ডকুমেন্ট যাচাই</h4>
+          <p>আমাদের পরামর্শক দল আপনার ডকুমেন্ট যাচাই করে প্রয়োজনীয় পরামর্শ প্রদান করবে।</p>
         </div>
         <div class="step-card">
           <div class="step-number">৩</div>
-          <h4>শেখা শুরু করুন</h4>
-          <p>একটি নিয়মিত পরিকল্পনা বেছে নিন এবং আপনার ট্যাবলেট বা কম্পিউটার থেকে লাইভ অনলাইন ক্লাস শুরু করুন।</p>
+          <h4>আবেদন জমা দিন</h4>
+          <p>আমরা আপনার পক্ষ থেকে বিশ্ববিদ্যালয়ে আবেদন জমা দিয়ে সম্পূর্ণ প্রক্রিয়া সম্পন্ন করব।</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== FREE TOOLS ===== -->
-  <section style="background: #f5f9f7;">
+  <!-- ===== APPLICATION FORM ===== -->
+  <section id="apply" class="form-section">
     <div class="container">
       <div class="section-title">
-        <h2>বিনামূল্যে ইন্টারঅ্যাকটিভ ইসলামিক টুলস দেখুন</h2>
-        <p>দৈনন্দিন আধ্যাত্মিক অনুশীলন এবং শেখার জন্য তৈরি ওয়েব অ্যাপ্লিকেশন এবং ইন্টারঅ্যাকটিভ ড্যাশবোর্ড। চিরকালের জন্য বিনামূল্যে।</p>
+        <h2>আবেদন ফরম</h2>
+        <p>নিচের ফরমটি পূরণ করে আপনার আবেদন শুরু করুন। সকল তথ্য গোপন রাখা হবে।</p>
       </div>
-      <div class="tools-grid">
-        <div class="tool-card">
-          <div class="tool-img">🖌️</div>
-          <div class="tool-body">
-            <h3>আরবি ক্যালিগ্রাফি জেনারেটর</h3>
-            <p>সুন্দর আরবি ক্যালিগ্রাফি অনলাইনে তৈরি করুন। নাম এবং কুরআনিক আয়াতকে ইসলামিক শিল্পে রূপান্তর করুন।</p>
-            <a href="#" class="launch-link">অ্যাপ লঞ্চ করুন ↗</a>
+      <form class="form-box" action="#" method="POST" enctype="multipart/form-data">
+        <h3>ব্যক্তিগত তথ্য</h3>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">নাম <span class="required">*</span></label>
+            <input type="text" id="name" name="name" placeholder="আপনার পূর্ণ নাম" required>
+          </div>
+          <div class="form-group">
+            <label for="father_name">পিতার নাম <span class="required">*</span></label>
+            <input type="text" id="father_name" name="father_name" placeholder="পিতার নাম" required>
           </div>
         </div>
-        <div class="tool-card">
-          <div class="tool-img">📿</div>
-          <div class="tool-body">
-            <h3>ডিজিটাল তাসবিহ কাউন্টার</h3>
-            <p>এই সুবিধাজনক অনলাইন কাউন্টার দিয়ে আপনার দৈনিক যিকির ট্র্যাক করুন।</p>
-            <a href="#" class="launch-link">অ্যাপ লঞ্চ করুন ↗</a>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="mother_name">মাতার নাম <span class="required">*</span></label>
+            <input type="text" id="mother_name" name="mother_name" placeholder="মাতার নাম" required>
+          </div>
+          <div class="form-group">
+            <label for="grandfather_name">দাদার নাম (অপশনাল)</label>
+            <input type="text" id="grandfather_name" name="grandfather_name" placeholder="দাদার নাম">
           </div>
         </div>
-        <div class="tool-card">
-          <div class="tool-img">🧮</div>
-          <div class="tool-body">
-            <h3>অনলাইন যাকাত ক্যালকুলেটর (২০২৬)</h3>
-           
+
+        <div class="form-group">
+          <label for="address">ঠিকানা <span class="required">*</span></label>
+          <textarea id="address" name="address" placeholder="আপনার সম্পূর্ণ ঠিকানা লিখুন" required></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="passport">পাসপোর্ট নাম্বার <span class="required">*</span></label>
+            <input type="text" id="passport" name="passport" placeholder="পাসপোর্ট নাম্বার" required>
+          </div>
+          <div class="form-group">
+            <label for="mobile">মোবাইল নাম্বার <span class="required">*</span></label>
+            <input type="tel" id="mobile" name="mobile" placeholder="০১৬০১৮৯৯৯৫৬" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">ইমেইল <span class="required">*</span></label>
+          <input type="email" id="email" name="email" placeholder="madaniohbd@gmail.com" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="previous_service">আগে সার্ভিস নিয়েছে কি না? <span class="required">*</span></label>
+            <select id="previous_service" name="previous_service" required>
+              <option value="">-- নির্বাচন করুন --</option>
+              <option value="yes">হ্যাঁ</option>
+              <option value="no">না</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="payment_method">কিসের মাধ্যমে পেমেন্ট করেছে? <span class="required">*</span></label>
+            <select id="payment_method" name="payment_method" required>
+              <option value="">-- নির্বাচন করুন --</option>
+              <option value="bikash">বিকাশ</option>
+              <option value="nagad">নগদ</option>
+              <option value="rocket">রকেট</option>
+              <option value="bank">ব্যাংক</option>
+            </select>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 30px;">ডকুমেন্ট আপলোড (সর্বোচ্চ ২০ এমবি প্রতিটি)</h3>
+
+        <div class="form-group">
+          <label>ডকুমেন্ট ১ <span class="required">*</span></label>
+          <div class="file-upload-box">
+            <input type="file" name="document1" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" onchange="showFileName(this)">
+            <div class="upload-icon">📎</div>
+            <div class="upload-text">ফাইল নির্বাচন করতে ক্লিক করুন বা ড্র্যাগ করুন<br><strong>সর্বোচ্চ ২০ এমবি</strong></div>
+            <div class="file-name"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>ডকুমেন্ট ২ <span class="required">*</span></label>
+          <div class="file-upload-box">
+            <input type="file" name="document2" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" onchange="showFileName(this)">
+            <div class="upload-icon">📎</div>
+            <div class="upload-text">ফাইল নির্বাচন করতে ক্লিক করুন বা ড্র্যাগ করুন<br><strong>সর্বোচ্চ ২০ এমবি</strong></div>
+            <div class="file-name"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>ডকুমেন্ট ৩ <span class="required">*</span></label>
+          <div class="file-upload-box">
+            <input type="file" name="document3" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" onchange="showFileName(this)">
+            <div class="upload-icon">📎</div>
+            <div class="upload-text">ফাইল নির্বাচন করতে ক্লিক করুন বা ড্র্যাগ করুন<br><strong>সর্বোচ্চ ২০ এমবি</strong></div>
+            <div class="file-name"></div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-green">আবেদন জমা দিন</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT / CTA ===== -->
+  <section class="trial-section">
+    <div class="container">
+      <h2>আজই যোগাযোগ করুন</h2>
+      <p>সৌদি আরবের বিশ্ববিদ্যালয়ে ভর্তির জন্য যেকোনো প্রশ্ন বা সহায়তার জন্য আমাদের সাথে যোগাযোগ করুন।</p>
+      <div class="trial-features">
+        <span>📞 ০১৬০১৮৯৯৯৫৬</span>
+        <span>✉️ madaniohbd@gmail.com</span>
+      </div>
+      <a href="tel:01601899956" class="btn btn-gold">এখনই কল করুন</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>মাদানি স্কলারশিপ হেল্প সেন্টার</h4>
+          <p>আমরা সৌদি আরবের বিভিন্ন বিশ্ববিদ্যালয়ে ভর্তির জন্য প্রয়োজনীয় কাগজপত্র প্রস্তুত, আবেদন প্রক্রিয়া এবং সম্পূর্ণ গাইডলাইন প্রদান করি।</p>
+        </div>
+        <div>
+          <h4>দ্রুত লিংক</h4>
+          <ul>
+            <li><a href="#">হোম</a></li>
+            <li><a href="#services">সেবাসমূহ</a></li>
+            <li><a href="#apply">আবেদন ফরম</a></li>
+            <li><a href="#">যোগাযোগ</a></li>
+         
