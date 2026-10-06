@@ -32,10 +32,10 @@
     /* HEADER */
     .navbar { background: var(--dark-green); padding: 16px 0; position: sticky; top: 0; z-index: 100; }
     .navbar .container { display: flex; justify-content: space-between; align-items: center; }
-    .logo { color: var(--white); font-size: 1.2rem; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+    .logo { color: var(--white); font-size: 1.3rem; font-weight: 700; display: flex; align-items: center; gap: 10px; }
     .logo span { color: var(--gold); }
-    .nav-links { display: flex; gap: 24px; list-style: none; }
-    .nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
     .nav-links a:hover { color: var(--gold); }
 
     .btn {
@@ -56,6 +56,8 @@
     .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
     .btn-green { background: var(--dark-green); color: var(--white); }
     .btn-green:hover { background: var(--medium-green); transform: translateY(-2px); }
+    .btn-wa { background: #25D366; color: #fff; }
+    .btn-wa:hover { background: #1ebe5a; transform: translateY(-2px); }
 
     /* HERO */
     .hero {
@@ -75,9 +77,9 @@
       background: #fafafa;
       clip-path: ellipse(70% 100% at 50% 100%);
     }
-    .hero h1 { font-size: 2.6rem; font-weight: 700; margin-bottom: 20px; line-height: 1.3; }
+    .hero h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 20px; line-height: 1.3; }
     .hero h1 span { color: var(--gold); }
-    .hero p { font-size: 1.05rem; max-width: 720px; margin: 0 auto 36px; opacity: 0.9; line-height: 1.7; }
+    .hero p { font-size: 1.1rem; max-width: 720px; margin: 0 auto 36px; opacity: 0.9; line-height: 1.7; }
     .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
     /* TRUST BAR */
@@ -94,7 +96,7 @@
       margin-right: auto;
     }
     .trust-bar .container { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; }
-    .trust-item { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.88rem; color: var(--text-dark); }
+    .trust-item { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.9rem; color: var(--text-dark); }
     .trust-item .icon {
       width: 36px; height: 36px;
       background: var(--light-green);
@@ -107,19 +109,19 @@
     section { padding: 80px 0; }
     .section-title { text-align: center; margin-bottom: 50px; }
     .section-title h2 { font-size: 2rem; color: var(--dark-green); margin-bottom: 12px; }
-    .section-title p { color: var(--text-gray); max-width: 640px; margin: 0 auto; }
+    .section-title p { color: var(--text-gray); max-width: 600px; margin: 0 auto; }
 
     /* UNIVERSITY GRID */
     .uni-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 20px;
     }
 
     .uni-card {
       background: var(--white);
       border-radius: var(--border-radius);
-      padding: 22px 20px 22px 26px;
+      padding: 22px 20px;
       box-shadow: var(--shadow);
       border: 1px solid #eee;
       transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
@@ -130,7 +132,8 @@
     .uni-card::before {
       content: '';
       position: absolute;
-      top: 0; left: 0;
+      top: 0;
+      left: 0;
       width: 4px;
       height: 100%;
       background: var(--gold);
@@ -160,23 +163,15 @@
       color: var(--dark-green);
       font-size: 1rem;
       font-weight: 700;
-      margin-bottom: 4px;
+      margin-bottom: 10px;
       line-height: 1.4;
-    }
-
-    .uni-card h3 .bn-name {
-      display: block;
-      color: var(--text-gray);
-      font-size: 0.85rem;
-      font-weight: 500;
-      margin-top: 2px;
     }
 
     .uni-card .uni-info {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
-      margin: 10px 0;
+      margin-bottom: 10px;
     }
 
     .uni-card .tag {
@@ -236,6 +231,104 @@
       gap: 8px;
     }
     .service-card ul li::before { content: '✔'; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+
+    /* ADDITIONAL SERVICES (আবেদের সেবা সমূহ) */
+    .extra-services {
+      background: #f5f9f7;
+    }
+    .extra-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .extra-card {
+      background: var(--white);
+      border-radius: var(--border-radius);
+      padding: 28px 22px;
+      box-shadow: var(--shadow);
+      border: 1px solid #eee;
+      transition: transform 0.25s, box-shadow 0.25s;
+      border-left: 5px solid var(--gold);
+    }
+    .extra-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+    }
+    .extra-card .icon-circle {
+      width: 50px; height: 50px;
+      background: var(--light-green);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 14px;
+      font-size: 1.3rem;
+    }
+    .extra-card h3 { color: var(--dark-green); font-size: 1rem; margin-bottom: 8px; font-weight: 700; }
+    .extra-card p { font-size: 0.85rem; color: var(--text-gray); line-height: 1.6; }
+    .extra-card .badge {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.7rem;
+      background: #fff3e0;
+      color: #b8651a;
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-weight: 600;
+    }
+
+    /* CONTACT SECTION */
+    .contact-section {
+      background: var(--white);
+      padding: 60px 0;
+      text-align: center;
+      border-top: 1px solid #e0e8e4;
+    }
+    .contact-section h2 {
+      color: var(--dark-green);
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+    }
+    .contact-section p {
+      color: var(--text-gray);
+      max-width: 600px;
+      margin: 0 auto 24px;
+      font-size: 0.95rem;
+    }
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #25D366;
+      color: #fff;
+      padding: 16px 40px;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+      margin-bottom: 16px;
+    }
+    .contact-btn:hover {
+      background: #1ebe5a;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.45);
+    }
+    .contact-btn .wa-icon {
+      font-size: 1.4rem;
+    }
+    .contact-note {
+      font-size: 0.85rem;
+      color: var(--text-gray);
+    }
+    .contact-note a {
+      color: var(--dark-green);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .contact-note a:hover {
+      color: var(--gold);
+      text-decoration: underline;
+    }
 
     /* WHY CHOOSE */
     .why-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px; }
@@ -361,13 +454,14 @@
       .nav-links { display: none; }
     }
     @media (max-width: 600px) {
-      .hero h1 { font-size: 1.7rem; }
+      .hero h1 { font-size: 1.8rem; }
       .hero { padding: 60px 0 80px; }
       .footer-grid { grid-template-columns: 1fr; }
       .trust-bar .container { flex-direction: column; align-items: center; }
       .form-box { padding: 24px; }
       .form-row { grid-template-columns: 1fr; }
       section { padding: 50px 0; }
+      .contact-btn { font-size: 0.95rem; padding: 14px 28px; }
     }
   </style>
 </head>
@@ -381,7 +475,9 @@
         <li><a href="#">হোম</a></li>
         <li><a href="#universities">বিশ্ববিদ্যালয়</a></li>
         <li><a href="#services">সেবাসমূহ</a></li>
+        <li><a href="#extra-services">আবেদের সেবা</a></li>
         <li><a href="#apply">আবেদন ফরম</a></li>
+        <li><a href="#contact">যোগাযোগ</a></li>
       </ul>
       <a href="#apply" class="btn btn-gold">আবেদন করুন</a>
     </div>
@@ -414,14 +510,14 @@
     <div class="container">
       <div class="section-title">
         <h2>সৌদি আরবের ২৪টি বিশ্ববিদ্যালয়</h2>
-        <p>নিচে সৌদি আরবের সব পাবলিক বিশ্ববিদ্যালয়ের সম্পূর্ণ তালিকা (বাংলা + ইংরেজি নাম), অবস্থান, লেভেল এবং বিশেষ নোট।</p>
+        <p>নিচে সৌদি আরবের সব পাবলিক বিশ্ববিদ্যালয়ের সম্পূর্ণ তালিকা, অবস্থান, লেভেল এবং বিশেষ নোট দেওয়া হলো।</p>
       </div>
 
       <div class="uni-grid">
 
         <div class="uni-card">
           <div class="uni-number">১</div>
-          <h3>King Abdulaziz University (KAU)<span class="bn-name">কিং আব্দুল আজিজ বিশ্ববিদ্যালয়</span></h3>
+          <h3>King Abdulaziz University (KAU)</h3>
           <div class="uni-info">
             <span class="tag">📍 Jeddah</span>
             <span class="tag level">Bachelor / Master / PhD</span>
@@ -431,7 +527,7 @@
 
         <div class="uni-card">
           <div class="uni-number">২</div>
-          <h3>King Saud University (KSU)<span class="bn-name">কিং সৌদ বিশ্ববিদ্যালয়</span></h3>
+          <h3>King Saud University (KSU)</h3>
           <div class="uni-info">
             <span class="tag">📍 Riyadh</span>
             <span class="tag level">Master / PhD (কিছু ক্ষেত্রে Bachelor)</span>
@@ -441,7 +537,7 @@
 
         <div class="uni-card">
           <div class="uni-number">৩</div>
-          <h3>King Fahd University of Petroleum &amp; Minerals (KFUPM)<span class="bn-name">কিং ফাহদ পেট্রোলিয়াম ও মিনারেলস বিশ্ববিদ্যালয়</span></h3>
+          <h3>King Fahd University of Petroleum &amp; Minerals (KFUPM)</h3>
           <div class="uni-info">
             <span class="tag">📍 Dhahran</span>
             <span class="tag level">Master / PhD</span>
@@ -451,7 +547,7 @@
 
         <div class="uni-card">
           <div class="uni-number">৪</div>
-          <h3>Islamic University of Madinah<span class="bn-name">ইসলামিক বিশ্ববিদ্যালয় মদিনা</span></h3>
+          <h3>Islamic University of Madinah</h3>
           <div class="uni-info">
             <span class="tag">📍 Madinah</span>
             <span class="tag level">Bachelor / Master / PhD</span>
@@ -461,7 +557,7 @@
 
         <div class="uni-card">
           <div class="uni-number">৫</div>
-          <h3>Imam Muhammad ibn Saud Islamic University<span class="bn-name">ইমাম মুহাম্মদ ইবনে সৌদ ইসলামিক বিশ্ববিদ্যালয়</span></h3>
+          <h3>Imam Muhammad ibn Saud Islamic University</h3>
           <div class="uni-info">
             <span class="tag">📍 Riyadh</span>
             <span class="tag level">Bachelor / Master / PhD</span>
@@ -471,7 +567,7 @@
 
         <div class="uni-card">
           <div class="uni-number">৬</div>
-          <h3>Umm Al-Qura University<span class="bn-name">উম্মুল কুরা বিশ্ববিদ্যালয়</span></h3>
+          <h3>Umm Al-Qura University</h3>
           <div class="uni-info">
             <span class="tag">📍 Makkah</span>
             <span class="tag level">Bachelor / Master / PhD</span>
@@ -481,7 +577,7 @@
 
         <div class="uni-card">
           <div class="uni-number">৭</div>
-          <h3>King Faisal University<span class="bn-name">কিং ফয়সাল বিশ্ববিদ্যালয়</span></h3>
+          <h3>King Faisal University</h3>
           <div class="uni-info">
             <span class="tag">📍 Al Ahsa</span>
             <span class="tag level">Bachelor / Master</span>
@@ -491,7 +587,7 @@
 
         <div class="uni-card">
           <div class="uni-number">৮</div>
-          <h3>King Khalid University<span class="bn-name">কিং খালিদ বিশ্ববিদ্যালয়</span></h3>
+          <h3>King Khalid University</h3>
           <div class="uni-info">
             <span class="tag">📍 Abha</span>
             <span class="tag level">Bachelor / Master</span>
@@ -501,7 +597,7 @@
 
         <div class="uni-card">
           <div class="uni-number">৯</div>
-          <h3>Qassim University<span class="bn-name">কাসিম বিশ্ববিদ্যালয়</span></h3>
+          <h3>Qassim University</h3>
           <div class="uni-info">
             <span class="tag">📍 Qassim</span>
             <span class="tag level">Bachelor / Master</span>
@@ -511,7 +607,7 @@
 
         <div class="uni-card">
           <div class="uni-number">১০</div>
-          <h3>Princess Nourah bint Abdulrahman University (PNU)<span class="bn-name">প্রিন্সেস নুরাহ বিনতে আব্দুলরহমান বিশ্ববিদ্যালয়</span></h3>
+          <h3>Princess Nourah bint Abdulrahman University (PNU)</h3>
           <div class="uni-info">
             <span class="tag">📍 Riyadh</span>
             <span class="tag level">Bachelor / Master</span>
@@ -521,7 +617,7 @@
 
         <div class="uni-card">
           <div class="uni-number">১১</div>
-          <h3>University of Bisha<span class="bn-name">বিশা বিশ্ববিদ্যালয়</span></h3>
+          <h3>University of Bisha</h3>
           <div class="uni-info">
             <span class="tag">📍 Bisha</span>
             <span class="tag level">Bachelor</span>
@@ -531,7 +627,7 @@
 
         <div class="uni-card">
           <div class="uni-number">১২</div>
-          <h3>University of Jeddah<span class="bn-name">জেদ্দা বিশ্ববিদ্যালয়</span></h3>
+          <h3>University of Jeddah</h3>
           <div class="uni-info">
             <span class="tag">📍 Jeddah</span>
             <span class="tag level">Bachelor / Master</span>
@@ -541,7 +637,7 @@
 
         <div class="uni-card">
           <div class="uni-number">১৩</div>
-          <h3>University of Hafr Al-Batin<span class="bn-name">হাফর আল-বাতিন বিশ্ববিদ্যালয়</span></h3>
+          <h3>University of Hafr Al-Batin</h3>
           <div class="uni-info">
             <span class="tag">📍 Hafr Al-Batin</span>
             <span class="tag level">Bachelor</span>
@@ -551,7 +647,7 @@
 
         <div class="uni-card">
           <div class="uni-number">১৪</div>
-          <h3>Taif University<span class="bn-name">তায়েফ বিশ্ববিদ্যালয়</span></h3>
+          <h3>Taif University</h3>
           <div class="uni-info">
             <span class="tag">📍 Taif</span>
             <span class="tag level">Bachelor / Master</span>
@@ -561,7 +657,7 @@
 
         <div class="uni-card">
           <div class="uni-number">১৫</div>
-          <h3>Taibah University<span class="bn-name">তাইবাহ বিশ্ববিদ্যালয়</span></h3>
+          <h3>Taibah University</h3>
           <div class="uni-info">
             <span class="tag">📍 Madinah</span>
             <span class="tag level">Bachelor / Master</span>
@@ -571,7 +667,7 @@
 
         <div class="uni-card">
           <div class="uni-number">১৬</div>
-          <h3>University of Hail<span class="bn-name">হাইল বিশ্ববিদ্যালয়</span></h3>
+          <h3>University of Hail</h3>
           <div class="uni-info">
             <span class="tag">📍 Hail</span>
             <span class="tag level">Bachelor</span>
@@ -581,7 +677,7 @@
 
         <div class="uni-card">
           <div class="uni-number">১৭</div>
-          <h3>Jazan University<span class="bn-name">জাজান বিশ্ববিদ্যালয়</span></h3>
+          <h3>Jazan University</h3>
           <div class="uni-info">
             <span class="tag">📍 Jazan</span>
             <span class="tag level">Bachelor / Master</span>
@@ -591,7 +687,7 @@
 
         <div class="uni-card">
           <div class="uni-number">১৮</div>
-          <h3>Jouf University<span class="bn-name">জউফ বিশ্ববিদ্যালয়</span></h3>
+          <h3>Jouf University</h3>
           <div class="uni-info">
             <span class="tag">📍 Al Jouf</span>
             <span class="tag level">Bachelor</span>
@@ -601,7 +697,7 @@
 
         <div class="uni-card">
           <div class="uni-number">১৯</div>
-          <h3>Al-Baha University<span class="bn-name">আল-বাহা বিশ্ববিদ্যালয়</span></h3>
+          <h3>Al-Baha University</h3>
           <div class="uni-info">
             <span class="tag">📍 Al-Baha</span>
             <span class="tag level">Bachelor</span>
@@ -611,7 +707,7 @@
 
         <div class="uni-card">
           <div class="uni-number">২০</div>
-          <h3>University of Tabuk<span class="bn-name">তাবুক বিশ্ববিদ্যালয়</span></h3>
+          <h3>University of Tabuk</h3>
           <div class="uni-info">
             <span class="tag">📍 Tabuk</span>
             <span class="tag level">Bachelor / Master</span>
@@ -621,7 +717,7 @@
 
         <div class="uni-card">
           <div class="uni-number">২১</div>
-          <h3>Najran University<span class="bn-name">নাজরান বিশ্ববিদ্যালয়</span></h3>
+          <h3>Najran University</h3>
           <div class="uni-info">
             <span class="tag">📍 Najran</span>
             <span class="tag level">Bachelor</span>
@@ -631,7 +727,7 @@
 
         <div class="uni-card">
           <div class="uni-number">২২</div>
-          <h3>Northern Border University<span class="bn-name">নর্দার্ন বর্ডার বিশ্ববিদ্যালয়</span></h3>
+          <h3>Northern Border University</h3>
           <div class="uni-info">
             <span class="tag">📍 Arar</span>
             <span class="tag level">Bachelor</span>
@@ -641,7 +737,7 @@
 
         <div class="uni-card">
           <div class="uni-number">২৩</div>
-          <h3>Prince Sattam bin Abdulaziz University<span class="bn-name">প্রিন্স সাত্তাম বিন আব্দুলআজিজ বিশ্ববিদ্যালয়</span></h3>
+          <h3>Prince Sattam bin Abdulaziz University</h3>
           <div class="uni-info">
             <span class="tag">📍 Al Kharj</span>
             <span class="tag level">Bachelor / Master</span>
@@ -651,7 +747,7 @@
 
         <div class="uni-card">
           <div class="uni-number">২৪</div>
-          <h3>Imam Abdulrahman bin Faisal University<span class="bn-name">ইমাম আব্দুলরহমান বিন ফয়সাল বিশ্ববিদ্যালয়</span></h3>
+          <h3>Imam Abdulrahman bin Faisal University</h3>
           <div class="uni-info">
             <span class="tag">📍 Dammam</span>
             <span class="tag level">Bachelor / Master</span>
@@ -659,29 +755,4 @@
           <p><strong>নোট:</strong> Medical ও Science সাবজেক্টে ভালো।</p>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services" style="background: #f5f9f7;">
-    <div class="container">
-      <div class="section-title">
-        <h2>আমাদের সেবাসমূহ</h2>
-        <p>আমরা সৌদি আরবের বিভিন্ন বিশ্ববিদ্যালয়ে ভর্তির জন্য প্রয়োজনীয় সকল কাগজপত্র প্রস্তুত এবং আবেদন প্রক্রিয়ায় সহায়তা করি।</p>
-      </div>
-      <div class="service-grid">
-        <div class="service-card">
-          <div class="icon-circle">📄</div>
-          <h3>প্রয়োজনীয় কাগজপত্র প্রস্তুত</h3>
-          <p>আবেদনের জন্য প্রয়োজনীয় সকল ডকুমেন্ট প্রস্তুত ও যাচাইকরণে সম্পূর্ণ সহায়তা।</p>
-          <ul>
-            <li>পাসপোর্ট ও জন্মনিবন্ধন</li>
-            <li>শিক্ষাগত সনদ ও মার্কশিট</li>
-            <li>অনুবাদ ও সত্যায়ন</li>
-            <li>পুলিশ ক্লিয়ারেন্স</li>
-            <li>মেডিকেল রিপোর্ট</li>
-            <li>ছবি ও ফরম পূরণ</li>
-          </ul>
-        </div>
-        <div class="service
+      </
