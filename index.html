@@ -1,117 +1,948 @@
-<h3 style="margin-top: 30px; color: var(--dark-green);">ডকুমেন্ট আপলোড <span style="font-size:0.8rem; font-weight:400; color:#888;">(সবগুলো অপশনাল)</span></h3>
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>মাদানি স্কলারশিপ হেল্প সেন্টার</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- RESET & VARIABLES ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<div style="background: #fff8e1; border-left: 4px solid var(--gold); padding: 12px 16px; border-radius: 6px; font-size: 0.85rem; color: #6b5a1e; margin-bottom: 20px;">
-  📌 নিচের যেকোনো ডকুমেন্ট আপনি চাইলে আপলোড করতে পারেন। সব ডকুমেন্ট আপলোড না করলেও আবেদন জমা দেওয়া যাবে। প্রতিটি ফাইল সর্বোচ্চ ২০ এমবি।
-</div>
+    :root {
+      --dark-green: #0b3d2e;
+      --medium-green: #1a5c45;
+      --light-green: #e8f0ed;
+      --gold: #c9a84c;
+      --gold-light: #f5e6b8;
+      --text-dark: #1a1a1a;
+      --text-gray: #4a4a4a;
+      --white: #ffffff;
+      --pink: #e84393;
+      --orange: #e67e22;
+      --blue: #2980b9;
+      --border-radius: 12px;
+      --shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
 
-<!-- পাসপোর্ট -->
-<div class="form-group">
-  <label>🛂 পাসপোর্ট <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
-  <div class="file-upload-box">
-    <input type="file" name="passport_file" accept=".pdf,.jpg,.jpeg,.png" onchange="showFileName(this)">
-    <div class="upload-icon">📎</div>
-    <div class="upload-text">ফাইল নির্বাচন করতে ক্লিক করুন<br><strong>সর্বোচ্চ ২০ এমবি</strong></div>
-    <div class="file-name"></div>
+    body {
+      font-family: 'Poppins', 'Noto Sans Bengali', sans-serif;
+      color: var(--text-dark);
+      background: #fafafa;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ---------- HEADER ---------- */
+    .navbar {
+      background: var(--dark-green);
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: var(--white);
+      font-size: 1.3rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: all 0.25s;
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--dark-green);
+    }
+
+    .btn-gold:hover {
+      background: #d4b85a;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.4);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .btn-green {
+      background: var(--dark-green);
+      color: var(--white);
+    }
+
+    .btn-green:hover {
+      background: var(--medium-green);
+      transform: translateY(-2px);
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      background: linear-gradient(135deg, var(--dark-green) 0%, #0f4a38 100%);
+      padding: 80px 0 100px;
+      color: var(--white);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: #fafafa;
+      clip-path: ellipse(70% 100% at 50% 100%);
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 720px;
+      margin: 0 auto 36px;
+      opacity: 0.9;
+      line-height: 1.7;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ---------- TRUST BAR ---------- */
+    .trust-bar {
+      background: var(--white);
+      padding: 28px 0;
+      box-shadow: var(--shadow);
+      margin-top: -40px;
+      position: relative;
+      z-index: 10;
+      border-radius: var(--border-radius);
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .trust-bar .container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text-dark);
+    }
+
+    .trust-item .icon {
+      width: 36px;
+      height: 36px;
+      background: var(--light-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+
+    /* ---------- SECTIONS ---------- */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 2rem;
+      color: var(--dark-green);
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: var(--text-gray);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ---------- SERVICE CARDS ---------- */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: var(--border-radius);
+      padding: 30px 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid #eee;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+    }
+
+    .service-card .icon-circle {
+      width: 60px;
+      height: 60px;
+      background: var(--light-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      font-size: 1.5rem;
+    }
+
+    .service-card h3 {
+      color: var(--dark-green);
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: 0.85rem;
+      color: var(--text-gray);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .service-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .service-card ul li {
+      font-size: 0.85rem;
+      color: var(--text-gray);
+      padding: 6px 0;
+      border-bottom: 1px solid #f0f0f0;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .service-card ul li::before {
+      content: '✔';
+      color: var(--gold);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ---------- WHY CHOOSE ---------- */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 24px;
+    }
+
+    .why-card {
+      background: var(--white);
+      border-radius: var(--border-radius);
+      padding: 30px 24px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      border: 1px solid #eee;
+    }
+
+    .why-card .icon-circle {
+      width: 60px;
+      height: 60px;
+      background: var(--light-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+      font-size: 1.5rem;
+    }
+
+    .why-card h4 {
+      color: var(--dark-green);
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+    }
+
+    .why-card p {
+      font-size: 0.85rem;
+      color: var(--text-gray);
+    }
+
+    /* ---------- HOW IT WORKS ---------- */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      text-align: center;
+    }
+
+    .step-number {
+      width: 64px;
+      height: 64px;
+      background: var(--dark-green);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 0 auto 20px;
+    }
+
+    .step-card h4 {
+      color: var(--dark-green);
+      margin-bottom: 10px;
+    }
+
+    .step-card p {
+      font-size: 0.9rem;
+      color: var(--text-gray);
+    }
+
+    /* ---------- APPLICATION FORM ---------- */
+    .form-section {
+      background: #f5f9f7;
+    }
+
+    .form-box {
+      background: var(--white);
+      border-radius: var(--border-radius);
+      padding: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+      border: 1px solid #eee;
+    }
+
+    .form-box h3 {
+      color: var(--dark-green);
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 1.5rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+
+    .form-group label .required {
+      color: #e74c3c;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-family: inherit;
+      transition: border-color 0.2s;
+      outline: none;
+      background: var(--white);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .form-group small {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--text-gray);
+      margin-top: 4px;
+    }
+
+    .file-upload-box {
+      border: 2px dashed #d0d0d0;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      transition: border-color 0.2s, background 0.2s;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .file-upload-box:hover {
+      border-color: var(--gold);
+      background: #fffdf5;
+    }
+
+    .file-upload-box input[type="file"] {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .file-upload-box .upload-icon {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .file-upload-box .upload-text {
+      font-size: 0.85rem;
+      color: var(--text-gray);
+    }
+
+    .file-upload-box .upload-text strong {
+      color: var(--dark-green);
+    }
+
+    .file-upload-box .file-name {
+      font-size: 0.8rem;
+      color: var(--gold);
+      margin-top: 6px;
+      font-weight: 600;
+      word-break: break-all;
+    }
+
+    .form-box .btn {
+      width: 100%;
+      padding: 14px;
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+
+    /* ---------- TRIAL / CTA ---------- */
+    .trial-section {
+      background: linear-gradient(135deg, var(--dark-green), #0f4a38);
+      color: var(--white);
+      text-align: center;
+      padding: 80px 0;
+    }
+
+    .trial-section h2 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .trial-section p {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      opacity: 0.9;
+    }
+
+    .trial-features {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+
+    .trial-features span {
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .trial-features span::before {
+      content: '✦';
+      color: var(--gold);
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: var(--dark-green);
+      color: rgba(255,255,255,0.8);
+      padding: 60px 0 30px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    footer h4 {
+      color: var(--white);
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+
+    footer p,
+    footer li {
+      font-size: 0.85rem;
+      line-height: 1.8;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    footer a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    footer a:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 24px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 900px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero {
+        padding: 60px 0 80px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-bar .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .form-box {
+        padding: 24px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 50px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">মাদানি <span>স্কলারশিপ হেল্প সেন্টার</span></div>
+      <ul class="nav-links">
+        <li><a href="#">হোম</a></li>
+        <li><a href="#services">সেবাসমূহ</a></li>
+        <li><a href="#apply">আবেদন ফরম</a></li>
+        <li><a href="#contact">যোগাযোগ</a></li>
+      </ul>
+      <a href="#apply" class="btn btn-gold">আবেদন করুন</a>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container">
+      <h1>সৌদি আরবের বিশ্ববিদ্যালয়ে <span>ভর্তির জন্য সম্পূর্ণ সহায়তা</span></h1>
+      <p>মাদানি স্কলারশিপ হেল্প সেন্টার সৌদি আরবের বিভিন্ন বিশ্ববিদ্যালয়ে আবেদনের জন্য প্রয়োজনীয় কাগজপত্র প্রস্তুত, আবেদন প্রক্রিয়া এবং সম্পূর্ণ গাইডলাইন প্রদান করে। আমরা আপনার স্বপ্ন পূরণের পথে পাশে আছি।</p>
+      <div class="hero-buttons">
+        <a href="#apply" class="btn btn-gold">এখনই আবেদন করুন</a>
+        <a href="#services" class="btn btn-outline">📋 সেবাসমূহ দেখুন</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUST BAR ===== -->
+  <div class="trust-bar">
+    <div class="container">
+      <div class="trust-item"><span class="icon">🎓</span> অভিজ্ঞ পরামর্শক</div>
+      <div class="trust-item"><span class="icon">🌍</span> সৌদি আরবের বিশ্ববিদ্যালয়</div>
+      <div class="trust-item"><span class="icon">📄</span> কাগজপত্র প্রস্তুত</div>
+      <div class="trust-item"><span class="icon">✅</span> ১০০% বিশ্বস্ত সেবা</div>
+    </div>
   </div>
-</div>
 
-<!-- এইচএসসি সার্টিফিকেট -->
-<div class="form-group">
-  <label>🎓 এইচএসসি সার্টিফিকেট <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
-  <div class="file-upload-box">
-    <input type="file" name="hsc_certificate" accept=".pdf,.jpg,.jpeg,.png" onchange="showFileName(this)">
-    <div class="upload-icon">📎</div>
-    <div class="upload-text">ফাইল নির্বাচন করতে ক্লিক করুন<br><strong>সর্বোচ্চ ২০ এমবি</strong></div>
-    <div class="file-name"></div>
-  </div>
-</div>
+  <!-- ===== SERVICES ===== -->
+  <section id="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>সৌদি বিশ্ববিদ্যালয়ে আবেদনের জন্য আমাদের সেবাসমূহ</h2>
+        <p>আমরা সৌদি আরবের বিভিন্ন বিশ্ববিদ্যালয়ে ভর্তির জন্য প্রয়োজনীয় সকল কাগজপত্র প্রস্তুত এবং আবেদন প্রক্রিয়ায় সহায়তা করি।</p>
+      </div>
+      <div class="service-grid">
+        <div class="service-card">
+          <div class="icon-circle">🏛️</div>
+          <h3>বিশ্ববিদ্যালয় নির্বাচন</h3>
+          <p>আপনার যোগ্যতা ও আগ্রহ অনুযায়ী সৌদি আরবের সেরা বিশ্ববিদ্যালয় নির্বাচনে সহায়তা।</p>
+          <ul>
+            <li>উম্মুল কুরা বিশ্ববিদ্যালয়</li>
+            <li>ইসলামিক বিশ্ববিদ্যালয় মদিনা</li>
+            <li>কিং সৌদ বিশ্ববিদ্যালয়</li>
+            <li>কিং আব্দুল আজিজ বিশ্ববিদ্যালয়</li>
+            <li>ইমাম মুহাম্মদ ইবনে সৌদ বিশ্ববিদ্যালয়</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="icon-circle">📄</div>
+          <h3>প্রয়োজনীয় কাগজপত্র প্রস্তুত</h3>
+          <p>আবেদনের জন্য প্রয়োজনীয় সকল ডকুমেন্ট প্রস্তুত ও যাচাইকরণে সম্পূর্ণ সহায়তা।</p>
+          <ul>
+            <li>পাসপোর্ট ও জন্মনিবন্ধন</li>
+            <li>শিক্ষাগত সনদ ও মার্কশিট</li>
+            <li>অনুবাদ ও সত্যায়ন</li>
+            <li>পুলিশ ক্লিয়ারেন্স</li>
+            <li>মেডিকেল রিপোর্ট</li>
+            <li>ছবি ও ফরম পূরণ</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="icon-circle">🎁</div>
+          <h3>যে সুযোগ-সুবিধা পাবেন</h3>
+          <p>সৌদি বিশ্ববিদ্যালয়ে ভর্তি হলে যে সকল সুযোগ-সুবিধা পাবেন।</p>
+          <ul>
+            <li>সম্পূর্ণ বিনামূল্যে শিক্ষা</li>
+            <li>মাসিক উপবৃত্তি</li>
+            <li>বিনামূল্যে আবাসন</li>
+            <li>চিকিৎসা সুবিধা</li>
+            <li>খাবার ও পরিবহন</li>
+            <li>উচ্চ মানের শিক্ষা</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="icon-circle">✈️</div>
+          <h3>ভিসা ও ভ্রমণ সহায়তা</h3>
+          <p>ভিসা প্রক্রিয়া, টিকিট বুকিং এবং সৌদি আরবে পৌঁছানোর পর গাইডলাইন।</p>
+          <ul>
+            <li>ভিসা আবেদন প্রক্রিয়া</li>
+            <li>টিকিট বুকিং সহায়তা</li>
+            <li>এয়ারপোর্ট রিসিভ</li>
+            <li>বিশ্ববিদ্যালয়ে ভর্তি সহায়তা</li>
+            <li>স্থানীয় গাইডলাইন</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="icon-circle">📝</div>
+          <h3>আবেদন প্রক্রিয়া</h3>
+          <p>অনলাইন আবেদন থেকে শুরু করে ভর্তি নিশ্চিতকরণ পর্যন্ত সম্পূর্ণ প্রক্রিয়া।</p>
+          <ul>
+            <li>অনলাইন ফরম পূরণ</li>
+            <li>ডকুমেন্ট আপলোড</li>
+            <li>আবেদন ফি পরিশোধ</li>
+            <li>ইন্টারভিউ প্রস্তুতি</li>
+            <li>ভর্তি নিশ্চিতকরণ</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="icon-circle">💬</div>
+          <h3>২৪/৭ পরামর্শ সেবা</h3>
+          <p>যেকোনো প্রশ্ন বা সমস্যার জন্য আমাদের সাথে যোগাযোগ করুন।</p>
+          <ul>
+            <li>হোয়াটসঅ্যাপ সাপোর্ট</li>
+            <li>ফোন কল সাপোর্ট</li>
+            <li>ইমেইল সাপোর্ট</li>
+            <li>ব্যক্তিগত পরামর্শ</li>
+            <li>অনলাইন মিটিং</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- এইচএসসি মার্কশিট -->
-<div class="form-group">
-  <label>📊 এইচএসসি মার্কশিট <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
-  <div class="file-upload-box">
-    <input type="file" name="hsc_marksheet" accept=".pdf,.jpg,.jpeg,.png" onchange="showFileName(this)">
-    <div class="upload-icon">📎</div>
-    <div class="upload-text">ফাইল নির্বাচন করতে ক্লিক করুন<br><strong>সর্বোচ্চ ২০ এমবি</strong></div>
-    <div class="file-name"></div>
-  </div>
-</div>
+  <!-- ===== WHY CHOOSE ===== -->
+  <section style="background: #f5f9f7;">
+    <div class="container">
+      <div class="section-title">
+        <h2>কেন মাদানি স্কলারশিপ হেল্প সেন্টার বেছে নেবেন?</h2>
+        <p>আমরা সৌদি আরবের বিশ্ববিদ্যালয়ে ভর্তির জন্য সর্বোচ্চ মানের সেবা প্রদান করি।</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="icon-circle">🎓</div>
+          <h4>অভিজ্ঞ পরামর্শক</h4>
+          <p>দীর্ঘ বছরের অভিজ্ঞতা সম্পন্ন পরামর্শক দল আপনার আবেদন প্রক্রিয়ায় সহায়তা করবে।</p>
+        </div>
+        <div class="why-card">
+          <div class="icon-circle">📅</div>
+          <h4>সময়মতো সেবা</h4>
+          <p>নির্ধারিত সময়ের মধ্যে আপনার সকল কাগজপত্র ও আবেদন প্রস্তুত করা হবে।</p>
+        </div>
+        <div class="why-card">
+          <div class="icon-circle">👥</div>
+          <h4>ব্যক্তিগত মনোযোগ</h4>
+          <p>প্রতিটি আবেদনকারীকে আলাদাভাবে গুরুত্ব দিয়ে সেবা প্রদান করা হয়।</p>
+        </div>
+        <div class="why-card">
+          <div class="icon-circle">🏷️</div>
+          <h4>সাশ্রয়ী মূল্য</h4>
+          <p>উচ্চ-মানের সেবা সাশ্রয়ী মূল্যে প্রদান করা হয়, কোনো লুকানো খরচ নেই।</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- এসএসসি সার্টিফিকেট -->
-<div class="form-group">
-  <label>📜 এসএসসি সার্টিফিকেট <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
-  <div class="file-upload-box">
-    <input type="file" name="ssc_certificate" accept=".pdf,.jpg,.jpeg,.png" onchange="showFileName(this)">
-    <div class="upload-icon">📎</div>
-    <div class="upload-text">ফাইল নির্বাচন করতে ক্লিক করুন<br><strong>সর্বোচ্চ ২০ এমবি</strong></div>
-    <div class="file-name"></div>
-  </div>
-</div>
+  <!-- ===== HOW IT WORKS ===== -->
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>৩টি সহজ ধাপে আবেদন করুন</h2>
+        <p>৫ মিনিটেরও কম সময়ে আপনার আবেদন প্রক্রিয়া শুরু করুন।</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">১</div>
+          <h4>ফরম পূরণ করুন</h4>
+          <p>নিচের আবেদন ফরমটি পূরণ করে আপনার প্রয়োজনীয় তথ্য ও ডকুমেন্ট আপলোড করুন।</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">২</div>
+          <h4>ডকুমেন্ট যাচাই</h4>
+          <p>আমাদের পরামর্শক দল আপনার ডকুমেন্ট যাচাই করে প্রয়োজনীয় পরামর্শ প্রদান করবে।</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">৩</div>
+          <h4>আবেদন জমা দিন</h4>
+          <p>আমরা আপনার পক্ষ থেকে বিশ্ববিদ্যালয়ে আবেদন জমা দিয়ে সম্পূর্ণ প্রক্রিয়া সম্পন্ন করব।</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- এসএসসি মার্কশিট -->
-<div class="form-group">
-  <label>📈 এসএসসি মার্কশিট <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
-  <div class="file-upload-box">
-    <input type="file" name="ssc_marksheet" accept=".pdf,.jpg,.jpeg,.png" onchange="showFileName(this)">
-    <div class="upload-icon">📎</div>
-    <div class="upload-text">ফাইল নির্বাচন করতে ক্লিক করুন<br><strong>সর্বোচ্চ ২০ এমবি</strong></div>
-    <div class="file-name"></div>
-  </div>
-</div>
+  <!-- ===== APPLICATION FORM ===== -->
+  <section id="apply" class="form-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>আবেদন ফরম</h2>
+        <p>নিচের ফরমটি পূরণ করে আপনার আবেদন শুরু করুন। সকল তথ্য গোপন রাখা হবে।</p>
+      </div>
 
-<!-- জন্মনিবন্ধন -->
-<div class="form-group">
-  <label>👶 জন্মনিবন্ধন <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
-  <div class="file-upload-box">
-    <input type="file" name="birth_certificate" accept=".pdf,.jpg,.jpeg,.png" onchange="showFileName(this)">
-    <div class="upload-icon">📎</div>
-    <div class="upload-text">ফাইল নির্বাচন করতে ক্লিক করুন<br><strong>সর্বোচ্চ ২০ এমবি</strong></div>
-    <div class="file-name"></div>
-  </div>
-</div>
+      <form class="form-box" id="applicationForm" enctype="multipart/form-data">
+        <h3>ব্যক্তিগত তথ্য</h3>
 
-<!-- পুলিশ ক্লিয়ারেন্স -->
-<div class="form-group">
-  <label>🚔 পুলিশ ক্লিয়ারেন্স <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
-  <div class="file-upload-box">
-    <input type="file" name="police_clearance" accept=".pdf,.jpg,.jpeg,.png" onchange="showFileName(this)">
-    <div class="upload-icon">📎</div>
-    <div class="upload-text">ফাইল নির্বাচন করতে ক্লিক করুন<br><strong>সর্বোচ্চ ২০ এমবি</strong></div>
-    <div class="file-name"></div>
-  </div>
-</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">নাম <span class="required">*</span></label>
+            <input type="text" id="name" name="name" placeholder="আপনার পূর্ণ নাম" required>
+          </div>
+          <div class="form-group">
+            <label for="father_name">পিতার নাম <span class="required">*</span></label>
+            <input type="text" id="father_name" name="father_name" placeholder="পিতার নাম" required>
+          </div>
+        </div>
 
-<!-- মেডিকেল রিপোর্ট -->
-<div class="form-group">
-  <label>🏥 মেডিকেল রিপোর্ট <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
-  <div class="file-upload-box">
-    <input type="file" name="medical_report" accept=".pdf,.jpg,.jpeg,.png" onchange="showFileName(this)">
-    <div class="upload-icon">📎</div>
-    <div class="upload-text">ফাইল নির্বাচন করতে ক্লিক করুন<br><strong>সর্বোচ্চ ২০ এমবি</strong></div>
-    <div class="file-name"></div>
-  </div>
-</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="mother_name">মাতার নাম <span class="required">*</span></label>
+            <input type="text" id="mother_name" name="mother_name" placeholder="মাতার নাম" required>
+          </div>
+          <div class="form-group">
+            <label for="grandfather_name">দাদার নাম <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
+            <input type="text" id="grandfather_name" name="grandfather_name" placeholder="দাদার নাম">
+          </div>
+        </div>
 
-<!-- ছবি (পাসপোর্ট সাইজ) -->
-<div class="form-group">
-  <label>📷 পাসপোর্ট সাইজ ছবি <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
-  <div class="file-upload-box">
-    <input type="file" name="photo" accept=".jpg,.jpeg,.png" onchange="showFileName(this)">
-    <div class="upload-icon">📎</div>
-    <div class="upload-text">ফাইল নির্বাচন করতে ক্লিক করুন<br><strong>সর্বোচ্চ ২০ এমবি</strong></div>
-    <div class="file-name"></div>
-  </div>
-</div>
+        <div class="form-group">
+          <label for="address">ঠিকানা <span class="required">*</span></label>
+          <textarea id="address" name="address" placeholder="আপনার সম্পূর্ণ ঠিকানা লিখুন" required></textarea>
+        </div>
 
-<!-- অন্যান্য ডকুমেন্ট -->
-<div class="form-group">
-  <label>📁 অন্যান্য ডকুমেন্ট <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
-  <div class="file-upload-box">
-    <input type="file" name="other_document" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" onchange="showFileName(this)">
-    <div class="upload-icon">📎</div>
-    <div class="upload-text">ফাইল নির্বাচন করতে ক্লিক করুন<br><strong>সর্বোচ্চ ২০ এমবি</strong></div>
-    <div class="file-name"></div>
-  </div>
-</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="passport">পাসপোর্ট নাম্বার <span class="required">*</span></label>
+            <input type="text" id="passport" name="passport" placeholder="পাসপোর্ট নাম্বার" required>
+          </div>
+          <div class="form-group">
+            <label for="mobile">মোবাইল নাম্বার <span class="required">*</span></label>
+            <input type="tel" id="mobile" name="mobile" placeholder="01XXXXXXXXX" required>
+          </div>
+        </div>
 
-<button type="submit" class="btn btn-green">আবেদন জমা দিন</button>
+        <div class="form-group">
+          <label for="email">ইমেইল <span class="required">*</span></label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="previous_service">আগে সার্ভিস নিয়েছে কি না? <span class="required">*</span></label>
+            <select id="previous_service" name="previous_service" required>
+              <option value="">-- নির্বাচন করুন --</option>
+              <option value="হ্যাঁ">হ্যাঁ</option>
+              <option value="না">না</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="payment_method">কিসের মাধ্যমে পেমেন্ট করেছে? <span class="required">*</span></label>
+            <select id="payment_method" name="payment_method" required>
+              <option value="">-- নির্বাচন করুন --</option>
+              <option value="বিকাশ">বিকাশ</option>
+              <option value="নগদ">নগদ</option>
+              <option value="রকেট">রকেট</option>
+              <option value="ব্যাংক">ব্যাংক</option>
+            </select>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 30px; color: var(--dark-green);">ডকুমেন্ট আপলোড <span style="font-size:0.8rem; font-weight:400; color:#888;">(সবগুলো অপশনাল)</span></h3>
+
+        <div style="background: #fff8e1; border-left: 4px solid var(--gold); padding: 12px 16px; border-radius: 6px; font-size: 0.85rem; color: #6b5a1e; margin-bottom: 20px;">
+          📌 নিচের যেকোনো ডকুমেন্ট আপনি চাইলে আপলোড করতে পারেন। সব ডকুমেন্ট আপলোড না করলেও আবেদন জমা দেওয়া যাবে। প্রতিটি ফাইল সর্বোচ্চ ২০ এমবি।
+        </div>
+
+        <!-- পাসপোর্ট -->
+        <div class="form-group">
+          <label>🛂 পাসপোর্ট <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
+          <div class="file-upload-box">
+            <input type="file" name="passport_file" accept=".pdf,.jpg,.jpeg,.png" onchange="showFileName(this)">
+            <div class="upload-icon">📎</div>
+            <div class="upload-text">ফাইল নির্বাচন করতে ক্লিক করুন<br><strong>সর্বোচ্চ ২০ এমবি</strong></div>
+            <div class="file-name"></div>
+          </div>
+        </div>
+
+        <!-- এইচএসসি সার্টিফিকেট -->
+        <div class="form-group">
+          <label>🎓 এইচএসসি সার্টিফিকেট <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
+          <div class="file-upload-box">
+            <input type="file" name="hsc_certificate" accept=".pdf,.jpg,.jpeg,.png" onchange="showFileName(this)">
+            <div class="upload-icon">📎</div>
+            <div class="upload-text">ফাইল নির্বাচন করতে ক্লিক করুন<br><strong>সর্বোচ্চ ২০ এমবি</strong></div>
+            <div class="file-name"></div>
+          </div>
+        </div>
+
+        <!-- এইচএসসি মার্কশিট -->
+        <div class="form-group">
+          <label>📊 এইচএসসি মার্কশিট <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
+          <div class="file-upload-box">
+            <input type="file" name="hsc_marksheet" accept=".pdf,.jpg,.jpeg,.png" onchange="showFileName(this)">
+            <div class="upload-icon">📎</div>
+            <div class="upload-text">ফাইল নির্বাচন করতে ক্লিক করুন<br><strong>সর্বোচ্চ ২০ এমবি</strong></div>
+            <div class="file-name"></div>
+          </div>
+        </div>
+
+        <!-- এসএসসি সার্টিফিকেট -->
+        <div class="form-group">
+          <label>📜 এসএসসি সার্টিফিকেট <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
+          <div class="file-upload-box">
+            <input
