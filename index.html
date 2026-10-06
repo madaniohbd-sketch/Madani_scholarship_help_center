@@ -274,6 +274,45 @@
       .form-row { grid-template-columns: 1fr; }
       section { padding: 50px 0; }
     }
+
+    /* EXTRA CONTACT & FORM ENHANCEMENTS */
+    .form-submit-area {
+      margin-top: 30px;
+      padding-top: 24px;
+      border-top: 1px solid #eee;
+      text-align: center;
+    }
+    .submit-note {
+      font-size: 0.82rem;
+      color: var(--text-gray);
+      margin-top: 10px;
+    }
+    .submit-btn {
+      width: 100%;
+      background: var(--dark-green);
+      color: var(--white);
+      padding: 15px 24px;
+      border: none;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+    .submit-btn:hover { background: var(--medium-green); transform: translateY(-2px); }
+    .contact-links { display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:18px; }
+    .contact-links a { display:inline-flex; align-items:center; gap:8px; }
+    .footer-contact-buttons { display:flex; gap:10px; flex-wrap:wrap; margin-top:12px; }
+    .footer-contact-buttons a { background:rgba(255,255,255,0.08); padding:9px 13px; border-radius:8px; }
+    .floating-whatsapp {
+      position:fixed; right:22px; bottom:22px; z-index:999;
+      width:56px; height:56px; border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      background:#25D366; color:#fff; text-decoration:none;
+      font-size:1.55rem; box-shadow:0 6px 20px rgba(0,0,0,.2);
+    }
+    @media (max-width:600px) { .floating-whatsapp { right:14px; bottom:14px; } }
   </style>
 </head>
 <body>
@@ -605,4 +644,89 @@
           <label>🚔 পুলিশ ক্লিয়ারেন্স <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
           <div class="file-upload-box">
             <input type="file" name="police_clearance" accept=".pdf,.jpg,.jpeg,.png" onchange="showFileName(this)">
-            <div class="upload
+            <div class="upload-icon">📎</div>
+            <div class="upload-text">ফাইল নির্বাচন করতে ক্লিক করুন<br><strong>সর্বোচ্চ ২০ এমবি</strong></div>
+            <div class="file-name"></div>
+          </div>
+        </div>
+
+        <!-- SUBMIT APPLICATION -->
+        <div class="form-submit-area">
+          <button type="submit" class="submit-btn">📨 আবেদন পাঠান</button>
+          <p class="submit-note">আবেদন পাঠানোর আগে আপনার তথ্য ও ডকুমেন্টগুলো সঠিকভাবে যাচাই করে নিন।</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section id="contact" class="trial-section">
+    <div class="container">
+      <h2>যেকোনো কাজে আমাদের সাথে যোগাযোগ করুন</h2>
+      <p>স্কলারশিপ, সরকারি আবেদন, ভিসা, প্রবাসী সেবা, পাসপোর্ট, এনআইডি, জন্ম নিবন্ধনসহ যেকোনো কাজে আমাদের সাথে যোগাযোগ করুন।</p>
+      <div class="contact-links">
+        <a href="https://wa.me/8801601899945" target="_blank" rel="noopener" class="btn btn-gold">💬 WhatsApp-এ সরাসরি যোগাযোগ</a>
+        <a href="https://www.facebook.com/share/1YX8BmXsW5/" target="_blank" rel="noopener" class="btn btn-outline">📘 Facebook পেজ</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>মাদানি স্কলারশিপ হেল্প সেন্টার</h4>
+          <p>শিক্ষা, স্কলারশিপ, সরকারি আবেদন, ভিসা এবং প্রবাসীদের বিভিন্ন সেবায় নির্ভরযোগ্য সহায়তা।</p>
+          <div class="footer-contact-buttons">
+            <a href="https://wa.me/8801601899945" target="_blank" rel="noopener">💬 WhatsApp</a>
+            <a href="https://www.facebook.com/share/1YX8BmXsW5/" target="_blank" rel="noopener">📘 Facebook</a>
+          </div>
+        </div>
+        <div>
+          <h4>দ্রুত লিংক</h4>
+          <ul>
+            <li><a href="#services">স্কলারশিপ সেবা</a></li>
+            <li><a href="#general-services">অন্যান্য সেবাসমূহ</a></li>
+            <li><a href="#apply">আবেদন ফরম</a></li>
+            <li><a href="#contact">যোগাযোগ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>আমাদের সেবাসমূহ</h4>
+          <ul>
+            <li>স্কলারশিপ ও অনুবাদ</li>
+            <li>সরকারি চাকরির আবেদন</li>
+            <li>ভিসা ও মেডিক্যাল সেবা</li>
+            <li>পাসপোর্ট ও পুলিশ ক্লিয়ারেন্স</li>
+            <li>জন্ম নিবন্ধন ও এনআইডি</li>
+          </ul>
+        </div>
+        <div>
+          <h4>যোগাযোগ</h4>
+          <p>📱 <a href="https://wa.me/8801601899945" target="_blank" rel="noopener">01601899945</a></p>
+          <p>📘 <a href="https://www.facebook.com/share/1YX8BmXsW5/" target="_blank" rel="noopener">Facebook</a></p>
+          <p>💬 <a href="https://wa.me/8801601899945" target="_blank" rel="noopener">WhatsApp-এ যোগাযোগ করুন</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 মাদানি স্কলারশিপ হেল্প সেন্টার — সর্বস্বত্ব সংরক্ষিত</div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a class="floating-whatsapp" href="https://wa.me/8801601899945" target="_blank" rel="noopener" aria-label="WhatsApp-এ যোগাযোগ করুন" title="WhatsApp-এ যোগাযোগ করুন">💬</a>
+
+  <script>
+    function showFileName(input) {
+      const box = input.closest('.file-upload-box');
+      const name = box ? box.querySelector('.file-name') : null;
+      if (name) name.textContent = input.files && input.files[0] ? input.files[0].name : '';
+    }
+
+    document.getElementById('applicationForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('আপনার আবেদন ফরম প্রস্তুত হয়েছে। সরাসরি যোগাযোগের জন্য WhatsApp বাটনে ক্লিক করুন।');
+    });
+  </script>
+</body>
+</html>
