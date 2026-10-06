@@ -2663,77 +2663,77 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="container">
       <div class="form-box">
         <h3>স্কলারশিপ আবেদন ফরম</h3>
-        <form id="scholarshipForm" onsubmit="handleFormSubmit(event)">
-          <div class="form-row">
-            <div class="form-group">
-              <label>আপনার পূর্ণ নাম <span class="required">*</span></label>
-              <input type="text" placeholder="মোঃ ইমদাদুল্লাহ" required>
-            </div>
-            <div class="form-group">
-              <label>পিতার নাম <span class="required">*</span></label>
-              <input type="text" placeholder="মোঃ ইমদাদুল্লাহ" required>
-            </div>
-            <div class="form-group">
-              <label>মাতার নাম <span class="required">*</span></label>
-              <input type="text" placeholder="সালেহা আক্তার" required>
-            </div>
-            <div class="form-group">
-              <label>পাসপোর্ট  নাম্বার <span class="required">*</span></label>
-              <input type="text" placeholder="মোঃA00000000" required>
-            </div>
-            <div class="form-group">
-              <label>মোবাইল / হোয়াটসঅ্যাপ নম্বর <span class="required">*</span></label>
-              <input type="tel" placeholder="01700000000" required>
-            </div>
-          </div>
+       <form id="scholarshipForm" onsubmit="handleFormSubmit(event)">
+  <div class="form-row">
+    <div class="form-group">
+      <label>আপনার পূর্ণ নাম <span class="required">*</span></label>
+      <input type="text" name="fullName" placeholder="মোঃ ইমদাদুল্লাহ" required>
+    </div>
+    <div class="form-group">
+      <label>পিতার নাম <span class="required">*</span></label>
+      <input type="text" name="fatherName" placeholder="মোঃ ইমদাদুল্লাহ" required>
+    </div>
+    <div class="form-group">
+      <label>মাতার নাম <span class="required">*</span></label>
+      <input type="text" name="motherName" placeholder="সালেহা আক্তার" required>
+    </div>
+    <div class="form-group">
+      <label>পাসপোর্ট  নাম্বার <span class="required">*</span></label>
+      <input type="text" name="passport" placeholder="A00000000" required>
+    </div>
+    <div class="form-group">
+      <label>মোবাইল / হোয়াটসঅ্যাপ নম্বর <span class="required">*</span></label>
+      <input type="tel" name="phone" placeholder="01700000000" required>
+    </div>
+  </div>
 
-          <div class="form-row">
-            <div class="form-group">
-              <label>ইমেইল ঠিকানা <span class="required">*</span></label>
-              <input type="email" placeholder="example@gmail.com" required>
-            </div>
-            <div class="form-group">
-              <label>আবেদনের স্তর <span class="required">*</span></label>
-              <select required>
-                <option value="">নির্বাচন করুন</option>
-                <option value="bachelor">ব্যাচেলর (Bachelor)</option>
-                <option value="masters">মাস্টার্স (Masters)</option>
-                <option value="phd">পিএইচডি (PhD)</option>
-                <option value="diploma">আরাবিক ডিপ্লোমা (Arabic Diploma)</option>
-              </select>
-            </div>
-          </div>
+  <div class="form-row">
+    <div class="form-group">
+      <label>ইমেইল ঠিকানা <span class="required">*</span></label>
+      <input type="email" name="email" placeholder="example@gmail.com" required>
+    </div>
+    <div class="form-group">
+      <label>আবেদনের স্তর <span class="required">*</span></label>
+      <select name="level" required>
+        <option value="">নির্বাচন করুন</option>
+        <option value="ব্যাচেলর (Bachelor)">ব্যাচেলর (Bachelor)</option>
+        <option value="মাস্টার্স (Masters)">মাস্টার্স (Masters)</option>
+        <option value="পিএইচডি (PhD)">পিএইচডি (PhD)</option>
+        <option value="আরাবিক ডিপ্লোমা (Arabic Diploma)">আরাবিক ডিপ্লোমা (Arabic Diploma)</option>
+      </select>
+    </div>
+  </div>
 
-          <div class="form-group">
-            <label>পছন্দের বিশ্ববিদ্যালয় / বিষয়</label>
-            <input type="text" placeholder="যেমন: ইসলামিক ইউনিভার্সিটি মদিনা / ইঞ্জিনিয়ারিং">
-          </div>
+  <div class="form-group">
+    <label>পছন্দের বিশ্ববিদ্যালয় / বিষয়</label>
+    <input type="text" name="university" placeholder="যেমন: ইসলামিক ইউনিভার্সিটি মদিনা / ইঞ্জিনিয়ারিং">
+  </div>
 
-          <div class="form-group">
-            <label>সর্বশেষ শিক্ষাগত যোগ্যতা ও রেজাল্ট</label>
-            <input type="text" placeholder="যেমন: আলিম / এইচএসসি - জিপিএ ৫.০০">
-          </div>
+  <div class="form-group">
+    <label>সর্বশেষ শিক্ষাগত যোগ্যতা ও রেজাল্ট</label>
+    <input type="text" name="education" placeholder="যেমন: আলিম / এইচএসসি - জিপিএ ৫.০০">
+  </div>
 
-          <div class="form-group">
-            <label>আপনার পাসপোর্ট বা সিভি সংযুক্তি (যদি থাকে)</label>
-            <div class="file-upload-box">
-              <input type="file" id="documentUpload" onchange="updateFileName(this)">
-              <div class="upload-icon">📁</div>
-              <div class="upload-text">ফাইলের উপর ক্লিক করুন অথবা ড্রাগ করে আনুন</div>
-              <div class="file-name" id="fileNameDisplay"></div>
-            </div>
-          </div>
+  <div class="form-group">
+    <label>আপনার পাসপোর্ট বা সিভি সংযুক্তি (যদি থাকে)</label>
+    <div class="file-upload-box">
+      <input type="file" id="documentUpload" name="document" onchange="updateFileName(this)">
+      <div class="upload-icon">📁</div>
+      <div class="upload-text">ফাইলের উপর ক্লিক করুন অথবা ড্রাগ করে আনুন</div>
+      <div class="file-name" id="fileNameDisplay"></div>
+    </div>
+  </div>
 
-          <div class="form-group">
-            <label>অতিরিক্ত বার্তা বা প্রশ্ন (যদি থাকে)</label>
-            <textarea placeholder="আপনার কোনো নির্দিষ্ট প্রশ্ন থাকলে এখানে লিখুন..."></textarea>
-          </div>
+  <div class="form-group">
+    <label>অতিরিক্ত বার্তা বা প্রশ্ন (যদি থাকে)</label>
+    <textarea name="message" placeholder="আপনার কোনো নির্দিষ্ট প্রশ্ন থাকলে এখানে লিখুন..."></textarea>
+  </div>
 
-          <div class="form-submit-area">
-            <button type="submit" class="submit-btn">আবেদন সাবমিট করুন</button>
-            <p class="submit-note">🔒 আপনার সকল তথ্য সম্পূর্ণ নিরাপদ রাখা হবে।</p>
-          </div>
-        </form>
+  <div class="form-submit-area">
+    <button type="submit" class="submit-btn">আবেদন সাবমিট করুন</button>
+    <p class="submit-note">🔒 আপনার সকল তথ্য সম্পূর্ণ নিরাপদ রাখা হবে।</p>
+  </div>
+</form>
       </div>
     </div>
   </section>
@@ -2805,94 +2805,189 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <!-- JS SCRIPT -->
   <script>
-    // File upload name display
-    function updateFileName(input) {
-      const display = document.getElementById('fileNameDisplay');
-      if (input.files && input.files[0]) {
-        display.textContent = 'সংযুক্ত ফাইল: ' + input.files[0].name;
-      } else {
-        display.textContent = '';
-      }
+  // ============================================================
+  // 🔴 এখানে আপনার টেলিগ্রাম বট টোকেন বসান
+  // ============================================================
+  const TELEGRAM_BOT_TOKEN = "8926559827:AAH8Kz9JPtJd9kEsUcCfiRJvQcOsUdPjhNY";
+
+  // ============================================================
+  // 🔴 এখানে আপনার Chat ID / Channel ID বসান
+  // (চ্যানেল হলে -100 দিয়ে শুরু হবে, যেমন: -1001234567890)
+  // ============================================================
+  const TELEGRAM_CHAT_ID = "-1004267834660";
+  // ============================================================
+
+
+  // ফাইল নাম দেখানো
+  function updateFileName(input) {
+    const display = document.getElementById('fileNameDisplay');
+    if (input.files && input.files[0]) {
+      display.textContent = 'সংযুক্ত ফাইল: ' + input.files[0].name;
+    } else {
+      display.textContent = '';
     }
+  }
 
-    // University Filter functionality
-    function filterUni(category) {
-      const buttons = document.querySelectorAll('.filter-btn');
-      buttons.forEach(btn => btn.classList.remove('active'));
-      
-      event.target.classList.add('active');
+  // University Filter
+  function filterUni(category, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
 
+    const cards = document.querySelectorAll('.uni-card');
+    let visible = 0;
+
+    cards.forEach(card => {
+      const cat = card.getAttribute('data-category') || '';
+      const match = (category === 'all') || cat.split(/\s+/).includes(category);
+      if (match) {
+        card.classList.remove('is-hidden');
+        visible++;
+      } else {
+        card.classList.add('is-hidden');
+      }
+    });
+    checkNoResults(visible);
+  }
+
+  // Search
+  const searchInput = document.getElementById('uniSearch');
+  if (searchInput) {
+    searchInput.addEventListener('keyup', function (e) {
+      const term = e.target.value.toLowerCase().trim();
       const cards = document.querySelectorAll('.uni-card');
-      let visibleCount = 0;
+      let visible = 0;
 
       cards.forEach(card => {
-        const cardCat = card.getAttribute('data-category');
-        if (category === 'all' || cardCat === category) {
+        const name = (card.getAttribute('data-name') || '').toLowerCase();
+        const text = card.textContent.toLowerCase();
+        if (name.includes(term) || text.includes(term)) {
           card.classList.remove('is-hidden');
-          visibleCount++;
+          visible++;
         } else {
           card.classList.add('is-hidden');
         }
       });
-
-      checkNoResults(visibleCount);
-    }
-
-    // Search functionality
-    const searchInput = document.getElementById('uniSearch');
-    if (searchInput) {
-      searchInput.addEventListener('keyup', function(e) {
-        const term = e.target.value.toLowerCase().trim();
-        const cards = document.querySelectorAll('.uni-card');
-        let visibleCount = 0;
-
-        cards.forEach(card => {
-          const name = card.getAttribute('data-name').toLowerCase();
-          if (name.includes(term)) {
-            card.classList.remove('is-hidden');
-            visibleCount++;
-          } else {
-            card.classList.add('is-hidden');
-          }
-        });
-
-        checkNoResults(visibleCount);
-      });
-    }
-
-    function checkNoResults(count) {
-      const noRes = document.getElementById('noResults');
-      if (count === 0) {
-        noRes.style.display = 'block';
-      } else {
-        noRes.style.display = 'none';
-      }
-    }
-
-    // FAQ Accordion functionality
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-      const question = item.querySelector('.faq-question');
-      question.addEventListener('click', () => {
-        const isOpen = item.classList.contains('active');
-        faqItems.forEach(i => {
-          i.classList.remove('active');
-          i.querySelector('.faq-answer').style.display = 'none';
-        });
-        if (!isOpen) {
-          item.classList.add('active');
-          item.querySelector('.faq-answer').style.display = 'block';
-        }
-      });
+      checkNoResults(visible);
     });
+  }
 
-    // Form submit handler
-    function handleFormSubmit(e) {
-      e.preventDefault();
-      alert('ধন্যবাদ! আপনার আবেদনের তথ্য সফলভাবে গৃহীত হয়েছে। খুব শীঘ্রই আমাদের প্রতিনিধি আপনার সাথে যোগাযোগ করবেন।');
-      e.target.reset();
-      document.getElementById('fileNameDisplay').textContent = '';
+  function checkNoResults(count) {
+    const noRes = document.getElementById('noResults');
+    if (noRes) noRes.style.display = (count === 0) ? 'block' : 'none';
+  }
+
+  // FAQ Accordion
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const q = item.querySelector('.faq-question');
+    q.addEventListener('click', () => {
+      const open = item.classList.contains('active');
+      faqItems.forEach(i => {
+        i.classList.remove('active');
+        i.querySelector('.faq-answer').style.display = 'none';
+      });
+      if (!open) {
+        item.classList.add('active');
+        item.querySelector('.faq-answer').style.display = 'block';
+      }
+    });
+  });
+
+  // HTML escape
+  function escapeHtml(str) {
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+  }
+
+  // ফর্ম সাবমিট → টেলিগ্রাম
+  async function handleFormSubmit(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const btn = form.querySelector('.submit-btn');
+    const originalText = btn.textContent;
+
+    btn.disabled = true;
+    btn.textContent = '⏳ পাঠানো হচ্ছে...';
+
+    const data = {
+      fullName:   form.fullName.value.trim(),
+      fatherName: form.fatherName.value.trim(),
+      motherName: form.motherName.value.trim(),
+      passport:   form.passport.value.trim(),
+      phone:      form.phone.value.trim(),
+      email:      form.email.value.trim(),
+      level:      form.level.value,
+      university: form.university.value.trim() || '—',
+      education:  form.education.value.trim() || '—',
+      message:    form.message.value.trim() || '—',
+      fileInfo:   form.document.files[0] ? form.document.files[0].name : 'কোনো ফাইল নেই'
+    };
+
+    const text =
+      '🎓 <b>নতুন স্কলারশিপ আবেদন</b>\n' +
+      '━━━━━━━━━━━━━━━━━━\n' +
+      '👤 <b>নাম:</b> ' + escapeHtml(data.fullName) + '\n' +
+      '👨 <b>পিতার নাম:</b> ' + escapeHtml(data.fatherName) + '\n' +
+      '👩 <b>মাতার নাম:</b> ' + escapeHtml(data.motherName) + '\n' +
+      '🛂 <b>পাসপোর্ট:</b> ' + escapeHtml(data.passport) + '\n' +
+      '📱 <b>মোবাইল:</b> ' + escapeHtml(data.phone) + '\n' +
+      '📧 <b>ইমেইল:</b> ' + escapeHtml(data.email) + '\n' +
+      '🎯 <b>স্তর:</b> ' + escapeHtml(data.level) + '\n' +
+      '🏛️ <b>বিশ্ববিদ্যালয়/বিষয়:</b> ' + escapeHtml(data.university) + '\n' +
+      '📚 <b>শিক্ষাগত যোগ্যতা:</b> ' + escapeHtml(data.education) + '\n' +
+      '📎 <b>সংযুক্তি:</b> ' + escapeHtml(data.fileInfo) + '\n' +
+      '💬 <b>বার্তা:</b> ' + escapeHtml(data.message) + '\n' +
+      '━━━━━━━━━━━━━━━━━━\n' +
+      '🕒 ' + new Date().toLocaleString('bn-BD', { timeZone: 'Asia/Dhaka' });
+
+    try {
+      // ১) টেক্সট মেসেজ পাঠানো
+      const res = await fetch(
+        'https://api.telegram.org/bot' + TELEGRAM_BOT_TOKEN + '/sendMessage',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            chat_id: TELEGRAM_CHAT_ID,
+            text: text,
+            parse_mode: 'HTML'
+          })
+        }
+      );
+
+      const result = await res.json();
+
+      // ২) ফাইল থাকলে ডকুমেন্ট পাঠানো
+      if (form.document.files[0]) {
+        const fd = new FormData();
+        fd.append('chat_id', TELEGRAM_CHAT_ID);
+        fd.append('document', form.document.files[0]);
+        fd.append('caption', '📎 ' + data.fullName + ' এর সংযুক্তি (' + data.phone + ')');
+
+        await fetch(
+          'https://api.telegram.org/bot' + TELEGRAM_BOT_TOKEN + '/sendDocument',
+          { method: 'POST', body: fd }
+        );
+      }
+
+      if (result.ok) {
+        alert('✅ ধন্যবাদ! আপনার আবেদন সফলভাবে জমা হয়েছে।');
+        form.reset();
+        document.getElementById('fileNameDisplay').textContent = '';
+      } else {
+        throw new Error(result.description || 'Telegram error');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('❌ দুঃখিত, আবেদন পাঠাতে সমস্যা হয়েছে। WhatsApp-এ যোগাযোগ করুন।');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = originalText;
     }
-  </script>
+  }
+</script>
 </body>
 </html>
