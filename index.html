@@ -375,6 +375,28 @@
       font-size:1.55rem; box-shadow:0 6px 20px rgba(0,0,0,.2);
     }
 
+
+    /* =========================================================
+       CURRENT APPLICATIONS SECTION
+       ========================================================= */
+    .current-applications-section { background: #fafafa; }
+    .current-applications-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
+    .application-card { background:var(--white); border-radius:var(--border-radius); padding:26px 24px; box-shadow:var(--shadow); border:1px solid #eee; transition:transform .25s,box-shadow .25s; position:relative; overflow:hidden; }
+    .application-card:hover { transform:translateY(-5px); box-shadow:0 12px 32px rgba(0,0,0,.12); }
+    .application-status { position:absolute; top:18px; right:18px; background:#e8f5ed; color:var(--dark-green); padding:5px 11px; border-radius:20px; font-size:.72rem; font-weight:700; }
+    .application-card h3 { color:var(--dark-green); font-size:1.15rem; margin-bottom:8px; padding-right:80px; }
+    .application-university { color:var(--gold); font-size:.88rem; font-weight:600; margin-bottom:18px; }
+    .application-details { list-style:none; padding:0; margin:0 0 20px; }
+    .application-details li { font-size:.85rem; color:var(--text-gray); padding:7px 0; border-bottom:1px solid #f0f0f0; }
+    .application-details li:last-child { border-bottom:none; }
+    .application-details strong { color:var(--text-dark); }
+    .application-btn { display:block; width:100%; text-align:center; background:var(--dark-green); color:var(--white); padding:11px 18px; border-radius:8px; text-decoration:none; font-size:.88rem; font-weight:600; transition:all .25s; }
+    .application-btn:hover { background:var(--medium-green); transform:translateY(-2px); }
+    .application-note { margin-top:30px; padding:18px 20px; background:var(--light-green); border-left:4px solid var(--gold); border-radius:8px; color:var(--text-gray); font-size:.85rem; text-align:center; }
+
+    @media (max-width:900px) { .current-applications-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media (max-width:600px) { .current-applications-grid { grid-template-columns:1fr; } }
+
     /* RESPONSIVE */
     @media (max-width: 900px) {
       .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -412,6 +434,7 @@
         <li><a href="#services">সেবাসমূহ</a></li>
         <li><a href="#benefits">সুযোগ-সুবিধা</a></li>
         <li><a href="#universities">বিশ্ববিদ্যালয়সমূহ</a></li>
+        <li><a href="#current-applications">চলমান আবেদন</a></li>
         <li><a href="#documents">ডকুমেন্টস</a></li>
         <li><a href="#why-us">কেন আমরা</a></li>
         <li><a href="#faq">প্রশ্নোত্তর</a></li>
@@ -545,6 +568,70 @@
           <h4>🕋 ওমরাহ ও হজ সুবিধা</h4>
           <p>পবিত্র মক্কা ও মদিনার সান্নিধ্যে থেকে ইবাদত ও ওমরাহ করার বিশেষ সুযোগ।</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- =========================================================
+       CURRENT APPLICATIONS SECTION
+       চলমান স্কলারশিপ আবেদনসমূহ
+  ========================================================= -->
+
+  <section class="current-applications-section" id="current-applications">
+    <div class="container">
+      <div class="section-title">
+        <span class="section-badge">🔔 বর্তমানে খোলা</span>
+        <h2>চলমান স্কলারশিপ আবেদন</h2>
+        <p>বর্তমানে যেসব বিশ্ববিদ্যালয় ও স্কলারশিপের আবেদন গ্রহণ করা হচ্ছে, সেগুলোর গুরুত্বপূর্ণ তথ্য নিচে দেখুন।</p>
+      </div>
+
+      <div class="current-applications-grid">
+
+        <!-- APPLICATION 01 -->
+        <div class="application-card">
+          <span class="application-status">আবেদন চলছে</span>
+          <h3>ইসলামিক বিশ্ববিদ্যালয় মদিনা</h3>
+          <p class="application-university">Islamic University of Madinah</p>
+          <ul class="application-details">
+            <li><strong>প্রোগ্রাম:</strong> ব্যাচেলর / মাস্টার্স / পিএইচডি</li>
+            <li><strong>আবেদনকারী:</strong> আন্তর্জাতিক শিক্ষার্থী</li>
+            <li><strong>শেষ তারিখ:</strong> শীঘ্রই ঘোষণা করা হবে</li>
+          </ul>
+          <a href="#apply" class="application-btn">আবেদন সম্পর্কে বিস্তারিত</a>
+        </div>
+
+        <!-- APPLICATION 02 -->
+        <div class="application-card">
+          <span class="application-status">আবেদন চলছে</span>
+          <h3>কিং সউদ বিশ্ববিদ্যালয়</h3>
+          <p class="application-university">King Saud University</p>
+          <ul class="application-details">
+            <li><strong>প্রোগ্রাম:</strong> ব্যাচেলর / মাস্টার্স / পিএইচডি</li>
+            <li><strong>আবেদনকারী:</strong> আন্তর্জাতিক শিক্ষার্থী</li>
+            <li><strong>শেষ তারিখ:</strong> শীঘ্রই ঘোষণা করা হবে</li>
+          </ul>
+          <a href="#apply" class="application-btn">আবেদন সম্পর্কে বিস্তারিত</a>
+        </div>
+
+        <!-- APPLICATION 03 -->
+        <div class="application-card">
+          <span class="application-status">আবেদন চলছে</span>
+          <h3>কিং আবদুলআজিজ বিশ্ববিদ্যালয়</h3>
+          <p class="application-university">King Abdulaziz University</p>
+          <ul class="application-details">
+            <li><strong>প্রোগ্রাম:</strong> ব্যাচেলর / মাস্টার্স / পিএইচডি</li>
+            <li><strong>আবেদনকারী:</strong> আন্তর্জাতিক শিক্ষার্থী</li>
+            <li><strong>শেষ তারিখ:</strong> শীঘ্রই ঘোষণা করা হবে</li>
+          </ul>
+          <a href="#apply" class="application-btn">আবেদন সম্পর্কে বিস্তারিত</a>
+        </div>
+
+      </div>
+
+      <div class="application-note">
+        📌 নতুন স্কলারশিপের আবেদন শুরু হলে এই সেকশনে নিয়মিত আপডেট করা হবে। আবেদন করার আগে সর্বশেষ তথ্য ও আবেদনের সময়সীমা অবশ্যই যাচাই করুন।
       </div>
     </div>
   </section>
