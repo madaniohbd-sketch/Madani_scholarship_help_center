@@ -109,7 +109,95 @@
     .section-title h2 { font-size: 2rem; color: var(--dark-green); margin-bottom: 12px; }
     .section-title p { color: var(--text-gray); max-width: 600px; margin: 0 auto; }
 
-    /* SERVICE CARDS */
+    /* UNIVERSITY GRID */
+    .uni-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .uni-card {
+      background: var(--white);
+      border-radius: var(--border-radius);
+      padding: 22px 20px;
+      box-shadow: var(--shadow);
+      border: 1px solid #eee;
+      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .uni-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--gold);
+    }
+
+    .uni-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+      border-color: var(--gold);
+    }
+
+    .uni-card .uni-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: var(--dark-green);
+      color: var(--gold);
+      border-radius: 50%;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .uni-card h3 {
+      color: var(--dark-green);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    .uni-card .uni-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .uni-card .tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      background: var(--light-green);
+      color: var(--dark-green);
+    }
+
+    .uni-card .tag.level {
+      background: #fff3e0;
+      color: #b8651a;
+    }
+
+    .uni-card p {
+      font-size: 0.82rem;
+      color: var(--text-gray);
+      line-height: 1.5;
+    }
+
+    .uni-card p strong {
+      color: var(--dark-green);
+    }
+
+    /* SERVICE CARDS (non-university) */
     .service-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
     .service-card {
       background: var(--white);
@@ -284,9 +372,9 @@
       <div class="logo">মাদানি <span>স্কলারশিপ হেল্প সেন্টার</span></div>
       <ul class="nav-links">
         <li><a href="#">হোম</a></li>
+        <li><a href="#universities">বিশ্ববিদ্যালয়</a></li>
         <li><a href="#services">সেবাসমূহ</a></li>
         <li><a href="#apply">আবেদন ফরম</a></li>
-        <li><a href="#contact">যোগাযোগ</a></li>
       </ul>
       <a href="#apply" class="btn btn-gold">আবেদন করুন</a>
     </div>
@@ -295,11 +383,11 @@
   <!-- HERO -->
   <section class="hero">
     <div class="container">
-      <h1>সৌদি আরবের বিশ্ববিদ্যালয়ে <span>ভর্তির জন্য সম্পূর্ণ সহায়তা</span></h1>
+      <h1>সৌদি আরবের ২৪টি বিশ্ববিদ্যালয়ে <span>ভর্তির জন্য সম্পূর্ণ সহায়তা</span></h1>
       <p>মাদানি স্কলারশিপ হেল্প সেন্টার সৌদি আরবের বিভিন্ন বিশ্ববিদ্যালয়ে আবেদনের জন্য প্রয়োজনীয় কাগজপত্র প্রস্তুত, আবেদন প্রক্রিয়া এবং সম্পূর্ণ গাইডলাইন প্রদান করে।</p>
       <div class="hero-buttons">
         <a href="#apply" class="btn btn-gold">এখনই আবেদন করুন</a>
-        <a href="#services" class="btn btn-outline">📋 সেবাসমূহ দেখুন</a>
+        <a href="#universities" class="btn btn-outline">🏛️ বিশ্ববিদ্যালয় দেখুন</a>
       </div>
     </div>
   </section>
@@ -307,33 +395,275 @@
   <!-- TRUST BAR -->
   <div class="trust-bar">
     <div class="container">
-      <div class="trust-item"><span class="icon">🎓</span> অভিজ্ঞ পরামর্শক</div>
-      <div class="trust-item"><span class="icon">🌍</span> সৌদি আরবের বিশ্ববিদ্যালয়</div>
+      <div class="trust-item"><span class="icon">🎓</span> ২৪টি বিশ্ববিদ্যালয়</div>
+      <div class="trust-item"><span class="icon">🌍</span> সৌদি আরবের সব অঞ্চল</div>
       <div class="trust-item"><span class="icon">📄</span> কাগজপত্র প্রস্তুত</div>
       <div class="trust-item"><span class="icon">✅</span> ১০০% বিশ্বস্ত সেবা</div>
     </div>
   </div>
 
-  <!-- SERVICES -->
-  <section id="services">
+  <!-- UNIVERSITIES SECTION -->
+  <section id="universities">
     <div class="container">
       <div class="section-title">
-        <h2>সৌদি বিশ্ববিদ্যালয়ে আবেদনের জন্য আমাদের সেবাসমূহ</h2>
+        <h2>সৌদি আরবের ২৪টি বিশ্ববিদ্যালয়</h2>
+        <p>নিচে সৌদি আরবের সব পাবলিক বিশ্ববিদ্যালয়ের সম্পূর্ণ তালিকা, অবস্থান, লেভেল এবং বিশেষ নোট দেওয়া হলো।</p>
+      </div>
+
+      <div class="uni-grid">
+
+        <div class="uni-card">
+          <div class="uni-number">১</div>
+          <h3>King Abdulaziz University (KAU)</h3>
+          <div class="uni-info">
+            <span class="tag">📍 Jeddah</span>
+            <span class="tag level">Bachelor / Master / PhD</span>
+          </div>
+          <p><strong>নোট:</strong> সায়েন্স, ইঞ্জিনিয়ারিং, ইসলামিক স্টাডিজ – সব সাবজেক্টে সুযোগ।</p>
+        </div>
+
+        <div class="uni-card">
+          <div class="uni-number">২</div>
+          <h3>King Saud University (KSU)</h3>
+          <div class="uni-info">
+            <span class="tag">📍 Riyadh</span>
+            <span class="tag level">Master / PhD (কিছু ক্ষেত্রে Bachelor)</span>
+          </div>
+          <p><strong>নোট:</strong> রিসার্চ-ভিত্তিক প্রোগ্রামে শক্তিশালী।</p>
+        </div>
+
+        <div class="uni-card">
+          <div class="uni-number">৩</div>
+          <h3>King Fahd University of Petroleum &amp; Minerals (KFUPM)</h3>
+          <div class="uni-info">
+            <span class="tag">📍 Dhahran</span>
+            <span class="tag level">Master / PhD</span>
+          </div>
+          <p><strong>নোট:</strong> Engineering, Petroleum, AI, Data Science (খুব কম্পিটিটিভ)।</p>
+        </div>
+
+        <div class="uni-card">
+          <div class="uni-number">৪</div>
+          <h3>Islamic University of Madinah</h3>
+          <div class="uni-info">
+            <span class="tag">📍 Madinah</span>
+            <span class="tag level">Bachelor / Master / PhD</span>
+          </div>
+          <p><strong>নোট:</strong> ইসলামিক স্টাডিজ, হাদিস, ফিকহ, দাওয়াহ (পুরুষদের জন্য)।</p>
+        </div>
+
+        <div class="uni-card">
+          <div class="uni-number">৫</div>
+          <h3>Imam Muhammad ibn Saud Islamic University</h3>
+          <div class="uni-info">
+            <span class="tag">📍 Riyadh</span>
+            <span class="tag level">Bachelor / Master / PhD</span>
+          </div>
+          <p><strong>নোট:</strong> শরিয়াহ, উসূল, আরবি, মিডিয়া স্টাডিজ।</p>
+        </div>
+
+        <div class="uni-card">
+          <div class="uni-number">৬</div>
+          <h3>Umm Al-Qura University</h3>
+          <div class="uni-info">
+            <span class="tag">📍 Makkah</span>
+            <span class="tag level">Bachelor / Master / PhD</span>
+          </div>
+          <p><strong>নোট:</strong> কুরআন, হাদিস, শরিয়াহ + সায়েন্স সাবজেক্ট।</p>
+        </div>
+
+        <div class="uni-card">
+          <div class="uni-number">৭</div>
+          <h3>King Faisal University</h3>
+          <div class="uni-info">
+            <span class="tag">📍 Al Ahsa</span>
+            <span class="tag level">Bachelor / Master</span>
+          </div>
+          <p><strong>নোট:</strong> Agriculture, Veterinary, Islamic Studies।</p>
+        </div>
+
+        <div class="uni-card">
+          <div class="uni-number">৮</div>
+          <h3>King Khalid University</h3>
+          <div class="uni-info">
+            <span class="tag">📍 Abha</span>
+            <span class="tag level">Bachelor / Master</span>
+          </div>
+          <p><strong>নোট:</strong> তুলনামূলকভাবে চান্স ভালো।</p>
+        </div>
+
+        <div class="uni-card">
+          <div class="uni-number">৯</div>
+          <h3>Qassim University</h3>
+          <div class="uni-info">
+            <span class="tag">📍 Qassim</span>
+            <span class="tag level">Bachelor / Master</span>
+          </div>
+          <p><strong>নোট:</strong> ইসলামিক ও জেনারেল স্টাডিজ।</p>
+        </div>
+
+        <div class="uni-card">
+          <div class="uni-number">১০</div>
+          <h3>Princess Nourah bint Abdulrahman University (PNU)</h3>
+          <div class="uni-info">
+            <span class="tag">📍 Riyadh</span>
+            <span class="tag level">Bachelor / Master</span>
+          </div>
+          <p><strong>নোট:</strong> শুধুমাত্র মেয়েদের জন্য (Mahram শর্ত প্রযোজ্য)।</p>
+        </div>
+
+        <div class="uni-card">
+          <div class="uni-number">১১</div>
+          <h3>University of Bisha</h3>
+          <div class="uni-info">
+            <span class="tag">📍 Bisha</span>
+            <span class="tag level">Bachelor</span>
+          </div>
+          <p><strong>নোট:</strong> নতুন বিশ্ববিদ্যালয়, প্রতিযোগিতা কম।</p>
+        </div>
+
+        <div class="uni-card">
+          <div class="uni-number">১২</div>
+          <h3>University of Jeddah</h3>
+          <div class="uni-info">
+            <span class="tag">📍 Jeddah</span>
+            <span class="tag level">Bachelor / Master</span>
+          </div>
+          <p><strong>নোট:</strong> আধুনিক সাবজেক্ট বেশি।</p>
+        </div>
+
+        <div class="uni-card">
+          <div class="uni-number">১৩</div>
+          <h3>University of Hafr Al-Batin</h3>
+          <div class="uni-info">
+            <span class="tag">📍 Hafr Al-Batin</span>
+            <span class="tag level">Bachelor</span>
+          </div>
+          <p><strong>নোট:</strong> স্কলারশিপ পাওয়া তুলনামূলক সহজ।</p>
+        </div>
+
+        <div class="uni-card">
+          <div class="uni-number">১৪</div>
+          <h3>Taif University</h3>
+          <div class="uni-info">
+            <span class="tag">📍 Taif</span>
+            <span class="tag level">Bachelor / Master</span>
+          </div>
+          <p><strong>নোট:</strong> ইসলামিক + আর্টস সাবজেক্ট।</p>
+        </div>
+
+        <div class="uni-card">
+          <div class="uni-number">১৫</div>
+          <h3>Taibah University</h3>
+          <div class="uni-info">
+            <span class="tag">📍 Madinah</span>
+            <span class="tag level">Bachelor / Master</span>
+          </div>
+          <p><strong>নোট:</strong> মদিনা অবস্থানের কারণে জনপ্রিয়।</p>
+        </div>
+
+        <div class="uni-card">
+          <div class="uni-number">১৬</div>
+          <h3>University of Hail</h3>
+          <div class="uni-info">
+            <span class="tag">📍 Hail</span>
+            <span class="tag level">Bachelor</span>
+          </div>
+          <p><strong>নোট:</strong> GPA মাঝারি হলেও চান্স থাকে।</p>
+        </div>
+
+        <div class="uni-card">
+          <div class="uni-number">১৭</div>
+          <h3>Jazan University</h3>
+          <div class="uni-info">
+            <span class="tag">📍 Jazan</span>
+            <span class="tag level">Bachelor / Master</span>
+          </div>
+          <p><strong>নোট:</strong> দক্ষিণ অঞ্চলের বড় পাবলিক ইউনিভার্সিটি।</p>
+        </div>
+
+        <div class="uni-card">
+          <div class="uni-number">১৮</div>
+          <h3>Jouf University</h3>
+          <div class="uni-info">
+            <span class="tag">📍 Al Jouf</span>
+            <span class="tag level">Bachelor</span>
+          </div>
+          <p><strong>নোট:</strong> কম আবেদনকারী, ভালো অপশন।</p>
+        </div>
+
+        <div class="uni-card">
+          <div class="uni-number">১৯</div>
+          <h3>Al-Baha University</h3>
+          <div class="uni-info">
+            <span class="tag">📍 Al-Baha</span>
+            <span class="tag level">Bachelor</span>
+          </div>
+          <p><strong>নোট:</strong> নতুন স্টুডেন্টদের জন্য সুবিধাজনক।</p>
+        </div>
+
+        <div class="uni-card">
+          <div class="uni-number">২০</div>
+          <h3>University of Tabuk</h3>
+          <div class="uni-info">
+            <span class="tag">📍 Tabuk</span>
+            <span class="tag level">Bachelor / Master</span>
+          </div>
+          <p><strong>নোট:</strong> বাংলাদেশিদের জন্য বাস্তবে চান্স ভালো।</p>
+        </div>
+
+        <div class="uni-card">
+          <div class="uni-number">২১</div>
+          <h3>Najran University</h3>
+          <div class="uni-info">
+            <span class="tag">📍 Najran</span>
+            <span class="tag level">Bachelor</span>
+          </div>
+          <p><strong>নোট:</strong> কম প্রতিযোগিতা।</p>
+        </div>
+
+        <div class="uni-card">
+          <div class="uni-number">২২</div>
+          <h3>Northern Border University</h3>
+          <div class="uni-info">
+            <span class="tag">📍 Arar</span>
+            <span class="tag level">Bachelor</span>
+          </div>
+          <p><strong>নোট:</strong> GPA কম হলেও সম্ভাবনা থাকে।</p>
+        </div>
+
+        <div class="uni-card">
+          <div class="uni-number">২৩</div>
+          <h3>Prince Sattam bin Abdulaziz University</h3>
+          <div class="uni-info">
+            <span class="tag">📍 Al Kharj</span>
+            <span class="tag level">Bachelor / Master</span>
+          </div>
+          <p><strong>নোট:</strong> Riyadh এর কাছে হওয়ায় জনপ্রিয়।</p>
+        </div>
+
+        <div class="uni-card">
+          <div class="uni-number">২৪</div>
+          <h3>Imam Abdulrahman bin Faisal University</h3>
+          <div class="uni-info">
+            <span class="tag">📍 Dammam</span>
+            <span class="tag level">Bachelor / Master</span>
+          </div>
+          <p><strong>নোট:</strong> Medical ও Science সাবজেক্টে ভালো।</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" style="background: #f5f9f7;">
+    <div class="container">
+      <div class="section-title">
+        <h2>আমাদের সেবাসমূহ</h2>
         <p>আমরা সৌদি আরবের বিভিন্ন বিশ্ববিদ্যালয়ে ভর্তির জন্য প্রয়োজনীয় সকল কাগজপত্র প্রস্তুত এবং আবেদন প্রক্রিয়ায় সহায়তা করি।</p>
       </div>
       <div class="service-grid">
-        <div class="service-card">
-          <div class="icon-circle">🏛️</div>
-          <h3>বিশ্ববিদ্যালয় নির্বাচন</h3>
-          <p>আপনার যোগ্যতা ও আগ্রহ অনুযায়ী সৌদি আরবের সেরা বিশ্ববিদ্যালয় নির্বাচনে সহায়তা।</p>
-          <ul>
-            <li>উম্মুল কুরা বিশ্ববিদ্যালয়</li>
-            <li>ইসলামিক বিশ্ববিদ্যালয় মদিনা</li>
-            <li>কিং সৌদ বিশ্ববিদ্যালয়</li>
-            <li>কিং আব্দুল আজিজ বিশ্ববিদ্যালয়</li>
-            <li>ইমাম মুহাম্মদ ইবনে সৌদ বিশ্ববিদ্যালয়</li>
-          </ul>
-        </div>
         <div class="service-card">
           <div class="icon-circle">📄</div>
           <h3>প্রয়োজনীয় কাগজপত্র প্রস্তুত</h3>
@@ -386,222 +716,4 @@
         </div>
         <div class="service-card">
           <div class="icon-circle">💬</div>
-          <h3>২৪/৭ পরামর্শ সেবা</h3>
-          <p>যেকোনো প্রশ্ন বা সমস্যার জন্য আমাদের সাথে যোগাযোগ করুন।</p>
-          <ul>
-            <li>হোয়াটসঅ্যাপ সাপোর্ট</li>
-            <li>ফোন কল সাপোর্ট</li>
-            <li>ইমেইল সাপোর্ট</li>
-            <li>ব্যক্তিগত পরামর্শ</li>
-            <li>অনলাইন মিটিং</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY CHOOSE -->
-  <section style="background: #f5f9f7;">
-    <div class="container">
-      <div class="section-title">
-        <h2>কেন মাদানি স্কলারশিপ হেল্প সেন্টার বেছে নেবেন?</h2>
-        <p>আমরা সৌদি আরবের বিশ্ববিদ্যালয়ে ভর্তির জন্য সর্বোচ্চ মানের সেবা প্রদান করি।</p>
-      </div>
-      <div class="why-grid">
-        <div class="why-card">
-          <div class="icon-circle">🎓</div>
-          <h4>অভিজ্ঞ পরামর্শক</h4>
-          <p>দীর্ঘ বছরের অভিজ্ঞতা সম্পন্ন পরামর্শক দল আপনার আবেদন প্রক্রিয়ায় সহায়তা করবে।</p>
-        </div>
-        <div class="why-card">
-          <div class="icon-circle">📅</div>
-          <h4>সময়মতো সেবা</h4>
-          <p>নির্ধারিত সময়ের মধ্যে আপনার সকল কাগজপত্র ও আবেদন প্রস্তুত করা হবে।</p>
-        </div>
-        <div class="why-card">
-          <div class="icon-circle">👥</div>
-          <h4>ব্যক্তিগত মনোযোগ</h4>
-          <p>প্রতিটি আবেদনকারীকে আলাদাভাবে গুরুত্ব দিয়ে সেবা প্রদান করা হয়।</p>
-        </div>
-        <div class="why-card">
-          <div class="icon-circle">🏷️</div>
-          <h4>সাশ্রয়ী মূল্য</h4>
-          <p>উচ্চ-মানের সেবা সাশ্রয়ী মূল্যে প্রদান করা হয়, কোনো লুকানো খরচ নেই।</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section>
-    <div class="container">
-      <div class="section-title">
-        <h2>৩টি সহজ ধাপে আবেদন করুন</h2>
-        <p>৫ মিনিটেরও কম সময়ে আপনার আবেদন প্রক্রিয়া শুরু করুন।</p>
-      </div>
-      <div class="steps-grid">
-        <div class="step-card">
-          <div class="step-number">১</div>
-          <h4>ফরম পূরণ করুন</h4>
-          <p>নিচের আবেদন ফরমটি পূরণ করে আপনার প্রয়োজনীয় তথ্য ও ডকুমেন্ট আপলোড করুন।</p>
-        </div>
-        <div class="step-card">
-          <div class="step-number">২</div>
-          <h4>ডকুমেন্ট যাচাই</h4>
-          <p>আমাদের পরামর্শক দল আপনার ডকুমেন্ট যাচাই করে প্রয়োজনীয় পরামর্শ প্রদান করবে।</p>
-        </div>
-        <div class="step-card">
-          <div class="step-number">৩</div>
-          <h4>আবেদন জমা দিন</h4>
-          <p>আমরা আপনার পক্ষ থেকে বিশ্ববিদ্যালয়ে আবেদন জমা দিয়ে সম্পূর্ণ প্রক্রিয়া সম্পন্ন করব।</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- APPLICATION FORM -->
-  <section id="apply" class="form-section">
-    <div class="container">
-      <div class="section-title">
-        <h2>আবেদন ফরম</h2>
-        <p>নিচের ফরমটি পূরণ করে আপনার আবেদন শুরু করুন। সকল তথ্য গোপন রাখা হবে।</p>
-      </div>
-
-      <form class="form-box" id="applicationForm" enctype="multipart/form-data">
-        <h3>ব্যক্তিগত তথ্য</h3>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">নাম <span class="required">*</span></label>
-            <input type="text" id="name" name="name" placeholder="আপনার পূর্ণ নাম" required>
-          </div>
-          <div class="form-group">
-            <label for="father_name">পিতার নাম <span class="required">*</span></label>
-            <input type="text" id="father_name" name="father_name" placeholder="পিতার নাম" required>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="mother_name">মাতার নাম <span class="required">*</span></label>
-            <input type="text" id="mother_name" name="mother_name" placeholder="মাতার নাম" required>
-          </div>
-          <div class="form-group">
-            <label for="grandfather_name">দাদার নাম <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
-            <input type="text" id="grandfather_name" name="grandfather_name" placeholder="দাদার নাম">
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="address">ঠিকানা <span class="required">*</span></label>
-          <textarea id="address" name="address" placeholder="আপনার সম্পূর্ণ ঠিকানা লিখুন" required></textarea>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="passport">পাসপোর্ট নাম্বার <span class="required">*</span></label>
-            <input type="text" id="passport" name="passport" placeholder="পাসপোর্ট নাম্বার" required>
-          </div>
-          <div class="form-group">
-            <label for="mobile">মোবাইল নাম্বার <span class="required">*</span></label>
-            <input type="tel" id="mobile" name="mobile" placeholder="01XXXXXXXXX" required>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="email">ইমেইল <span class="required">*</span></label>
-          <input type="email" id="email" name="email" placeholder="example@email.com" required>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="previous_service">আগে সার্ভিস নিয়েছে কি না? <span class="required">*</span></label>
-            <select id="previous_service" name="previous_service" required>
-              <option value="">-- নির্বাচন করুন --</option>
-              <option value="হ্যাঁ">হ্যাঁ</option>
-              <option value="না">না</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="payment_method">কিসের মাধ্যমে পেমেন্ট করেছে? <span class="required">*</span></label>
-            <select id="payment_method" name="payment_method" required>
-              <option value="">-- নির্বাচন করুন --</option>
-              <option value="বিকাশ">বিকাশ</option>
-              <option value="নগদ">নগদ</option>
-              <option value="রকেট">রকেট</option>
-              <option value="ব্যাংক">ব্যাংক</option>
-            </select>
-          </div>
-        </div>
-
-        <h3 style="margin-top: 30px; color: var(--dark-green);">ডকুমেন্ট আপলোড <span style="font-size:0.8rem; font-weight:400; color:#888;">(সবগুলো অপশনাল)</span></h3>
-
-        <div style="background: #fff8e1; border-left: 4px solid var(--gold); padding: 12px 16px; border-radius: 6px; font-size: 0.85rem; color: #6b5a1e; margin-bottom: 20px;">
-          📌 নিচের যেকোনো ডকুমেন্ট আপনি চাইলে আপলোড করতে পারেন। সব ডকুমেন্ট আপলোড না করলেও আবেদন জমা দেওয়া যাবে। প্রতিটি ফাইল সর্বোচ্চ ২০ এমবি।
-        </div>
-
-        <div class="form-group">
-          <label>🛂 পাসপোর্ট <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
-          <div class="file-upload-box">
-            <input type="file" name="passport_file" accept=".pdf,.jpg,.jpeg,.png" onchange="showFileName(this)">
-            <div class="upload-icon">📎</div>
-            <div class="upload-text">ফাইল নির্বাচন করতে ক্লিক করুন<br><strong>সর্বোচ্চ ২০ এমবি</strong></div>
-            <div class="file-name"></div>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label>🎓 এইচএসসি সার্টিফিকেট <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
-          <div class="file-upload-box">
-            <input type="file" name="hsc_certificate" accept=".pdf,.jpg,.jpeg,.png" onchange="showFileName(this)">
-            <div class="upload-icon">📎</div>
-            <div class="upload-text">ফাইল নির্বাচন করতে ক্লিক করুন<br><strong>সর্বোচ্চ ২০ এমবি</strong></div>
-            <div class="file-name"></div>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label>📊 এইচএসসি মার্কশিট <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
-          <div class="file-upload-box">
-            <input type="file" name="hsc_marksheet" accept=".pdf,.jpg,.jpeg,.png" onchange="showFileName(this)">
-            <div class="upload-icon">📎</div>
-            <div class="upload-text">ফাইল নির্বাচন করতে ক্লিক করুন<br><strong>সর্বোচ্চ ২০ এমবি</strong></div>
-            <div class="file-name"></div>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label>📜 এসএসসি সার্টিফিকেট <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
-          <div class="file-upload-box">
-            <input type="file" name="ssc_certificate" accept=".pdf,.jpg,.jpeg,.png" onchange="showFileName(this)">
-            <div class="upload-icon">📎</div>
-            <div class="upload-text">ফাইল নির্বাচন করতে ক্লিক করুন<br><strong>সর্বোচ্চ ২০ এমবি</strong></div>
-            <div class="file-name"></div>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label>📈 এসএসসি মার্কশিট <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
-          <div class="file-upload-box">
-            <input type="file" name="ssc_marksheet" accept=".pdf,.jpg,.jpeg,.png" onchange="showFileName(this)">
-            <div class="upload-icon">📎</div>
-            <div class="upload-text">ফাইল নির্বাচন করতে ক্লিক করুন<br><strong>সর্বোচ্চ ২০ এমবি</strong></div>
-            <div class="file-name"></div>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label>👶 জন্মনিবন্ধন <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
-          <div class="file-upload-box">
-            <input type="file" name="birth_certificate" accept=".pdf,.jpg,.jpeg,.png" onchange="showFileName(this)">
-            <div class="upload-icon">📎</div>
-            <div class="upload-text">ফাইল নির্বাচন করতে ক্লিক করুন<br><strong>সর্বোচ্চ ২০ এমবি</strong></div>
-            <div class="file-name"></div>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label>🚔 পুলিশ ক্লিয়ারেন্স <span style="color:#888; font-weight:400; font-size:0.8rem;">(অপশনাল)</span></label>
-          <div class="file-upload-box">
-            <input type="file" name="police_clearance" accept=".pdf,.jpg,.jpeg,.png" onchange="showFileName(this)">
-            <div class="upload
+          <h3>২৪/৭ পরামর্শ সেব
