@@ -1,27 +1,951 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>মাদানি স্কলারশিপ হেল্প সেন্টার</title>
-<meta name="description" content="স্কলারশিপ আবেদন, পরামর্শ, ভিসা, অনুবাদ ও সৌদি আরবের উচ্চশিক্ষা সংক্রান্ত সহায়তা।">
-<style>
-:root{--g:#08734f;--gd:#043d2d;--mint:#effaf5;--gold:#c99b35;--ink:#16352b;--muted:#667871;--line:#dfeae5}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,"Noto Sans Bengali",sans-serif;color:var(--ink);line-height:1.7;background:#fff}a{text-decoration:none;color:inherit}.wrap{max-width:1120px;margin:auto;padding:0 20px}header{position:sticky;top:0;z-index:20;background:#ffffffee;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;font-weight:900;color:var(--gd)}.brand img{width:52px;height:52px;object-fit:contain;border-radius:12px}.navlinks{display:flex;gap:22px;font-weight:700}.navlinks a:hover{color:var(--g)}.hero{background:radial-gradient(circle at 85% 20%,#d8f2e7,transparent 35%),linear-gradient(135deg,#effaf5,#fff);padding:78px 0}.heroGrid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}.pill{display:inline-block;padding:7px 14px;border-radius:999px;background:#dff3e9;color:var(--g);font-weight:800}.hero h1{font-size:clamp(36px,5vw,60px);line-height:1.13;margin:18px 0 16px;color:var(--gd)}.hero p{font-size:19px;color:#52675f;max-width:700px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{border:0;border-radius:11px;padding:13px 20px;font-weight:900;cursor:pointer;display:inline-block}.primary{background:var(--g);color:#fff}.secondary{background:#fff;border:1px solid #bfd4ca;color:var(--gd)}.heroCard{background:#fff;border:1px solid var(--line);border-radius:26px;padding:34px;text-align:center;box-shadow:0 25px 70px #053d2d16}.heroCard img{width:min(250px,80%);max-height:250px;object-fit:contain}.heroCard h3{margin:12px 0 4px;color:var(--gd)}section{padding:70px 0}.title{text-align:center;max-width:760px;margin:0 auto 36px}.title h2{font-size:34px;line-height:1.25;margin:0 0 8px;color:var(--gd)}.title p{color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid var(--line);border-radius:18px;padding:24px;background:#fff;transition:.2s}.card:hover{transform:translateY(-3px);box-shadow:0 12px 30px #053d2d0c}.icon{font-size:30px}.card h3{margin:8px 0;color:var(--gd)}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{background:var(--mint);border-radius:18px;padding:24px}.num{display:grid;place-items:center;width:40px;height:40px;background:var(--g);color:#fff;border-radius:50%;font-weight:900}.apply{background:var(--gd);color:#fff}.apply .title h2,.apply .title p{color:#fff}.form{max-width:920px;margin:auto;background:#fff;color:var(--ink);padding:30px;border-radius:22px;box-shadow:0 20px 60px #0002}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}label{font-weight:800;font-size:14px}input,select,textarea{width:100%;margin-top:6px;padding:13px;border:1px solid #cbdcd5;border-radius:10px;font:inherit;background:#fff}textarea{min-height:120px;resize:vertical}.full{grid-column:1/-1}.files{padding:13px;border:1px dashed #9fbeb1;border-radius:10px;background:#f7fbf9}.note{font-size:13px;color:#71827c;margin:10px 0 0}.msg{margin-top:14px;font-weight:800}.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.contact .card{text-align:center}.contact a{color:var(--g);font-weight:800}footer{background:#032c21;color:#d7ebe4;text-align:center;padding:25px}.small{font-size:13px;opacity:.8}@media(max-width:800px){.navlinks{display:none}.heroGrid,.cards,.steps,.contact,.grid{grid-template-columns:1fr}.full{grid-column:auto}.hero{padding:52px 0}.heroCard{order:-1}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>মাদানি স্কলারশিপ হেল্প সেন্টার</title>
+
+  <meta name="description"
+    content="মাদানি স্কলারশিপ হেল্প সেন্টার - স্কলারশিপ আবেদন, শিক্ষা পরামর্শ, ভিসা সহায়তা, অনুবাদ ও সৌদি আরবে উচ্চশিক্ষা সংক্রান্ত সহায়তা।">
+
+  <style>
+    :root {
+      --green: #087f5b;
+      --dark-green: #064e3b;
+      --light-green: #ecfdf5;
+      --gold: #c99b35;
+      --white: #ffffff;
+      --text: #17352d;
+      --muted: #667781;
+      --border: #dce9e4;
+      --shadow: 0 10px 30px rgba(0, 80, 55, .10);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, "Noto Sans Bengali", sans-serif;
+      background: #f8fcfa;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .wrap {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    /* Header */
+    header {
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      color: var(--dark-green);
+    }
+
+    .brand img {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    .brand span {
+      font-size: 18px;
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
+
+    nav a {
+      font-weight: 600;
+      color: #31534a;
+    }
+
+    nav a:hover {
+      color: var(--green);
+    }
+
+    .nav-btn {
+      background: var(--green);
+      color: white;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 85px 0;
+      background:
+        radial-gradient(circle at top right, #dff8ed, transparent 35%),
+        linear-gradient(135deg, #f4fffa, #ffffff);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 7px 14px;
+      border-radius: 50px;
+      background: #dff7ed;
+      color: var(--green);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(35px, 5vw, 58px);
+      line-height: 1.15;
+      color: var(--dark-green);
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 680px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 11px;
+      font-weight: 700;
+      border: 1px solid var(--green);
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: white;
+    }
+
+    .btn-secondary {
+      color: var(--green);
+      background: white;
+    }
+
+    .hero-card {
+      background: white;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      border-radius: 22px;
+      padding: 35px;
+      text-align: center;
+    }
+
+    .hero-card img {
+      width: 170px;
+      max-width: 70%;
+      margin-bottom: 20px;
+    }
+
+    .hero-card h3 {
+      color: var(--dark-green);
+      margin-bottom: 8px;
+    }
+
+    .hero-card p {
+      font-size: 15px;
+    }
+
+    /* Sections */
+    section {
+      padding: 75px 0;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .title span {
+      color: var(--green);
+      font-weight: 800;
+    }
+
+    .title h2 {
+      font-size: 34px;
+      color: var(--dark-green);
+      margin: 7px 0;
+    }
+
+    .title p {
+      color: var(--muted);
+    }
+
+    /* Services */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      padding: 26px;
+      box-shadow: 0 5px 20px rgba(0,80,55,.05);
+      transition: .25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      background: var(--light-green);
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: var(--dark-green);
+      margin-bottom: 7px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* Steps */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .step {
+      text-align: center;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      padding: 30px 20px;
+    }
+
+    .num {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 15px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--green);
+      color: white;
+      font-weight: 800;
+      font-size: 20px;
+    }
+
+    /* Form */
+    .apply-section {
+      background: #effaf5;
+    }
+
+    .form-box {
+      background: white;
+      max-width: 850px;
+      margin: auto;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 17px;
+    }
+
+    .field {
+      margin-bottom: 5px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--dark-green);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid #cbded7;
+      border-radius: 9px;
+      padding: 12px;
+      font: inherit;
+      outline: none;
+      background: white;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(8,127,91,.08);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      width: 100%;
+      border: 0;
+      background: var(--green);
+      color: white;
+      padding: 14px;
+      border-radius: 10px;
+      font-size: 17px;
+      font-weight: 800;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .submit-btn:hover {
+      background: var(--dark-green);
+    }
+
+    #msg {
+      margin-top: 15px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      align-items: stretch;
+    }
+
+    .contact-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0,80,55,.05);
+    }
+
+    .contact-card h3 {
+      color: var(--dark-green);
+      margin-bottom: 15px;
+    }
+
+    .contact-item {
+      padding: 10px 0;
+      border-bottom: 1px solid #edf3f0;
+    }
+
+    .contact-item:last-child {
+      border-bottom: 0;
+    }
+
+    .contact-item strong {
+      color: var(--green);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark-green);
+      color: white;
+      padding: 28px 0;
+      text-align: center;
+    }
+
+    footer p {
+      opacity: .9;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 850px) {
+      .hero-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      nav {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 55px 0;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .services,
+      .steps,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .field.full {
+        grid-column: auto;
+      }
+
+      .form-box {
+        padding: 22px;
+      }
+
+      .brand span {
+        font-size: 15px;
+      }
+
+      .brand img {
+        width: 45px;
+        height: 45px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header><div class="wrap nav"><a class="brand" href="#"><img src="assets/logo.jpg" alt="লোগো"><span>মাদানি স্কলারশিপ হেল্প সেন্টার</span></a><nav class="navlinks"><a href="#services">সেবাসমূহ</a><a href="#apply">আবেদন</a><a href="#contact">যোগাযোগ</a></nav></div></header>
-<main>
-<section class="hero"><div class="wrap heroGrid"><div><span class="pill">Scholarship • Visa • Consultation</span><h1>স্কলারশিপের আবেদন ও প্রয়োজনীয় সহায়তা—এক জায়গায়</h1><p>সৌদি আরবসহ বিভিন্ন দেশের উচ্চশিক্ষা, স্কলারশিপ, ভিসা, অনুবাদ ও প্রয়োজনীয় কাগজপত্রের বিষয়ে সহজ ও নির্ভরযোগ্য সহায়তা।</p><div class="actions"><a class="btn primary" href="#apply">আবেদন করুন</a><a class="btn secondary" href="https://wa.me/8801601899945" target="_blank">WhatsApp</a></div></div><div class="heroCard"><img src="assets/logo.jpg" alt="Madani Scholarship Help Center"><h3>আপনার শিক্ষাযাত্রায় পাশে আছি</h3><div class="small">সহজ আবেদন • ব্যক্তিগত পরামর্শ • দ্রুত যোগাযোগ</div></div></div></section>
-<section id="services"><div class="wrap"><div class="title"><h2>আমাদের সেবাসমূহ</h2><p>আপনার প্রয়োজন অনুযায়ী সঠিক সহায়তা পেতে আবেদন করুন।</p></div><div class="cards">
-<div class="card"><div class="icon">🎓</div><h3>স্কলারশিপ আবেদন</h3><p>বিশ্ববিদ্যালয় ও স্কলারশিপের আবেদন প্রক্রিয়ায় সহায়তা।</p></div><div class="card"><div class="icon">📝</div><h3>শিক্ষা পরামর্শ</h3><p>বিষয়, বিশ্ববিদ্যালয় ও আবেদন সংক্রান্ত গাইডলাইন।</p></div><div class="card"><div class="icon">🛂</div><h3>ভিসা সহায়তা</h3><p>ভিসা আবেদন ও প্রয়োজনীয় কাগজপত্র সম্পর্কে সহায়তা।</p></div><div class="card"><div class="icon">🌐</div><h3>অনুবাদ</h3><p>প্রয়োজনীয় ডকুমেন্টের অনুবাদ ও প্রস্তুতিতে সহায়তা।</p></div><div class="card"><div class="icon">🏥</div><h3>মেডিকেল স্লিপ</h3><p>মেডিকেল সংক্রান্ত প্রক্রিয়ায় প্রয়োজনীয় দিকনির্দেশনা।</p></div><div class="card"><div class="icon">📅</div><h3>Tasheerah Center</h3><p>অ্যাপয়েন্টমেন্ট ও সংশ্লিষ্ট প্রক্রিয়ায় সহায়তা।</p></div></div></div></section>
-<section><div class="wrap"><div class="title"><h2>কীভাবে কাজ করবে?</h2></div><div class="steps"><div class="step"><span class="num">১</span><h3>তথ্য দিন</h3><p>ফর্মে প্রয়োজনীয় তথ্য ও Documents দিন।</p></div><div class="step"><span class="num">২</span><h3>আমরা পাব</h3><p>আপনার আবেদন সরাসরি আমাদের Telegram Channel-এ পৌঁছাবে।</p></div><div class="step"><span class="num">৩</span><h3>আমরা যোগাযোগ করব</h3><p>তথ্য দেখে প্রয়োজনীয় পরামর্শ ও পরবর্তী ধাপ জানানো হবে।</p></div></div></div></section>
-<section id="apply" class="apply"><div class="wrap"><div class="title"><h2>নতুন স্কলারশিপ আবেদন</h2><p>তথ্য পূরণ করুন। Submit করলে আপনার তথ্য ও সংযুক্ত Documents সরাসরি আমাদের Telegram Channel-এ যাবে।</p></div><form class="form" id="applyForm" enctype="multipart/form-data"><div class="grid">
-<div><label>পূর্ণ নাম *</label><input name="name" required></div><div><label>পিতার নাম *</label><input name="father" required></div><div><label>দাদার নাম</label><input name="grandfather"></div><div><label>মায়ের নাম *</label><input name="mother" required></div><div><label>পাসপোর্ট নাম্বার *</label><input name="passport" required></div><div><label>ফোন / WhatsApp *</label><input name="phone" required></div><div><label>Email</label><input type="email" name="email"></div><div><label>সেবা *</label><select name="service" required><option value="">নির্বাচন করুন</option><option>স্কলারশিপ আবেদন</option><option>পরামর্শ</option><option>ভিসা সহায়তা</option><option>অনুবাদ</option><option>মেডিকেল স্লিপ</option><option>Tasheerah Center</option><option>অন্যান্য</option></select></div><div class="full"><label>বার্তা</label><textarea name="message" placeholder="আপনার প্রয়োজন সংক্ষেপে লিখুন"></textarea></div><div class="full"><label>📎 Documents</label><input class="files" type="file" name="documents" multiple accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"><div class="note">সর্বোচ্চ ১০টি ফাইল, প্রতিটি সর্বোচ্চ ২০MB।</div></div></div><button class="btn primary" type="submit" style="margin-top:18px">আবেদন পাঠান</button><div class="msg" id="msg"></div></form></div></section>
-<section id="contact"><div class="wrap"><div class="title"><h2>যোগাযোগ</h2></div><div class="contact"><div class="card"><h3>📞 ফোন / WhatsApp</h3><p><a href="https://wa.me/8801601899945">+8801601899945</a></p></div><div class="card"><h3>✉️ Email</h3><p><a href="mailto:madaniohbd@gmail.com">madaniohbd@gmail.com</a></p></div><div class="card"><h3>💬 যোগাযোগ</h3><p>WhatsApp • Telegram • Imo</p></div></div></div></section>
-</main><footer>© <span id="year"></span> Madani Scholarship Help Center — All Rights Reserved.</footer>
-<script>
-document.getElementById('year').textContent=new Date().getFullYear();
-const form=document.getElementById('applyForm'),msg=document.getElementById('msg');
-form.addEventListener('submit',async e=>{e.preventDefault();msg.textContent='আবেদন পাঠানো হচ্ছে…';msg.style.color='#08734f';try{const r=await fetch('/api/apply',{method:'POST',body:new FormData(form)});const d=await r.json();if(!r.ok||!d.ok)throw new Error(d.message);msg.textContent='✅ '+d.message;form.reset();}catch(err){msg.textContent='❌ '+err.message;msg.style.color='#b42318';}});
-</script>
-</body></html>
+
+  <!-- Header -->
+  <header>
+    <div class="wrap nav">
+
+      <a class="brand" href="#">
+        <img src="assets/logo.jpg" alt="মাদানি স্কলারশিপ হেল্প সেন্টার">
+        <span>মাদানি স্কলারশিপ হেল্প সেন্টার</span>
+      </a>
+
+      <nav>
+        <a href="#services">সেবাসমূহ</a>
+        <a href="#apply">আবেদন</a>
+        <a href="#contact">যোগাযোগ</a>
+        <a class="nav-btn" href="#apply">আবেদন করুন</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- Hero -->
+  <main>
+
+    <section class="hero">
+      <div class="wrap hero-grid">
+
+        <div>
+          <span class="pill">Scholarship • Visa • Consultation</span>
+
+          <h1>
+            আপনার উচ্চশিক্ষার স্বপ্নকে
+            <br>
+            বাস্তবে রূপ দিতে আমরা পাশে আছি।
+          </h1>
+
+          <p>
+            মাদানি স্কলারশিপ হেল্প সেন্টার থেকে স্কলারশিপ আবেদন,
+            শিক্ষা পরামর্শ, ভিসা সহায়তা, অনুবাদ এবং সৌদি আরবে
+            উচ্চশিক্ষা সংক্রান্ত প্রয়োজনীয় সহযোগিতা গ্রহণ করুন।
+          </p>
+
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#apply">
+              স্কলারশিপের জন্য আবেদন করুন
+            </a>
+
+            <a class="btn btn-secondary"
+               href="https://wa.me/8801601899945"
+               target="_blank">
+              WhatsApp-এ যোগাযোগ
+            </a>
+          </div>
+        </div>
+
+
+        <div class="hero-card">
+          <img src="assets/logo.jpg"
+               alt="Madani Scholarship Help Center Logo">
+
+          <h3>মাদানি স্কলারশিপ হেল্প সেন্টার</h3>
+
+          <p>
+            Scholarship Application & Educational Consultancy
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Services -->
+    <section id="services">
+      <div class="wrap">
+
+        <div class="title">
+          <span>OUR SERVICES</span>
+          <h2>আমাদের সেবাসমূহ</h2>
+          <p>স্কলারশিপ ও উচ্চশিক্ষা সংক্রান্ত বিভিন্ন সেবা একসাথে</p>
+        </div>
+
+        <div class="services">
+
+          <div class="card">
+            <div class="icon">🎓</div>
+            <h3>স্কলারশিপ আবেদন</h3>
+            <p>
+              বিভিন্ন বিশ্ববিদ্যালয় ও স্কলারশিপ প্রোগ্রামে
+              আবেদন সংক্রান্ত সহায়তা।
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">📚</div>
+            <h3>শিক্ষা পরামর্শ</h3>
+            <p>
+              বিশ্ববিদ্যালয় নির্বাচন, বিষয় নির্বাচন ও
+              উচ্চশিক্ষার প্রস্তুতি বিষয়ে পরামর্শ।
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🛂</div>
+            <h3>ভিসা সহায়তা</h3>
+            <p>
+              উচ্চশিক্ষার উদ্দেশ্যে প্রয়োজনীয় ভিসা
+              প্রক্রিয়া সম্পর্কে সহযোগিতা।
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🌐</div>
+            <h3>অনুবাদ সেবা</h3>
+            <p>
+              প্রয়োজনীয় কাগজপত্র ও শিক্ষাগত ডকুমেন্ট
+              অনুবাদে সহায়তা।
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🏥</div>
+            <h3>মেডিকেল স্লিপ</h3>
+            <p>
+              প্রয়োজনীয় মেডিকেল প্রক্রিয়া ও সংশ্লিষ্ট
+              সেবায় সহযোগিতা।
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">📄</div>
+            <h3>Tasheerah Center</h3>
+            <p>
+              Tasheerah Center appointment ও সংশ্লিষ্ট
+              প্রক্রিয়ায় প্রয়োজনীয় সহায়তা।
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- How it works -->
+    <section>
+      <div class="wrap">
+
+        <div class="title">
+          <span>HOW IT WORKS</span>
+          <h2>কীভাবে সেবা নেবেন?</h2>
+        </div>
+
+        <div class="steps">
+
+          <div class="step">
+            <div class="num">1</div>
+            <h3>তথ্য দিন</h3>
+            <p>
+              নিচের আবেদন ফর্মে আপনার প্রয়োজনীয় তথ্য দিন।
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="num">2</div>
+            <h3>আবেদন জমা দিন</h3>
+            <p>
+              প্রয়োজনীয় ডকুমেন্টসহ আবেদন Submit করুন।
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="num">3</div>
+            <h3>আমাদের সাথে যোগাযোগ</h3>
+            <p>
+              আমাদের টিম আপনার আবেদনের বিষয়ে যোগাযোগ করবে।
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Application -->
+    <section id="apply" class="apply-section">
+
+      <div class="wrap">
+
+        <div class="title">
+          <span>APPLICATION</span>
+          <h2>স্কলারশিপ / সেবা আবেদন</h2>
+          <p>
+            নিচের ফর্মটি পূরণ করে আপনার আবেদন জমা দিন।
+          </p>
+        </div>
+
+
+        <div class="form-box">
+
+          <form id="applyForm" enctype="multipart/form-data">
+
+            <div class="form-grid">
+
+              <div class="field">
+                <label>পূর্ণ নাম *</label>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  placeholder="আপনার পূর্ণ নাম">
+              </div>
+
+              <div class="field">
+                <label>পিতার নাম *</label>
+                <input
+                  type="text"
+                  name="father"
+                  required
+                  placeholder="পিতার নাম">
+              </div>
+
+              <div class="field">
+                <label>দাদার নাম</label>
+                <input
+                  type="text"
+                  name="grandfather"
+                  placeholder="দাদার নাম">
+              </div>
+
+              <div class="field">
+                <label>মাতার নাম *</label>
+                <input
+                  type="text"
+                  name="mother"
+                  required
+                  placeholder="মাতার নাম">
+              </div>
+
+              <div class="field">
+                <label>পাসপোর্ট নম্বর</label>
+                <input
+                  type="text"
+                  name="passport"
+                  placeholder="Passport Number">
+              </div>
+
+              <div class="field">
+                <label>মোবাইল নম্বর *</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  required
+                  placeholder="+880...">
+              </div>
+
+              <div class="field">
+                <label>ই-মেইল</label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="example@gmail.com">
+              </div>
+
+              <div class="field">
+                <label>কোন সেবা প্রয়োজন? *</label>
+
+                <select name="service" required>
+                  <option value="">সেবা নির্বাচন করুন</option>
+                  <option value="স্কলারশিপ আবেদন">
+                    স্কলারশিপ আবেদন
+                  </option>
+                  <option value="শিক্ষা পরামর্শ">
+                    শিক্ষা পরামর্শ
+                  </option>
+                  <option value="ভিসা সহায়তা">
+                    ভিসা সহায়তা
+                  </option>
+                  <option value="অনুবাদ">
+                    অনুবাদ
+                  </option>
+                  <option value="মেডিকেল স্লিপ">
+                    মেডিকেল স্লিপ
+                  </option>
+                  <option value="Tasheerah Center">
+                    Tasheerah Center
+                  </option>
+                  <option value="অন্যান্য">
+                    অন্যান্য
+                  </option>
+                </select>
+              </div>
+
+              <div class="field full">
+                <label>আপনার বার্তা</label>
+
+                <textarea
+                  name="message"
+                  placeholder="আপনার প্রয়োজন বা বিস্তারিত তথ্য লিখুন..."></textarea>
+              </div>
+
+              <div class="field full">
+                <label>প্রয়োজনীয় ডকুমেন্ট</label>
+
+                <input
+                  type="file"
+                  name="documents"
+                  multiple
+                  accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
+
+                <small>
+                  PDF, JPG, JPEG, PNG, DOC, DOCX ফাইল আপলোড করতে পারবেন।
+                </small>
+              </div>
+
+              <div class="field full">
+
+                <button
+                  type="submit"
+                  class="submit-btn">
+                  আবেদন জমা দিন
+                </button>
+
+                <div id="msg"></div>
+
+              </div>
+
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+
+      <div class="wrap">
+
+        <div class="title">
+          <span>CONTACT US</span>
+          <h2>যোগাযোগ করুন</h2>
+          <p>যেকোনো সাহায্য বা পরামর্শের জন্য আমাদের সাথে যোগাযোগ করুন।</p>
+        </div>
+
+
+        <div class="contact-grid">
+
+          <div class="contact-card">
+
+            <h3>মাদানি স্কলারশিপ হেল্প সেন্টার</h3>
+
+            <div class="contact-item">
+              <strong>📱 মোবাইল / WhatsApp</strong><br>
+              +8801601899945
+            </div>
+
+            <div class="contact-item">
+              <strong>✉️ Email</strong><br>
+              madaniohbd@gmail.com
+            </div>
+
+            <div class="contact-item">
+              <strong>💬 যোগাযোগ</strong><br>
+              WhatsApp • Telegram • Imo
+            </div>
+
+          </div>
+
+
+          <div class="contact-card">
+
+            <h3>দ্রুত যোগাযোগ</h3>
+
+            <p style="color:#667781;margin-bottom:20px;">
+              স্কলারশিপ আবেদন বা যেকোনো তথ্যের জন্য সরাসরি
+              WhatsApp-এ যোগাযোগ করতে পারেন।
+            </p>
+
+            <a
+              class="btn btn-primary"
+              href="https://wa.me/8801601899945"
+              target="_blank">
+              WhatsApp-এ মেসেজ করুন
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+
+      <p>
+        © <span id="year"></span>
+        Madani Scholarship Help Center
+        — All Rights Reserved.
+      </p>
+
+    </div>
+  </footer>
+
+
+  <script>
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    const form = document.getElementById("applyForm");
+    const msg = document.getElementById("msg");
+
+
+    form.addEventListener("submit", async (e) => {
+
+      e.preventDefault();
+
+      msg.textContent = "আবেদন পাঠানো হচ্ছে...";
+      msg.style.color = "#087f5b";
+
+
+      try {
+
+        const formData = new FormData(form);
+
+        const response = await fetch("/api/apply", {
+          method: "POST",
+          body: formData
+        });
+
+
+        const data = await response.json();
+
+
+        if (response.ok) {
+
+          msg.textContent =
+            "✅ আপনার আবেদন সফলভাবে জমা হয়েছে।";
+
+          msg.style.color = "#087f5b";
+
+          form.reset();
+
+        } else {
+
+          msg.textContent =
+            "❌ আবেদন জমা হয়নি: " +
+            (data.error || "অনুগ্রহ করে আবার চেষ্টা করুন।");
+
+          msg.style.color = "#c0392b";
+
+        }
+
+      } catch (error) {
+
+        msg.textContent =
+          "❌ সার্ভারের সাথে যোগাযোগ করা যাচ্ছে না।";
+
+        msg.style.color = "#c0392b";
+
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>
