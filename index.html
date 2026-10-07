@@ -594,7 +594,7 @@
     <div class="container">
       <h1><b></b>মাদানি স্কলারশিপ হেল্প সেন্টার</b></h1>
       
-      <h2>সৌদি আরবে উচ্চশিক্ষার <span>স্বপ্নে</span> আমরা আপনার পাশে</h2>
+      <h2> <span style="color: #ffffff;">সৌদি আরবে উচ্চশিক্ষার স্বপ্নে আমরা আপনার পাশে</span> </h2>
       <p>সৌদি আরবের শীর্ষস্থানীয় বিশ্ববিদ্যালয়গুলোতে ব্যাচেলর, মাস্টার্স ও পিএইচডি স্কলারশিপের বিশ্বস্ত গাইডলাইন ও আবেদন সহায়তা কেন্দ্র।</p>
       <div class="hero-buttons">
         <a href="#apply" class="btn btn-gold">ফ্রি অ্যাসেসমেন্ট নিন</a>
@@ -3832,20 +3832,19 @@ if (title.includes('তায়বাহ বিশ্ববিদ্যাল�
     btn.disabled = true;
     btn.textContent = '⏳ পাঠানো হচ্ছে...';
 
-    const data = {
-      fullName:   form.fullName.value.trim(),
-      fatherName: form.fatherName.value.trim(),
-      motherName: form.motherName.value.trim(),
-      passport:   form.passport.value.trim(),
-      phone:      form.phone.value.trim(),
-      email:      form.email.value.trim(),
-      level:      form.level.value,
-      university: form.university.value.trim() || '—',
-      education:  form.education.value.trim() || '—',
-      message:    form.message.value.trim() || '—',
-      fileInfo:   form.document.files[0] ? form.document.files[0].name : 'কোনো ফাইল নেই'
-    };
-
+     const data = {
+  fullName:   form.fullName?.value?.trim() || '',
+  fatherName: form.fatherName?.value?.trim() || '',
+  motherName: form.motherName?.value?.trim() || '',
+  passport:   form.passport?.value?.trim() || '',
+  phone:      form.phone?.value?.trim() || '',
+  email:      form.email?.value?.trim() || '',
+  level:      form.level?.value || '',
+  university: form.university?.value?.trim() || '—',
+  education:  form.education?.value?.trim() || '—',
+  message:    form.message?.value?.trim() || '—',
+  fileInfo:   (form.document?.files && form.document.files[0]) ? form.document.files[0].name : 'কোনো ফাইল নেই'
+};
     const text =
       '🎓 <b>নতুন স্কলারশিপ আবেদন</b>\n' +
       '━━━━━━━━━━━━━━━━━━\n' +
