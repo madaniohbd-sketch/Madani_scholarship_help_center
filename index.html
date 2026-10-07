@@ -2917,16 +2917,16 @@ document.addEventListener("DOMContentLoaded", function () {
   <div class="form-row">
     <div class="form-group">
       <label>আপনার পূর্ণ নাম <span class="required">*</span></label>
-      <input type="text" name="fullName" placeholder="Mobasshira Jannat Madani" required>
+      <input type="text" name="fullName" placeholder="Full Name" required>
     </div>
     <div class="form-group">
       <label>পিতার নাম <span class="required">*</span></label>
-      <input type="text" name="fatherName" placeholder="Dr. Mufti Amdadullah Al-Madani" required>
+      <input type="text" name="fatherName" placeholder="Father Name" required>
       </div>
 	
     <div class="form-group">
       <label>মাতার নাম <span class="required">*</span></label>
-      <input type="text" name="motherName" placeholder="Saleha Akter Madani" required>
+      <input type="text" name="motherName" placeholder="Mother Name" required>
     </div>
     <div class="form-group">
       <label>পাসপোর্ট  নাম্বার <span class="required">*</span></label>
@@ -2945,6 +2945,21 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="form-group">
       <label>পূর্ণ ঠিকানা <span class="required">*</span></label>
       <input type="address" name="address" placeholder="Full address" required>
+    </div>
+	
+	<div class="form-group">
+      <label>পেমেন্ট সম্পন্ন করেছেন কি? (হ্যাঁ/না) <span class="required">*</span></label>
+      <input type="text" name="Payment status" placeholder="Payment status" required>
+    </div>
+	    <div class="form-group">
+      <label>পেমেন্ট করার মাধ্যম <span class="required">*</span></label>
+      <select name="level">
+        <option value="">নির্বাচন করুন</option>
+        <option value="বিকাশ">বিকাশ (Bkash)</option>
+        <option value="নগদ">নগদ (Nagad)</option>
+        <option value="রকেট">রকেট (Rocket)</option>
+        <option value="ব্যাংক">ব্যাংক (Bank)</option>
+      </select>
     </div>
 	
     <div class="form-group">
