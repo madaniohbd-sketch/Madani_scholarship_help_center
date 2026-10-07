@@ -2910,7 +2910,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="container">
       <div class="form-box">
         <h3>স্কলারশিপ আবেদন ফরম</h3>
-        <h4>(সকল তথ্য পাসপোর্ট বা সার্টিফিকেট অনুযায়ী হবে)</h4>
+        <h4 style="text-align:center;">(সকল তথ্য পাসপোর্ট বা সার্টিফিকেট অনুযায়ী হবে)</h4>
        <form id="scholarshipForm" onsubmit="handleFormSubmit(event)">
   <div class="form-row">
     <div class="form-group">
@@ -2934,10 +2934,12 @@ document.addEventListener("DOMContentLoaded", function () {
       <input type="tel" name="phone" placeholder="01700000000" required>
     </div>
   </div>
+         
   <div class="form-row">
     <div class="form-group">
       <label>পূর্ণ ঠিকানা <span class="required">*</span></label>
-      <input type="email" name="email" placeholder="Dhaka Bangladesh" required>
+      <input type="address" name="address" placeholder="Dhaka Bangladesh" required>
+      </div>
     </div>
   <div class="form-row">
     <div class="form-group">
