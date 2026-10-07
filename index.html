@@ -2910,17 +2910,18 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="container">
       <div class="form-box">
         <h3>স্কলারশিপ আবেদন ফরম</h3>
-        <h4 style="text-align:center;">(সকল তথ্য পাসপোর্ট বা সার্টিফিকেট অনুযায়ী হবে)</h4><br>
+		<h4 style="text-align: center;">(সকল তথ্য পাসপোর্ট বা সার্টিফিকেট অনুযায়ী ইংরেজিতে হবে)</h4>
        <form id="scholarshipForm" onsubmit="handleFormSubmit(event)">
   <div class="form-row">
     <div class="form-group">
       <label>আপনার পূর্ণ নাম <span class="required">*</span></label>
-      <input type="text" name="fullName" placeholder="Mobasshira Madani" required>
+      <input type="text" name="fullName" placeholder="Mobasshira Jannat Madani" required>
     </div>
     <div class="form-group">
       <label>পিতার নাম <span class="required">*</span></label>
-      <input type="text" name="fatherName" placeholder="Md Amdadullah Madani" required>
-    </div>
+      <input type="text" name="fatherName" placeholder="Dr. Mufti Amdadullah Al-Madani" required>
+      </div>
+	
     <div class="form-group">
       <label>মাতার নাম <span class="required">*</span></label>
       <input type="text" name="motherName" placeholder="Saleha Akter Madani" required>
@@ -2928,116 +2929,476 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="form-group">
       <label>পাসপোর্ট  নাম্বার <span class="required">*</span></label>
       <input type="text" name="passport" placeholder="A00000000" required>
+     </div>
+	
+    <div class="form-group">
+      <label>মোবাইল / হোয়াটসঅ্যাপ নম্বর <span class="required">*</span></label>
+      <input type="tel" name="phone" placeholder="01700000000" required>
     </div>
-<!-- ===== লাইন ১: মোবাইল/হোয়াটসঅ্যাপ + ইমেইল ===== -->
-<div class="form-row">
-  <div class="form-group">
-    <label>মোবাইল / হোয়াটসঅ্যাপ নম্বর <span class="required">*</span></label>
-    <input type="tel" name="phone" placeholder="01700000000" required>
-  </div>
+    <div class="form-group">
+      <label>ইমেইল ঠিকানা <span class="required">*</span></label>
+      <input type="email" name="email" placeholder="example@gmail.com" required>
+    </div>
+	
+    <div class="form-group">
+      <label>পূর্ণ ঠিকানা <span class="required">*</span></label>
+      <input type="address" name="address" placeholder="Full address" required>
+    </div>
+	
+    <div class="form-group">
+      <label>আবেদনের স্তর <span class="required">*</span></label>
+      <select name="level" required>
+        <option value="">নির্বাচন করুন</option>
+        <option value="ব্যাচেলর (Bachelor)">ব্যাচেলর (Bachelor)</option>
+        <option value="মাস্টার্স (Masters)">মাস্টার্স (Masters)</option>
+        <option value="পিএইচডি (PhD)">পিএইচডি (PhD)</option>
+        <option value="আরাবিক ডিপ্লোমা (Arabic Diploma)">আরাবিক ডিপ্লোমা (Arabic Diploma)</option>
+      </select>
+    </div>
+	<div class="form-group">
+      <label>সর্বশেষ শিক্ষাগত যোগ্যতা ও রেজাল্ট</label>
+      <input type="text" name="education" placeholder="যেমন: আলিম / এইচএসসি - জিপিএ ৫.০০">
+	</div>
+	</div>
 
-  <div class="form-group">
-    <label>ইমেইল ঠিকানা <span class="required">*</span></label>
-    <input type="email" name="email" placeholder="example@gmail.com" required>
-  </div>
-</div>
+  <!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>সৌদি আরবের সরকারি বিশ্ববিদ্যালয় ও বিষয় নির্বাচন</title>
 
-<!-- ===== লাইন ২: পূর্ণ ঠিকানা + আবেদনের স্তর ===== -->
-<div class="form-row">
-  <div class="form-group">
-    <label>পূর্ণ ঠিকানা <span class="required">*</span></label>
-    <input 
-      type="text" 
-      name="address" 
-      placeholder="Village-....... Word-...... Thana-......... District-........." 
-      required>
-  </div>
+<!-- Select2 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
-  <div class="form-group">
-    <label>আবেদনের স্তর <span class="required">*</span></label>
-    <select name="level" required>
-      <option value="">নির্বাচন করুন</option>
-      <option value="ব্যাচেলর (Bachelor)">ব্যাচেলর (Bachelor)</option>
-      <option value="মাস্টার্স (Masters)">মাস্টার্স (Masters)</option>
-      <option value="পিএইচডি (PhD)">পিএইচডি (PhD)</option>
-      <option value="আরাবিক ডিপ্লোমা (Arabic Diploma)">আরাবিক ডিপ্লোমা (Arabic Diploma)</option>
-    </select>
-  </div>
-</div>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', 'SolaimanLipi', Arial, sans-serif;
+    background: #f4f6f9;
+    padding: 20px;
+    margin: 0;
+  }
+  .form-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+  h2 {
+    color: #1a3a5c;
+    margin-bottom: 25px;
+    text-align: center;
+    border-bottom: 2px solid #e8eef5;
+    padding-bottom: 15px;
+  }
+  .form-row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+  }
+  .form-group {
+    flex: 1;
+    min-width: 200px;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+    font-size: 15px;
+  }
+  .required { color: #e53935; }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    box-sizing: border-box;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: #1a73e8;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(26,115,232,0.1);
+  }
+  /* Select2 custom styling */
+  .select2-container .select2-selection--multiple {
+    min-height: 44px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 4px 8px;
+  }
+  .select2-container--default.select2-container--focus .select2-selection--multiple {
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 3px rgba(26,115,232,0.1);
+  }
+  .select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background: #1a73e8;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 13px;
+  }
+  .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: #fff;
+    margin-right: 5px;
+  }
+  .select2-results__option--group {
+    font-weight: bold;
+    color: #1a3a5c;
+    background: #f0f5ff;
+  }
+  .help-text {
+    color: #666;
+    font-size: 13px;
+    margin-top: 5px;
+    display: block;
+  }
+  .submit-btn {
+    background: #1a73e8;
+    color: #fff;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: background 0.2s;
+  }
+  .submit-btn:hover { background: #0d5bbd; }
 
-
-<!-- ===== লাইন ৩: পছন্দের বিশ্ববিদ্যালয় / বিষয় + সর্বশেষ শিক্ষাগত যোগ্যতা ও রেজাল্ট ===== -->
-<div class="form-row">
-  <div class="form-group">
-    <label>পছন্দের বিশ্ববিদ্যালয় / বিষয়</label>
-    <input 
-      type="text" 
-      name="university" 
-      placeholder="যেমন: ইসলামিক ইউনিভার্সিটি মদিনা / ইঞ্জিনিয়ারিং">
-  </div>
-
-  <div class="form-group">
-    <label>সর্বশেষ শিক্ষাগত যোগ্যতা ও রেজাল্ট</label>
-    <input 
-      type="text" 
-      name="education" 
-      placeholder="যেমন: আলিম / এইচএসসি - জিপিএ ৫.০০">
-  </div>
-</div>
-
-
-<!-- ===== লাইন ৪: পাসপোর্ট / সিভি সংযুক্তি ===== -->
-<div class="form-group">
-  <label>আপনার পাসপোর্ট বা সিভি সংযুক্তি (যদি থাকে)</label>
-
-  <div class="file-upload-box">
-    <input 
-      type="file" 
-      id="documentUpload" 
-      name="document" 
-      onchange="updateFileName(this)">
-
-    <div class="upload-icon">📁</div>
-
-    <div class="upload-text">
-      ফাইলের উপর ক্লিক করুন অথবা ড্রাগ করে আনুন
+  @media (max-width: 600px) {
+    .form-row { flex-direction: column; gap: 0; }
+    .form-group { min-width: 100%; }
+    .form-container { padding: 20px 15px; }
+  }
+</style>
+</head>
+<body>
+    <!-- Line 3: UNIVERSITY SELECT (Multi) -->
+    <div class="form-group" style="margin-bottom:18px;">
+      <label>পছন্দের বিশ্ববিদ্যালয় (একাধিক সিলেক্ট করা যাবে) <span class="required">*</span></label>
+      <select id="universitySelect" name="universities[]" multiple="multiple" style="width:100%" required>
+        <!-- 26 universities with search -->
+        <option value="iu_madinah">ইসলামিক ইউনিভার্সিটি মদিনা (Islamic University of Madinah)</option>
+        <option value="uqu">উম্মুল কুরা ইউনিভার্সিটি (Umm Al-Qura University)</option>
+        <option value="ksu">কিং সৌদ ইউনিভার্সিটি (King Saud University)</option>
+        <option value="kau">কিং আব্দুলআজিজ ইউনিভার্সিটি (King Abdulaziz University)</option>
+        <option value="kfupm">কিং ফাহদ ইউনিভার্সিটি অফ পেট্রোলিয়াম ও মিনারেলস (KFUPM)</option>
+        <option value="kfu">কিং ফয়সাল ইউনিভার্সিটি (King Faisal University)</option>
+        <option value="imamu">ইমাম মুহাম্মদ ইবনে সৌদ ইসলামিক ইউনিভার্সিটি (Imam Muhammad ibn Saud)</option>
+        <option value="kku">কিং খালিদ ইউনিভার্সিটি (King Khalid University)</option>
+        <option value="taibah">তাইবাহ ইউনিভার্সিটি (Taibah University)</option>
+        <option value="qu">কাসিম ইউনিভার্সিটি (Qassim University)</option>
+        <option value="tu">তাইফ ইউনিভার্সিটি (Taif University)</option>
+        <option value="uoh">হাইল ইউনিভার্সিটি (University of Hail)</option>
+        <option value="jazanu">জাজান ইউনিভার্সিটি (Jazan University)</option>
+        <option value="nu">নাজরান ইউনিভার্সিটি (Najran University)</option>
+        <option value="nbu">উত্তর সীমান্ত ইউনিভার্সিটি (Northern Border University)</option>
+        <option value="ju">আল-জউফ ইউনিভার্সিটি (Al Jouf University)</option>
+        <option value="bu">আল-বাহা ইউনিভার্সিটি (Al Baha University)</option>
+        <option value="ut">তাবুক ইউনিভার্সিটি (University of Tabuk)</option>
+        <option value="psu">প্রিন্স সাত্তাম বিন আব্দুলআজিজ ইউনিভার্সিটি (Prince Sattam bin Abdulaziz)</option>
+        <option value="shu">শাকরা ইউনিভার্সিটি (Shaqra University)</option>
+        <option value="mu">মাজমাহ ইউনিভার্সিটি (Majmaah University)</option>
+        <option value="seu">সৌদি ইলেকট্রনিক ইউনিভার্সিটি (Saudi Electronic University)</option>
+        <option value="pnu">প্রিন্সেস নুরা বিনতে আব্দুর রহমান ইউনিভার্সিটি (Princess Nourah)</option>
+        <option value="kaust">কিং আব্দুল্লাহ ইউনিভার্সিটি অফ সায়েন্স অ্যান্ড টেকনোলজি (KAUST)</option>
+        <option value="ub">বিশা ইউনিভার্সিটি (University of Bisha)</option>
+        <option value="iau">ইমাম আব্দুলরহমান বিন ফয়সাল ইউনিভার্সিটি (Imam Abdulrahman Bin Faisal)</option>
+      </select>
+      <small class="help-text">💡 একাধিক সিলেক্ট করতে টাইপ করুন বা ক্লিক করুন। Ctrl চাপার প্রয়োজন নেই।</small>
     </div>
 
-    <div 
-      class="file-name" 
-      id="fileNameDisplay">
+    <!-- Line 4: MAJOR/SELECT (Multi, filtered by university) -->
+    <div class="form-group" style="margin-bottom:18px;">
+      <label>পছন্দের বিষয় / সাবজেক্ট (একাধিক সিলেক্ট করা যাবে) <span class="required">*</span></label>
+      <select id="majorSelect" name="majors[]" multiple="multiple" style="width:100%" required>
+        <!-- Options will be populated dynamically -->
+      </select>
+      <small class="help-text">💡 প্রথমে বিশ্ববিদ্যালয় সিলেক্ট করুন, তারপর বিষয় লোড হবে।</small>
+    </div>
+
+<!-- jQuery (Select2 requires jQuery) -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<!-- Select2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<script>
+// ============================================================
+// UNIVERSITY → MAJOR DATA MAP
+// Based on available search results. Universities without
+// detailed major data use faculty/college names as placeholder.
+// ============================================================
+const uniMajorData = {
+
+  // ---- Islamic University of Madinah (detailed data available) ----
+  iu_madinah: {
+    label: 'ইসলামিক ইউনিভার্সিটি মদিনা',
+    majors: [
+      { group: 'كلية الشريعة (শরিয়াহ অনুষদ)', items: ['فقه (ফিকহ)', 'أصول الفقه (উসুল আল-ফিকহ)', 'الاقتصاد الإسلامي (ইসলামিক অর্থনীতি)'] },
+      { group: 'كلية الدعوة وأصول الدين (দাওয়াহ ও ধর্মীয় মূলনীতি)', items: ['عقيدة (আকিদা)', 'دعوة وثقافة إسلامية (দাওয়াহ ও ইসলামিক সংস্কৃতি)', 'تاريخ (ইতিহাস)', 'تربية (শিক্ষা)'] },
+      { group: 'كلية القرآن الكريم (কুরআন অনুষদ)', items: ['تفسير وعلوم القرآن (তাফসির ও কুরআনিক বিজ্ঞান)', 'قراءات (কিরাআত)'] },
+      { group: 'كلية الحديث الشريف (হাদিস অনুষদ)', items: ['فقه السنة ومصادرها (সুন্নাহ ফিকহ)', 'علوم الحديث (হাদিস বিজ্ঞান)'] },
+      { group: 'كلية اللغة العربية (আরবি ভাষা অনুষদ)', items: ['لغويات (ভাষাতত্ত্ব)', 'أدب وبلاغة (সাহিত্য ও অলঙ্কার)'] },
+      { group: 'كلية الهندسة (ইঞ্জিনিয়ারিং)', items: ['هندسة مدنية (সিভিল ইঞ্জিনিয়ারিং)', 'هندسة ميكانيكية (মেকানিক্যাল)', 'هندسة كهربائية (ইলেকট্রিক্যাল)'] },
+      { group: 'كلية الحاسب (কম্পিউটার)', items: ['علوم الحاسب (কম্পিউটার সায়েন্স)', 'تقنية الحاسب (আইটি)', 'نظم المعلومات (ইনফরমেশন সিস্টেম)'] },
+      { group: 'كلية العلوم (বিজ্ঞান)', items: ['رياضيات (গণিত)', 'أحياء (জীববিজ্ঞান)', 'فيزياء (পদার্থ)', 'كيمياء (রসায়ন)'] },
+      { group: 'كلية الأنظمة والدراسات القضائية (আইন)', items: ['الأنظمة (ল),'] },
+    ]
+  },
+
+  // ---- KFUPM (detailed data available) ----
+  kfupm: {
+    label: 'কিং ফাহদ ইউনিভার্সিটি (KFUPM)',
+    majors: [
+      { group: 'College of Engineering and Physics', items: ['Aerospace Engineering', 'Electrical Engineering', 'Mechanical Engineering', 'Physics', 'Control and Measurement Engineering'] },
+      { group: 'College of Chemicals and Materials', items: ['Chemistry', 'Chemical Engineering', 'Bioengineering', 'Material Sciences and Engineering'] },
+      { group: 'College of Computing and Mathematics', items: ['Computer Engineering', 'Industrial and Systems Engineering', 'Information and Computer Sciences', 'Mathematics', 'Actuarial Sciences', 'Software Engineering'] },
+      { group: 'College of Design and Built Environment', items: ['Civil Engineering', 'Architectural Engineering', 'Architecture'] },
+      { group: 'College of Petroleum Eng. and Geosciences', items: ['Petroleum Engineering', 'Geophysics', 'Geology'] },
+      { group: 'KFUPM Business School', items: ['Accounting', 'Finance', 'Management Information Systems', 'Marketing', 'Management'] }
+    ]
+  },
+
+  // ---- Universities with FACULTY-level data only (placeholder majors) ----
+  uqu: {
+    label: 'উম্মুল কুরা ইউনিভার্সিটি',
+    majors: [
+      { group: 'Medical Colleges', items: ['College of Medicine', 'College of Applied Medical Sciences', 'College of Dentistry', 'College of Public Health and Health Informatics', 'College of Pharmacy', 'College of Nursing'] },
+      { group: 'Science & Engineering', items: ['College of Sciences', 'College of Engineering and Architecture', 'College of Computers'] },
+      { group: 'Shari\'ah & Administration', items: ['College of Shari\'ah and Islamic Studies', 'College of Da\'wa and Islamic Theology', 'College of Administration and Economy', 'College of Judicial Studies and Regulations'] },
+      { group: 'Humanities & Education', items: ['College of Arabic Language', 'College of Education', 'College of Social Sciences', 'College of Designs and Arts'] }
+    ]
+  },
+
+  ksu: {
+    label: 'কিং সৌদ ইউনিভার্সিটি',
+    majors: [
+      { group: 'Health Sciences', items: ['Medicine', 'Dentistry', 'Pharmacy', 'Applied Medical Sciences', 'Nursing'] },
+      { group: 'Engineering & IT', items: ['Computer Science', 'Software Engineering', 'Information Systems', 'Electrical Engineering', 'Mechanical Engineering', 'Civil Engineering', 'Chemical Engineering', 'Petroleum & Gas Engineering', 'Architecture & Planning'] },
+      { group: 'Business & Administration', items: ['Accounting', 'Finance', 'Marketing', 'Economics', 'Business Administration', 'Management Information Systems'] },
+      { group: 'Humanities & Social Sciences', items: ['Arabic Language', 'English Language', 'Psychology', 'Sociology', 'History', 'Geography', 'Islamic Studies', 'Mass Communication', 'Law'] }
+    ]
+  },
+
+  // ---- Universities with only general discipline data ----
+  kau: {
+    label: 'কিং আব্দুলআজিজ ইউনিভার্সিটি',
+    majors: [
+      { group: 'Health Sciences', items: ['Medicine', 'Dentistry', 'Pharmacy', 'Applied Medical Sciences', 'Nursing', 'Rehabilitation Medicine'] },
+      { group: 'Science & Engineering', items: ['Engineering', 'Computing & IT', 'Earth Sciences', 'Marine Sciences', 'Environmental Design', 'Home Economics'] },
+      { group: 'Humanities & Social Sciences', items: ['Arts & Humanities', 'Economics & Administration', 'Law', 'Education'] }
+    ]
+  },
+
+  qu: {
+    label: 'কাসিম ইউনিভার্সিটি',
+    majors: [
+      { group: 'Health Sciences', items: ['Medicine', 'Dentistry', 'Pharmacy', 'Applied Medical Sciences', 'Nursing'] },
+      { group: 'Engineering & IT', items: ['Computer Science & Engineering', 'Information Systems', 'Electrical Engineering', 'Mechanical Engineering', 'Civil Engineering'] },
+      { group: 'Humanities & Social Sciences', items: ['Arabic Language & Literature', 'English Language & Literature', 'History', 'Sociology', 'Psychology', 'Law', 'Education'] },
+      { group: 'Administrative & Financial Sciences', items: ['Business Administration', 'Accounting', 'Finance', 'Economics', 'Marketing'] },
+      { group: 'Scientific Colleges', items: ['Physics', 'Chemistry', 'Biology', 'Mathematics', 'Agriculture & Veterinary Medicine'] }
+    ]
+  },
+
+  // ---- Universities with ONLY college names in search results (placeholder) ----
+  kfu: { label: 'কিং ফয়সাল ইউনিভার্সিটি', majors: [{ group: 'Colleges (বিস্তারিত তথ্য প্রয়োজন)', items: ['College of Medicine', 'College of Engineering', 'College of Science', 'College of Business'] }] },
+
+  imamu: { label: 'ইমাম মুহাম্মদ ইবনে সৌদ ইউনিভার্সিটি', majors: [{ group: 'Colleges (বিস্তারিত তথ্য প্রয়োজন)', items: ['College of Shari\'ah', 'College of Law', 'College of Education', 'College of Science'] }] },
+
+  kku: { label: 'কিং খালিদ ইউনিভার্সিটি', majors: [{ group: 'Colleges (বিস্তারিত তথ্য প্রয়োজন)', items: ['College of Medicine', 'College of Engineering', 'College of Computer Science', 'College of Business', 'College of Law'] }] },
+
+  taibah: { label: 'তাইবাহ ইউনিভার্সিটি', majors: [{ group: 'Colleges (বিস্তারিত তথ্য প্রয়োজন)', items: ['College of Business Administration', 'College of Law', 'College of Sciences & Arts', 'College of Medicine'] }] },
+
+  tu: { label: 'তাইফ ইউনিভার্সিটি', majors: [{ group: 'Colleges (বিস্তারিত তথ্য প্রয়োজন)', items: ['College of Medicine', 'College of Engineering', 'College of Computers & IT', 'College of Science', 'College of Business'] }] },
+
+  uoh: { label: 'হাইল ইউনিভার্সিটি', majors: [{ group: 'Colleges (বিস্তারিত তথ্য প্রয়োজন)', items: ['College of Engineering', 'College of Science', 'College of Medicine', 'College of Dentistry', 'College of Pharmacy', 'College of Nursing', 'College of Business Administration', 'College of Sharia and Law'] }] },
+
+  // ---- Remaining universities: basic college-level placeholder ----
+  jazanu: { label: 'জাজান ইউনিভার্সিটি', majors: [{ group: 'Colleges (বিস্তারিত তথ্য প্রয়োজন)', items: ['College of Medicine', 'College of Engineering', 'College of Science', 'College of Business'] }] },
+  nu: { label: 'নাজরান ইউনিভার্সিটি', majors: [{ group: 'Colleges (বিস্তারিত তথ্য প্রয়োজন)', items: ['College of Medicine', 'College of Engineering', 'College of Science', 'College of Business'] }] },
+  nbu: { label: 'উত্তর সীমান্ত ইউনিভার্সিটি', majors: [{ group: 'Colleges (বিস্তারিত তথ্য প্রয়োজন)', items: ['College of Medicine', 'College of Engineering', 'College of Science', 'College of Business'] }] },
+  ju: { label: 'আল-জউফ ইউনিভার্সিটি', majors: [{ group: 'Colleges (বিস্তারিত তথ্য প্রয়োজন)', items: ['College of Medicine', 'College of Engineering', 'College of Science', 'College of Business'] }] },
+  bu: { label: 'আল-বাহা ইউনিভার্সিটি', majors: [{ group: 'Colleges (বিস্তারিত তথ্য প্রয়োজন)', items: ['College of Medicine', 'College of Engineering', 'College of Science', 'College of Business'] }] },
+  ut: { label: 'তাবুক ইউনিভার্সিটি', majors: [{ group: 'Colleges (বিস্তারিত তথ্য প্রয়োজন)', items: ['College of Medicine', 'College of Engineering', 'College of Science', 'College of Business'] }] },
+  psu: { label: 'প্রিন্স সাত্তাম ইউনিভার্সিটি', majors: [{ group: 'Colleges (বিস্তারিত তথ্য প্রয়োজন)', items: ['College of Medicine', 'College of Engineering', 'College of Science', 'College of Business'] }] },
+  shu: { label: 'শাকরা ইউনিভার্সিটি', majors: [{ group: 'Colleges (বিস্তারিত তথ্য প্রয়োজন)', items: ['College of Medicine', 'College of Engineering', 'College of Science', 'College of Business'] }] },
+  mu: { label: 'মাজমাহ ইউনিভার্সিটি', majors: [{ group: 'Colleges (বিস্তারিত তথ্য প্রয়োজন)', items: ['College of Medicine', 'College of Engineering', 'College of Science', 'College of Business'] }] },
+  seu: { label: 'সৌদি ইলেকট্রনিক ইউনিভার্সিটি', majors: [{ group: 'Colleges (বিস্তারিত তথ্য প্রয়োজন)', items: ['College of Computing & IT', 'College of Business', 'College of Health Sciences'] }] },
+  pnu: { label: 'প্রিন্সেস নুরা ইউনিভার্সিটি', majors: [{ group: 'Colleges (বিস্তারিত তথ্য প্রয়োজন)', items: ['College of Medicine', 'College of Science', 'College of Business', 'College of Education'] }] },
+  kaust: { label: 'কিং আব্দুল্লাহ ইউনিভার্সিটি (KAUST)', majors: [{ group: 'Graduate Programs Only (স্নাতকোত্তর)', items: ['Biological & Environmental Science & Engineering', 'Computer, Electrical & Mathematical Science & Engineering', 'Physical Science & Engineering'] }] },
+  ub: { label: 'বিশা ইউনিভার্সিটি', majors: [{ group: 'Colleges (বিস্তারিত তথ্য প্রয়োজন)', items: ['College of Medicine', 'College of Engineering', 'College of Science', 'College of Business'] }] },
+  iau: { label: 'ইমাম আব্দুলরহমান ইউনিভার্সিটি', majors: [{ group: 'Colleges (বিস্তারিত তথ্য প্রয়োজন)', items: ['College of Medicine', 'College of Engineering', 'College of Science', 'College of Business'] }] }
+};
+
+// ============================================================
+// INITIALIZE SELECT2 & CASCADING LOGIC
+// ============================================================
+$(document).ready(function() {
+
+  // Initialize university multi-select
+  $('#universitySelect').select2({
+    placeholder: 'বিশ্ববিদ্যালয় খুঁজুন বা সিলেক্ট করুন...',
+    allowClear: true,
+    closeOnSelect: false,
+    width: '100%'
+  });
+
+  // Initialize major multi-select (empty initially)
+  $('#majorSelect').select2({
+    placeholder: 'প্রথমে বিশ্ববিদ্যালয় সিলেক্ট করুন...',
+    allowClear: true,
+    closeOnSelect: false,
+    width: '100%',
+    disabled: true
+  });
+
+  // When universities change → rebuild majors
+  $('#universitySelect').on('change', function() {
+    const selectedUnis = $(this).val() || [];
+    const majorSelect = $('#majorSelect');
+    const currentMajors = majorSelect.val() || [];
+
+    // Clear major select
+    majorSelect.empty();
+
+    if (selectedUnis.length === 0) {
+      majorSelect.prop('disabled', true);
+      majorSelect.trigger('change.select2');
+      return;
+    }
+
+    majorSelect.prop('disabled', false);
+
+    // Track which majors have been added (to avoid duplicates across universities)
+    const addedMajors = new Set();
+    let hasOptions = false;
+
+    selectedUnis.forEach(function(uniKey) {
+      const uniData = uniMajorData[uniKey];
+      if (!uniData) return;
+
+      // Add university as optgroup label
+      const optgroup = $('<optgroup>').attr('label', '🎓 ' + uniData.label);
+
+      uniData.majors.forEach(function(majorGroup) {
+        // Add faculty/college as nested label (using disabled option as visual separator)
+        const groupHeader = $('<option>')
+          .attr('disabled', true)
+          .attr('style', 'font-weight:bold; color:#1a3a5c; background:#f0f5ff;')
+          .text('📚 ' + majorGroup.group);
+        optgroup.append(groupHeader);
+
+        majorGroup.items.forEach(function(major) {
+          const majorValue = uniKey + '::' + major;
+          if (addedMajors.has(majorValue)) return;
+          addedMajors.add(majorValue);
+
+          const option = $('<option>')
+            .val(majorValue)
+            .text(major);
+
+          // Re-select if it was previously selected
+          if (currentMajors.includes(majorValue)) {
+            option.prop('selected', true);
+          }
+
+          optgroup.append(option);
+          hasOptions = true;
+        });
+      });
+
+      majorSelect.append(optgroup);
+    });
+
+    // If no options were added, add a placeholder
+    if (!hasOptions) {
+      majorSelect.append('<option value="" disabled>এই বিশ্ববিদ্যালয়ের জন্য কোনো বিষয় ডেটা নেই (আপডেট প্রয়োজন)</option>');
+    }
+
+    // Refresh Select2
+    majorSelect.trigger('change.select2');
+  });
+
+  // Form submit handler
+  $('#saudiUniForm').on('submit', function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+
+    // Get selected universities
+    const unis = $('#universitySelect').val() || [];
+    // Get selected majors
+    const majors = $('#majorSelect').val() || [];
+
+    console.log('=== FORM SUBMITTED ===');
+    console.log('Selected Universities:', unis);
+    console.log('Selected Majors:', majors);
+
+    // Show a summary
+    let summary = '✅ আপনার আবেদন প্রস্তুত!\n\n';
+    summary += '📋 নির্বাচিত বিশ্ববিদ্যালয় (' + unis.length + 'টি):\n';
+    unis.forEach(function(u) {
+      const uni = uniMajorData[u];
+      summary += '  • ' + (uni ? uni.label : u) + '\n';
+    });
+    summary += '\n📚 নির্বাচিত বিষয় (' + majors.length + 'টি):\n';
+    majors.slice(0, 10).forEach(function(m) {
+      summary += '  • ' + m.split('::')[1] + '\n';
+    });
+    if (majors.length > 10) {
+      summary += '  ... এবং আরো ' + (majors.length - 10) + 'টি\n';
+    }
+
+    alert(summary);
+
+    // In production: send formData via fetch/AJAX to server
+    // fetch('/submit', { method: 'POST', body: formData })
+  });
+
+});
+</script>
+
+</body>
+</html>
+  
+  <div class="form-group">
+    <label>আপনার পাসপোর্ট বা সিভি সংযুক্তি (যদি থাকে)</label>
+    <div class="file-upload-box">
+      <input type="file" id="documentUpload" name="document" onchange="updateFileName(this)">
+      <div class="upload-icon">📁</div>
+      <div class="upload-text">ফাইলের উপর ক্লিক করুন অথবা ড্রাগ করে আনুন</div>
+      <div class="file-name" id="fileNameDisplay"></div>
     </div>
   </div>
-</div>
 
+  <div class="form-group">
+    <label>অতিরিক্ত বার্তা বা প্রশ্ন (যদি থাকে)</label>
+    <textarea name="message" placeholder="আপনার কোনো নির্দিষ্ট প্রশ্ন থাকলে এখানে লিখুন..."></textarea>
+  </div>
 
-<!-- ===== লাইন ৫: অতিরিক্ত বার্তা / প্রশ্ন ===== -->
-<div class="form-group">
-  <label>অতিরিক্ত বার্তা বা প্রশ্ন (যদি থাকে)</label>
-
-  <textarea 
-    name="message" 
-    placeholder="আপনার কোনো নির্দিষ্ট প্রশ্ন থাকলে এখানে লিখুন...">
-  </textarea>
-</div>
-
-
-<!-- ===== সাবমিট বাটন ===== -->
-<div class="form-submit-area">
-  <button type="submit" class="submit-btn">
-    আবেদন সাবমিট করুন
-  </button>
-
-  <p class="submit-note">
-    🔒 আপনার সকল তথ্য সম্পূর্ণ নিরাপদ রাখা হবে।
-  </p>
-</div>
-
+  <div class="form-submit-area">
+    <button type="submit" class="submit-btn">আবেদন সাবমিট করুন</button>
+    <p class="submit-note">🔒 আপনার সকল তথ্য সম্পূর্ণ নিরাপদ রাখা হবে।</p>
+  </div>
 </form>
       </div>
     </div>
   </section>
-
   <!-- CTA / TRIAL SECTION -->
   <section class="trial-section">
     <div class="container">
