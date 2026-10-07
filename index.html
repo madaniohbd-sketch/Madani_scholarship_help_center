@@ -194,6 +194,149 @@
     .uni-info p { color:var(--text-gray); font-size:.78rem; line-height:1.65; margin:0; }
     .uni-link { display:inline-block; margin-top:15px; padding:9px 12px; border:1px solid var(--dark-green); border-radius:8px; color:var(--dark-green); text-decoration:none; text-align:center; font-size:.78rem; font-weight:700; }
     .uni-link:hover { background:var(--dark-green); color:#fff; }
+
+    /* UNIVERSITY DETAILS BUTTON + MODAL */
+    .uni-details-btn {
+      display:block;
+      width:100%;
+      margin-top:10px;
+      padding:10px 12px;
+      border:1px solid var(--gold);
+      border-radius:8px;
+      background:#fffdf5;
+      color:var(--dark-green);
+      text-align:center;
+      font-family:inherit;
+      font-size:.78rem;
+      font-weight:700;
+      cursor:pointer;
+      transition:all .25s;
+    }
+    .uni-details-btn:hover {
+      background:var(--gold);
+      color:var(--dark-green);
+      transform:translateY(-2px);
+    }
+
+    .uni-modal {
+      position:fixed;
+      inset:0;
+      background:rgba(7,34,26,.72);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+      z-index:2000;
+      backdrop-filter:blur(4px);
+    }
+    .uni-modal.show { display:flex; }
+    .uni-modal-box {
+      width:min(680px,100%);
+      max-height:90vh;
+      overflow-y:auto;
+      background:#fff;
+      border-radius:18px;
+      box-shadow:0 25px 80px rgba(0,0,0,.25);
+      position:relative;
+      animation:uniModalIn .22s ease;
+    }
+    @keyframes uniModalIn {
+      from { opacity:0; transform:translateY(18px) scale(.98); }
+      to { opacity:1; transform:translateY(0) scale(1); }
+    }
+    .uni-modal-head {
+      background:linear-gradient(135deg,var(--dark-green),#0f4a38);
+      color:#fff;
+      padding:24px 58px 22px 24px;
+      position:relative;
+    }
+    .uni-modal-head .uni-modal-number {
+      color:var(--gold);
+      font-size:.78rem;
+      font-weight:800;
+    }
+    .uni-modal-head h3 {
+      margin:4px 0 3px;
+      font-size:1.35rem;
+      line-height:1.45;
+    }
+    .uni-modal-head p {
+      margin:0;
+      opacity:.88;
+      font-size:.82rem;
+    }
+    .uni-modal-close {
+      position:absolute;
+      top:14px;
+      right:16px;
+      width:38px;
+      height:38px;
+      border:1px solid rgba(255,255,255,.35);
+      border-radius:50%;
+      background:rgba(255,255,255,.1);
+      color:#fff;
+      font-size:1.45rem;
+      line-height:1;
+      cursor:pointer;
+    }
+    .uni-modal-close:hover { background:var(--gold); color:var(--dark-green); }
+    .uni-modal-body { padding:24px; }
+    .uni-modal-meta {
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-bottom:20px;
+    }
+    .uni-modal-meta span {
+      background:var(--light-green);
+      color:var(--dark-green);
+      border-radius:999px;
+      padding:6px 10px;
+      font-size:.75rem;
+      font-weight:700;
+    }
+    .uni-modal-section {
+      padding:15px 0;
+      border-top:1px solid #edf1ef;
+    }
+    .uni-modal-section:first-child { border-top:none; padding-top:0; }
+    .uni-modal-section h4 {
+      color:var(--dark-green);
+      font-size:.9rem;
+      margin-bottom:7px;
+    }
+    .uni-modal-section p {
+      color:var(--text-gray);
+      font-size:.84rem;
+      line-height:1.75;
+      margin:0;
+    }
+    .uni-modal-actions {
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:18px;
+    }
+    .uni-modal-actions a {
+      flex:1 1 180px;
+      text-align:center;
+      text-decoration:none;
+      border-radius:8px;
+      padding:11px 14px;
+      font-size:.82rem;
+      font-weight:700;
+    }
+    .uni-modal-apply { background:var(--dark-green); color:#fff; }
+    .uni-modal-apply:hover { background:var(--medium-green); }
+    .uni-modal-note { background:#fff8e1; color:#5f5225; border:1px solid #f0df9a; }
+    @media (max-width:600px) {
+      .uni-modal { padding:12px; }
+      .uni-modal-box { max-height:94vh; border-radius:14px; }
+      .uni-modal-head { padding:20px 52px 18px 18px; }
+      .uni-modal-head h3 { font-size:1.1rem; }
+      .uni-modal-body { padding:18px; }
+    }
+
     .no-results { text-align:center; padding:35px; color:var(--text-gray); display:none; }
     .uni-card.is-hidden { display:none; }
 
@@ -760,6 +903,10 @@
             </div>
 
 
+            <button type="button" class="uni-details-btn" onclick="openUniDetails(this)">
+                🔎 বিস্তারিত জানতে ক্লিক করুন
+            </button>
+
             <a href="#apply" class="uni-link">
                 আবেদনের জন্য যোগাযোগ করুন
             </a>
@@ -817,6 +964,10 @@
 
             </div>
 
+
+            <button type="button" class="uni-details-btn" onclick="openUniDetails(this)">
+                🔎 বিস্তারিত জানতে ক্লিক করুন
+            </button>
 
             <a href="#apply" class="uni-link">
                 আবেদনের জন্য যোগাযোগ করুন
@@ -876,6 +1027,10 @@
             </div>
 
 
+            <button type="button" class="uni-details-btn" onclick="openUniDetails(this)">
+                🔎 বিস্তারিত জানতে ক্লিক করুন
+            </button>
+
             <a href="#apply" class="uni-link">
                 আবেদনের জন্য যোগাযোগ করুন
             </a>
@@ -933,6 +1088,10 @@
 
             </div>
 
+
+            <button type="button" class="uni-details-btn" onclick="openUniDetails(this)">
+                🔎 বিস্তারিত জানতে ক্লিক করুন
+            </button>
 
             <a href="#apply" class="uni-link">
                 আবেদনের জন্য যোগাযোগ করুন
@@ -992,6 +1151,10 @@
             </div>
 
 
+            <button type="button" class="uni-details-btn" onclick="openUniDetails(this)">
+                🔎 বিস্তারিত জানতে ক্লিক করুন
+            </button>
+
             <a href="#apply" class="uni-link">
                 আবেদনের জন্য যোগাযোগ করুন
             </a>
@@ -1049,6 +1212,10 @@
 
             </div>
 
+
+            <button type="button" class="uni-details-btn" onclick="openUniDetails(this)">
+                🔎 বিস্তারিত জানতে ক্লিক করুন
+            </button>
 
             <a href="#apply" class="uni-link">
                 আবেদনের জন্য যোগাযোগ করুন
@@ -1109,6 +1276,10 @@
             </div>
 
 
+            <button type="button" class="uni-details-btn" onclick="openUniDetails(this)">
+                🔎 বিস্তারিত জানতে ক্লিক করুন
+            </button>
+
             <a href="#apply" class="uni-link">
                 আবেদনের জন্য যোগাযোগ করুন
             </a>
@@ -1168,6 +1339,10 @@
             </div>
 
 
+            <button type="button" class="uni-details-btn" onclick="openUniDetails(this)">
+                🔎 বিস্তারিত জানতে ক্লিক করুন
+            </button>
+
             <a href="#apply" class="uni-link">
                 আবেদনের জন্য যোগাযোগ করুন
             </a>
@@ -1225,6 +1400,10 @@
 
             </div>
 
+
+            <button type="button" class="uni-details-btn" onclick="openUniDetails(this)">
+                🔎 বিস্তারিত জানতে ক্লিক করুন
+            </button>
 
             <a href="#apply" class="uni-link">
                 আবেদনের জন্য যোগাযোগ করুন
@@ -1284,6 +1463,10 @@
             </div>
 
 
+            <button type="button" class="uni-details-btn" onclick="openUniDetails(this)">
+                🔎 বিস্তারিত জানতে ক্লিক করুন
+            </button>
+
             <a href="#apply" class="uni-link">
                 আবেদনের জন্য যোগাযোগ করুন
             </a>
@@ -1341,6 +1524,10 @@
 
             </div>
 
+
+            <button type="button" class="uni-details-btn" onclick="openUniDetails(this)">
+                🔎 বিস্তারিত জানতে ক্লিক করুন
+            </button>
 
             <a href="#apply" class="uni-link">
                 আবেদনের জন্য যোগাযোগ করুন
@@ -1400,6 +1587,10 @@
             </div>
 
 
+            <button type="button" class="uni-details-btn" onclick="openUniDetails(this)">
+                🔎 বিস্তারিত জানতে ক্লিক করুন
+            </button>
+
             <a href="#apply" class="uni-link">
                 আবেদনের জন্য যোগাযোগ করুন
             </a>
@@ -1457,6 +1648,10 @@
 
             </div>
 
+
+            <button type="button" class="uni-details-btn" onclick="openUniDetails(this)">
+                🔎 বিস্তারিত জানতে ক্লিক করুন
+            </button>
 
             <a href="#apply" class="uni-link">
                 আবেদনের জন্য যোগাযোগ করুন
@@ -1517,6 +1712,10 @@
             </div>
 
 
+            <button type="button" class="uni-details-btn" onclick="openUniDetails(this)">
+                🔎 বিস্তারিত জানতে ক্লিক করুন
+            </button>
+
             <a href="#apply" class="uni-link">
                 আবেদনের জন্য যোগাযোগ করুন
             </a>
@@ -1575,6 +1774,10 @@
             </div>
 
 
+            <button type="button" class="uni-details-btn" onclick="openUniDetails(this)">
+                🔎 বিস্তারিত জানতে ক্লিক করুন
+            </button>
+
             <a href="#apply" class="uni-link">
                 আবেদনের জন্য যোগাযোগ করুন
             </a>
@@ -1632,6 +1835,10 @@
 
             </div>
 
+
+            <button type="button" class="uni-details-btn" onclick="openUniDetails(this)">
+                🔎 বিস্তারিত জানতে ক্লিক করুন
+            </button>
 
             <a href="#apply" class="uni-link">
                 আবেদনের জন্য যোগাযোগ করুন
@@ -1692,6 +1899,10 @@
             </div>
 
 
+            <button type="button" class="uni-details-btn" onclick="openUniDetails(this)">
+                🔎 বিস্তারিত জানতে ক্লিক করুন
+            </button>
+
             <a href="#apply" class="uni-link">
                 আবেদনের জন্য যোগাযোগ করুন
             </a>
@@ -1750,6 +1961,10 @@
 
             </div>
 
+
+            <button type="button" class="uni-details-btn" onclick="openUniDetails(this)">
+                🔎 বিস্তারিত জানতে ক্লিক করুন
+            </button>
 
             <a href="#apply" class="uni-link">
                 আবেদনের জন্য যোগাযোগ করুন
@@ -1810,6 +2025,10 @@
             </div>
 
 
+            <button type="button" class="uni-details-btn" onclick="openUniDetails(this)">
+                🔎 বিস্তারিত জানতে ক্লিক করুন
+            </button>
+
             <a href="#apply" class="uni-link">
                 আবেদনের জন্য যোগাযোগ করুন
             </a>
@@ -1868,6 +2087,10 @@
             </div>
 
 
+            <button type="button" class="uni-details-btn" onclick="openUniDetails(this)">
+                🔎 বিস্তারিত জানতে ক্লিক করুন
+            </button>
+
             <a href="#apply" class="uni-link">
                 আবেদনের জন্য যোগাযোগ করুন
             </a>
@@ -1925,6 +2148,10 @@
 
             </div>
 
+
+            <button type="button" class="uni-details-btn" onclick="openUniDetails(this)">
+                🔎 বিস্তারিত জানতে ক্লিক করুন
+            </button>
 
             <a href="#apply" class="uni-link">
                 আবেদনের জন্য যোগাযোগ করুন
@@ -1985,6 +2212,10 @@
             </div>
 
 
+            <button type="button" class="uni-details-btn" onclick="openUniDetails(this)">
+                🔎 বিস্তারিত জানতে ক্লিক করুন
+            </button>
+
             <a href="#apply" class="uni-link">
                 আবেদনের জন্য যোগাযোগ করুন
             </a>
@@ -2043,6 +2274,10 @@
 
             </div>
 
+
+            <button type="button" class="uni-details-btn" onclick="openUniDetails(this)">
+                🔎 বিস্তারিত জানতে ক্লিক করুন
+            </button>
 
             <a href="#apply" class="uni-link">
                 আবেদনের জন্য যোগাযোগ করুন
@@ -2103,6 +2338,10 @@
             </div>
 
 
+            <button type="button" class="uni-details-btn" onclick="openUniDetails(this)">
+                🔎 বিস্তারিত জানতে ক্লিক করুন
+            </button>
+
             <a href="#apply" class="uni-link">
                 আবেদনের জন্য যোগাযোগ করুন
             </a>
@@ -2162,6 +2401,10 @@
             </div>
 
 
+            <button type="button" class="uni-details-btn" onclick="openUniDetails(this)">
+                🔎 বিস্তারিত জানতে ক্লিক করুন
+            </button>
+
             <a href="#apply" class="uni-link">
                 আবেদনের জন্য যোগাযোগ করুন
             </a>
@@ -2220,6 +2463,10 @@
 
             </div>
 
+
+            <button type="button" class="uni-details-btn" onclick="openUniDetails(this)">
+                🔎 বিস্তারিত জানতে ক্লিক করুন
+            </button>
 
             <a href="#apply" class="uni-link">
                 আবেদনের জন্য যোগাযোগ করুন
@@ -2754,6 +3001,36 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   </section>
 
+  <!-- UNIVERSITY DETAILS MODAL -->
+  <div class="uni-modal" id="uniModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="uni-modal-box" role="document">
+      <div class="uni-modal-head">
+        <button type="button" class="uni-modal-close" onclick="closeUniDetails()" aria-label="বন্ধ করুন">×</button>
+        <span class="uni-modal-number" id="uniModalNumber"></span>
+        <h3 id="uniModalTitle"></h3>
+        <p id="uniModalEnglish"></p>
+      </div>
+      <div class="uni-modal-body">
+        <div class="uni-modal-meta" id="uniModalMeta"></div>
+
+        <div class="uni-modal-section">
+          <h4>অফারকৃত কোর্সসমূহ</h4>
+          <p id="uniModalPrograms"></p>
+        </div>
+
+        <div class="uni-modal-section">
+          <h4>স্কলারশিপ ও আবেদন</h4>
+          <p>স্কলারশিপের যোগ্যতা, প্রোগ্রাম, আবেদন সময়সীমা ও প্রয়োজনীয় ডকুমেন্ট বিশ্ববিদ্যালয় ও প্রোগ্রামভেদে পরিবর্তিত হতে পারে। আবেদন করার আগে সর্বশেষ অফিসিয়াল তথ্য যাচাই করুন।</p>
+        </div>
+
+        <div class="uni-modal-actions">
+          <a href="#apply" class="uni-modal-apply" onclick="closeUniDetails()">📋 আবেদন সম্পর্কে যোগাযোগ করুন</a>
+          <a href="javascript:void(0)" class="uni-modal-note" onclick="closeUniDetails()">✕ বন্ধ করুন</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer>
     <div class="container">
@@ -2875,6 +3152,58 @@ document.addEventListener("DOMContentLoaded", function () {
     const noRes = document.getElementById('noResults');
     if (noRes) noRes.style.display = (count === 0) ? 'block' : 'none';
   }
+
+  // University Details Modal
+  function openUniDetails(button) {
+    const card = button.closest('.uni-card');
+    if (!card) return;
+
+    const number = card.querySelector('.uni-number')?.textContent.trim() || '';
+    const title = card.querySelector('h3')?.textContent.trim() || 'বিশ্ববিদ্যালয়';
+    const english = card.querySelector('.uni-en')?.textContent.trim() || '';
+    const meta = card.querySelectorAll('.uni-meta span');
+    const programs = card.querySelector('.uni-info p')?.textContent.trim() || 'তথ্য পাওয়া যায়নি।';
+
+    document.getElementById('uniModalNumber').textContent = number;
+    document.getElementById('uniModalTitle').textContent = title;
+    document.getElementById('uniModalEnglish').textContent = english;
+    document.getElementById('uniModalPrograms').textContent = programs;
+
+    const metaBox = document.getElementById('uniModalMeta');
+    metaBox.innerHTML = '';
+    meta.forEach(item => {
+      const span = document.createElement('span');
+      span.textContent = item.textContent.trim();
+      metaBox.appendChild(span);
+    });
+
+    const modal = document.getElementById('uniModal');
+    modal.classList.add('show');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+
+    const closeBtn = modal.querySelector('.uni-modal-close');
+    if (closeBtn) closeBtn.focus();
+  }
+
+  function closeUniDetails() {
+    const modal = document.getElementById('uniModal');
+    if (!modal) return;
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  const uniModal = document.getElementById('uniModal');
+  if (uniModal) {
+    uniModal.addEventListener('click', function(e) {
+      if (e.target === uniModal) closeUniDetails();
+    });
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeUniDetails();
+  });
 
   // FAQ Accordion
   const faqItems = document.querySelectorAll('.faq-item');
