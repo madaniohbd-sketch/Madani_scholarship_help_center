@@ -2929,7 +2929,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <label>পাসপোর্ট  নাম্বার <span class="required">*</span></label>
       <input type="text" name="passport" placeholder="A00000000" required>
     </div>
-<!-- ===== মোবাইল ও ইমেইল — একই লাইনে ===== -->
+<!-- ===== লাইন ১: মোবাইল/হোয়াটসঅ্যাপ + ইমেইল ===== -->
 <div class="form-row">
   <div class="form-group">
     <label>মোবাইল / হোয়াটসঅ্যাপ নম্বর <span class="required">*</span></label>
@@ -2942,14 +2942,13 @@ document.addEventListener("DOMContentLoaded", function () {
   </div>
 </div>
 
-<!-- ===== পূর্ণ ঠিকানা (পুরো লাইন) ===== -->
-<div class="form-group">
-  <label>পূর্ণ ঠিকানা <span class="required">*</span></label>
-  <input type="text" name="address" placeholder="vill-....... Word-...... Thana-......... District-........." required>
-</div>
-
-<!-- ===== আবেদনের স্তর ও পছন্দের বিশ্ববিদ্যালয় — একই লাইনে ===== -->
+<!-- ===== লাইন ২: পূর্ণ ঠিকানা + আবেদনের স্তর ===== -->
 <div class="form-row">
+  <div class="form-group">
+    <label>পূর্ণ ঠিকানা <span class="required">*</span></label>
+    <input type="text" name="address" placeholder="vill-....... Word-...... Thana-......... District-........." required>
+  </div>
+
   <div class="form-group">
     <label>আবেদনের স্তর <span class="required">*</span></label>
     <select name="level" required>
@@ -2960,32 +2959,37 @@ document.addEventListener("DOMContentLoaded", function () {
       <option value="আরাবিক ডিপ্লোমা (Arabic Diploma)">আরাবিক ডিপ্লোমা (Arabic Diploma)</option>
     </select>
   </div>
+</div>
 
+<!-- ===== লাইন ৩: পছন্দের বিশ্ববিদ্যালয় + সর্বশেষ শিক্ষাগত যোগ্যতা ===== -->
+<div class="form-row">
   <div class="form-group">
     <label>পছন্দের বিশ্ববিদ্যালয় / বিষয়</label>
     <input type="text" name="university" placeholder="যেমন: ইসলামিক ইউনিভার্সিটি মদিনা / ইঞ্জিনিয়ারিং">
   </div>
-</div>
+
   <div class="form-group">
     <label>সর্বশেষ শিক্ষাগত যোগ্যতা ও রেজাল্ট</label>
     <input type="text" name="education" placeholder="যেমন: আলিম / এইচএসসি - জিপিএ ৫.০০">
   </div>
+</div>
 
-  <div class="form-group">
-    <label>আপনার পাসপোর্ট বা সিভি সংযুক্তি (যদি থাকে)</label>
-    <div class="file-upload-box">
-      <input type="file" id="documentUpload" name="document" onchange="updateFileName(this)">
-      <div class="upload-icon">📁</div>
-      <div class="upload-text">ফাইলের উপর ক্লিক করুন অথবা ড্রাগ করে আনুন</div>
-      <div class="file-name" id="fileNameDisplay"></div>
-    </div>
+<!-- ===== লাইন ৪: পাসপোর্ট / সিভি সংযুক্তি (আলাদা) ===== -->
+<div class="form-group">
+  <label>আপনার পাসপোর্ট বা সিভি সংযুক্তি (যদি থাকে)</label>
+  <div class="file-upload-box">
+    <input type="file" id="documentUpload" name="document" onchange="updateFileName(this)">
+    <div class="upload-icon">📁</div>
+    <div class="upload-text">ফাইলের উপর ক্লিক করুন অথবা ড্রাগ করে আনুন</div>
+    <div class="file-name" id="fileNameDisplay"></div>
   </div>
+</div>
 
-  <div class="form-group">
-    <label>অতিরিক্ত বার্তা বা প্রশ্ন (যদি থাকে)</label>
-    <textarea name="message" placeholder="আপনার কোনো নির্দিষ্ট প্রশ্ন থাকলে এখানে লিখুন..."></textarea>
-  </div>
-
+<!-- ===== লাইন ৫: অতিরিক্ত বার্তা (আলাদা) ===== -->
+<div class="form-group">
+  <label>অতিরিক্ত বার্তা বা প্রশ্ন (যদি থাকে)</label>
+  <textarea name="message" placeholder="আপনার কোনো নির্দিষ্ট প্রশ্ন থাকলে এখানে লিখুন..."></textarea>
+</div>
   <div class="form-submit-area">
     <button type="submit" class="submit-btn">আবেদন সাবমিট করুন</button>
     <p class="submit-note">🔒 আপনার সকল তথ্য সম্পূর্ণ নিরাপদ রাখা হবে।</p>
